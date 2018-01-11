@@ -35,7 +35,6 @@ C++ source codes
 |17|traverse||
 |18|bernoulli||
 |19|heap||
-
 |20|optimization||
 |21|settest||
 |22|bst||
@@ -335,3 +334,7 @@ C++ source codes
 |20|拓扑结构相同子树||
 |21|幸运数|n进制|
 |22|身份证分组||
+|23|filename||
+|24|拼凑面额|dp|
+|25|头条校招||
+|26|素数对|素数|
