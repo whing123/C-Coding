@@ -108,7 +108,6 @@ C++ source codes
 ## LeetCode
 | 序号 | 题目 | 描述 | is Done |
 |:---|:---:|:---:|:---:|
-
 |476|Number Complement||
 |500|Keyboard Row||
 |682|Baseball Game||
@@ -138,9 +137,6 @@ C++ source codes
 |594|Longest Harmonious Subsequence||
 |202|Happy Number||
 |645|Set Mismatch||
-
-
-
 |367|Valid Perfect Square||
 |172|Factorial Trailing Zeroes||
 |205|Isomorphic Strings||
@@ -148,7 +144,6 @@ C++ source codes
 |290|Word Pattern||
 |400|Nth Digit||
 |475|Heaters||
-
 |168|Excel Sheet Column Title||
 |406|Queue Reconstruction by Height||
 |423|Reconstruct Original Digits from English||
@@ -283,8 +278,6 @@ C++ source codes
 |287| Find the Duplicate Number | 二分查找 数组中的唯一重复数字 | done |
 |540| Single Element in a Sorted Array | 二分查找 数组中的唯一单身数字 | done |
 |349| Intersection of Two Arrays | 二分查找 |
-
-
 |0526|Beautiful Arrangement||
 |384|Shuffle an Array||
 |421|Maximum XOR of Two Numbers in an Array||
@@ -449,14 +442,12 @@ C++ source codes
 |14| 求数列的和 ||
 |15|滑雪||
 |16| 句子反转 | 将句子中的单词位置反转 | done |
-
 |18|年终奖||
 |19|袋鼠过河||
 |21| 幸运数 | n进制 |
 |22|身份证分组||
 |23|filename||
 |25|头条校招||
-
 |27|统计字符||
 |28|电话号码分身||
 |29|集合|set|
