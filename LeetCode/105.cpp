@@ -1,34 +1,38 @@
 /* *题目：
- *  1
- *  Two Sum
- * *思路：
- *  
- * *技法：
- *  
+ *  105
+ *  Construct Binary Tree from Preorder and Inorder Traversal
  */
 
+
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+ * };
+ */
 class Solution {
 public:
-    vector<int> twoSum(vector<int>& nums, int target) {
-        vector<int> tmp;
-        int num_tmp;
-        int i, j;
-        int vector_size = nums.size();
-        int vector_size_1 = nums.size() - 1;
+    TreeNode* buildTree(vector<int>& preorder, vector<int>& inorder) {
+        if(preorder.size() == 0){
+            return NULL;
+        }
         
-        for(i = 0;i < vector_size_1;i++)
-        {
-            num_tmp = target - nums[i];
-            for(j = i + 1;j < vector_size;j++)
-            {
-                if(num_tmp == nums[j])
-                {
-                    tmp.push_back(i);
-                    tmp.push_back(j);
-                    return tmp;
-                }
+        TreeNode* root = new TreeNode(preorder[0]);
+        int index;
+        for(int i = 0; i < inorder.size(); ++i){ // find root
+            if(inorder[i] == preorder[0]){
+                index = i;
             }
         }
-        return tmp;
+        
+        vector<int> preL(preorder.begin()+1, preorder.begin()+1+index), preR(preorder.begin()+1+index, preorder.end());
+        vector<int> inL(inorder.begin(), inorder.begin()+index), inR(inorder.begin()+index+1, inorder.end());
+        root->left = buildTree(preL, inL);
+        root->right = buildTree(preR, inR);
+        
+        return root;
     }
 };

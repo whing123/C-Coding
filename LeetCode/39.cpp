@@ -1,31 +1,31 @@
 /* *题目：
- *  404
- *  Sum of Left Leaves
- * *思路：
- *  
- * *技法：
- *  
+ *  39
+ *  Combination Sum
  */
 
- /**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
- * };
- */
 class Solution {
 public:
-    int sumOfLeftLeaves(TreeNode* root) {
-        if(root == NULL)
-            return 0;
-        if(root->left != NULL){
-            if(root->left->left == NULL && root->left->right == NULL){
-                return root->left->val + sumOfLeftLeaves(root->right);
-            }
+    vector<vector<int>> combinationSum(vector<int>& candidates, int target) {
+        vector<vector<int>> res;
+        vector<int> seq;
+        
+        sort(candidates.begin(), candidates.end());
+        dfs(candidates, target, res, seq, 0, 0);
+        return res;
+    }
+    
+    void dfs(vector<int>& nums, int target, vector<vector<int>>& res, vector<int>& cur, int cursum, int start){
+        if(cursum == target){
+            res.push_back(cur);
+            return;
+        }else if(cursum > target){
+            return;
         }
-        return sumOfLeftLeaves(root->left) + sumOfLeftLeaves(root->right);
+        
+        for(int i = start; i < nums.size(); ++i){
+            cur.push_back(nums[i]);
+            dfs(nums, target, res, cur, cursum+nums[i], i);
+            cur.pop_back();
+        }
     }
 };

@@ -1,6 +1,6 @@
 /* *题目：
- *  12
- *  Integer to Roman
+ *  172
+ *  Factorial Trailing Zeroes
  * *思路：
  *  
  * *技法：
@@ -9,24 +9,16 @@
 
 class Solution {
 public:
-    string intToRoman(int num) {
-         string roman[][10] = {  
-            {"", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"},  
-            {"", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC"},  
-            {"", "C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM"},  
-            {"", "M", "MM", "MMM"}  
-        };  
-          
-        string ret = "";  
-        int digit = 0;  
-        while (num != 0) {  
-            int remain = num % 10;  
-            ret = roman[digit][remain] + ret;  
-            digit++;  
-            num /= 10;  
-        }  
-          
-        return ret;  
-        
+    int trailingZeroes(int n) {
+        if (n < 5)
+		return 0;
+		
+	    int sum_5 = 0;
+
+        while (n / 5 != 0) {
+        	n /= 5;
+        	sum_5 += n;
+        }
+    	return sum_5;
     }
 };

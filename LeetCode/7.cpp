@@ -1,6 +1,6 @@
 /* *题目：
- *  557
- *  Reverse Words in a String III 
+ *  7
+ *  Reverse Integer
  * *思路：
  *  
  * *技法：
@@ -9,30 +9,24 @@
 
 class Solution {
 public:
-    string reverseWords(string s) {
-        int size = s.size();
+    int reverse(int x) {
+        int reNum = 0;
+        int i = 0;
+        int d;
         
-        for(int i = 0; i < size;){
-            while(s[i] == ' '){
-                i++;
+        d = x > 0 ? 1 : -1;
+        x = x * d;
+        while(x > 0){
+            if(i != 0){
+                if(reNum > 214748364)
+                    return 0;
+                 reNum *= 10;
             }
-            int start = i;
-            while(i < size && s[i] != ' '){
-                i++;
-            }
-            
-            inverse(s, start, i);
+            reNum += (x % 10);
+            x = x / 10;
+            i++;
         }
         
-        return s;
-    }
-    
-    void inverse(string &s, int start, int end){
-        int half = (end - start) / 2;
-        for(int i = 0; i < half; ++i){
-            char tmp = s[start + i];
-            s[start + i] = s[end - 1 - i];
-            s[end - 1 - i] = tmp;
-        }
+        return reNum * d;
     }
 };

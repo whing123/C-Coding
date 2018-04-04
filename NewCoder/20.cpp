@@ -17,7 +17,7 @@ struct TreeNode {
 class IdenticalTree {
 public:
     bool chkIdentical(TreeNode* A, TreeNode* B) {
-        if(A == NULL && B != NULL){ // 这句不能掉，否则可能会抛出空指针异常
+        if(A == NULL && B != NULL){ // 这句不能掉，否则可能会抛出空指针异常 下面的A->left 等
             return false;
         }
          
@@ -49,7 +49,7 @@ public:
 
 void preOrder(TreeNode* t, string &s)
 {
-  if(t != NULL)
+    if(t != NULL)
     {
         s += ('0' + t->val);
         preOrder(t->left, s);

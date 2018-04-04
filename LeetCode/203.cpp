@@ -1,28 +1,41 @@
 /* *题目：
- *  717
- *  1-bit and 2-bit Characters
+ *  203
+ *  Remove Linked List Elements
  * *思路：
  *  
  * *技法：
  *  
  */
 
+ /**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode(int x) : val(x), next(NULL) {}
+ * };
+ */
 class Solution {
 public:
-    bool isOneBitCharacter(vector<int>& bits) {
-        int size = bits.size();
+    ListNode* removeElements(ListNode* head, int val) {
+        ListNode *prev, *curr;
+        ListNode *first = new ListNode(0);
+        first->next = head;
+        prev = first;
+        curr = head;
         
-        char curflag;
-        for(int i = 0; i < size;){
-            if(bits[i] == 0){
-                curflag = 1; // one-bit
-                ++i;
-            }else{
-                curflag = 2; // two-bit
-                i += 2;
+        while(curr != NULL){
+            if(curr->val == val){
+                prev->next = curr->next;
+                delete curr;
+                curr = prev->next;
+                continue;
             }
+            prev = curr;
+            curr = curr->next;
         }
-        
-        return curflag == 1 ? true : false;
+        head = first->next;
+        delete first;
+        return head;
     }
 };

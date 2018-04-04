@@ -1,6 +1,6 @@
 /* *题目：
- *  219
- *  Contains Duplicate II
+ *  119
+ *  Pascal's Triangle II
  * *思路：
  *  
  * *技法：
@@ -9,21 +9,17 @@
 
 class Solution {
 public:
-    bool containsNearbyDuplicate(vector<int>& nums, int k) {
-        int size = nums.size();
-        unordered_map<int,int> Map;
-        unordered_map<int,int>::iterator it;
-        for(int i = 0;i < size;i++){
-            if((it = Map.find(nums[i])) == Map.end()){
-                Map[nums[i]] = i; 
-            }else{
-                if(i - it->second <= k){
-                    return true;
-                }else{
-                    it->second = i;
-                }
-            }
+    vector<int> getRow(int rowIndex) {
+        vector<int> row(rowIndex+1,0);
+        row[0] = 1;
+        row[rowIndex] = 1;
+        if(rowIndex < 2){
+            return row;
         }
-        return false;
+        vector<int> preRow = getRow(rowIndex - 1);
+        for(int i = 1;i < rowIndex;i++){
+            row[i] = preRow[i-1] + preRow[i];
+        }
+        return row;
     }
 };

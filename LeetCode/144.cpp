@@ -1,6 +1,6 @@
 /* *题目：
- *  513
- *  Find Bottom Left Tree Value
+ *  144
+ *  Binary Tree Preorder Traversal
  * *思路：
  *  
  * *技法：
@@ -18,25 +18,19 @@
  */
 class Solution {
 public:
-    int findBottomLeftValue(TreeNode* root) {
-        if(root->left == NULL && root->right == NULL)
-            return root->val;
-        int res;
-        if(getHeight(root->left) >= getHeight(root->right)){ //左子树高于右子树时去找左边，左边优先级高
-            res = findBottomLeftValue(root->left);           //左右一样高找左边，否则找最高的
-        }else{
-            res = findBottomLeftValue(root->right);
-        }
+    vector<int> preorderTraversal(TreeNode* root) {
+        vector<int> res;
+        pre(root,res);
         return res;
     }
     
-    int getHeight(TreeNode* root){
-        if(root == NULL){
-            return 0;
+    void pre(TreeNode *root, vector<int> &tmp){
+        if(root==NULL){
+            return;
         }
-        int leftH = getHeight(root->left);
-        int rightH = getHeight(root->right);
         
-        return 1 + (leftH > rightH ? leftH : rightH);
+        tmp.push_back(root->val);
+        pre(root->left,tmp); //左
+        pre(root->right,tmp); //右
     }
 };

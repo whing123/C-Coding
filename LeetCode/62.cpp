@@ -1,33 +1,26 @@
 /* *题目：
- *  551
- *  Student Attendance Record I
- * *思路：
- *  
- * *技法：
- *  
+ *  62
+ *  Unique Paths
  */
 
 class Solution {
 public:
-    bool checkRecord(string s) {
-        short num_a = 0, num_l = 0;
-        for(int i = 0; i < s.size();++i){
-            if(s[i] == 'A'){
-                num_l = 0;
-                num_a++;
-                if(num_a > 1){
-                    return false;
-                }
-            }else if(s[i] == 'L'){
-                num_l++;
-                if(num_l > 2){
-                    return false;
-                }
-            }else{
-                num_l = 0;
+    int uniquePaths(int m, int n) {
+        vector<vector<int>> vec(m, vector<int>(n, 0));
+        
+        for(int i = 0; i < n; i++){
+            vec[0][i] = 1;
+        }
+        for(int i = 0; i < m; i++){
+            vec[i][0] = 1;
+        }
+        
+        for(int i = 1; i < m; i++){
+            for(int j = 1; j < n; ++j){
+                vec[i][j] = vec[i-1][j] + vec[i][j-1]; // 左 + 上
             }
         }
         
-        return true;
+        return vec[m-1][n-1];
     }
 };

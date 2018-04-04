@@ -1,28 +1,44 @@
 /* *题目：
- *  448
- *  Find All Numbers Disappeared in an Array
+ *  24
+ *  Swap Nodes in Pairs
  * *思路：
  *  
  * *技法：
  *  
  */
 
+ /**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode(int x) : val(x), next(NULL) {}
+ * };
+ */
 class Solution {
 public:
-    vector<int> findDisappearedNumbers(vector<int>& nums) {
-        int size = nums.size();
-        vector<int> result, tmp(size+1, 0);
-        int j = 0;
-        while(j < size){ //1到size 哪个出现哪个累加1
-            tmp[nums[j++]]++;
-        }
-        j = 1;
-        while(j <= size){
-            if(tmp[j] == 0){ //没有出现的装入
-                result.push_back(j);
+    ListNode* swapPairs(ListNode* head) {
+        ListNode* p, *q, *z, *pre, *newhead = new ListNode(0);
+        pre = newhead;
+        pre->next = head;
+        p = q = z = head;
+        while(p){
+            q = p->next;
+            if(q == NULL){
+                return newhead->next;
             }
-            j++;
+            z = q->next;
+            p->next = z;
+            q->next = p;
+            pre->next = q;
+            //move
+            pre = pre->next;
+            pre = pre->next;
+            p = pre->next;
         }
-        return result;
+        pre = newhead;
+        newhead = newhead->next;
+        delete pre;
+        return newhead;
     }
 };

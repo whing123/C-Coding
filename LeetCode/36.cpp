@@ -1,6 +1,6 @@
 /* *题目：
- *  383
- *  Ransom Note
+ *  36
+ *  Valid Sudoku
  * *思路：
  *  
  * *技法：
@@ -9,21 +9,38 @@
 
 class Solution {
 public:
-    bool canConstruct(string ransomNote, string magazine) {
-        int size_m = magazine.size();
-        int size_r = ransomNote.size();
-        vector<int> tmp(size_m,0);
-        for(int i = 0, j;i < size_r;i++){
-            for(j = 0;j < size_m;j++){
-                if(tmp[j] == 0 && magazine[j] == ransomNote[i]){
-                    tmp[j] = 1;
-                    break;
-                }
+    bool isValidSudoku(vector<vector<char>>& board) {
+        int row_check[10] = {0};
+        int col_check[10] = {0};
+        int box_check[10] = {0};
+        
+        int i, j;
+        
+        for(i = 0;i < 9;i++)
+        {
+            for(j = 0;j < 9;j++)
+            {
+                if(!checkOut(col_check, board[j][i] - '0'))
+                    return false;
+                if(!checkOut(row_check, board[i][j] - '0'))
+                    return false;
+                if(!checkOut(box_check, board[i/3*3+j/3][i%3*3+j%3] - '0'))
+                    return false;
             }
-            if(j == size_m){
-                return false;
-            }
+            memset(col_check, 0, sizeof(col_check));
+            memset(row_check, 0, sizeof(row_check));
+            memset(box_check, 0, sizeof(box_check));
         }
+        return true;
+    }
+    
+    bool checkOut(int check[], int val)
+    {
+        if(val < 0)
+            return true;
+        if(check[val] == 1)
+            return false;
+        check[val] = 1;
         return true;
     }
 };

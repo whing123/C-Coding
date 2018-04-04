@@ -1,59 +1,115 @@
 /* *题目：
- *  526
- *  Beautiful Arrangement
- * *思路：
- *  
- * *技法：
- *  
+ *  148
+ *  Sort List
  */
 
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode(int x) : val(x), next(NULL) {}
+ * };
+ */
 class Solution {
 public:
-    int countArrangement(int N) {
-        int *arr;
-        arr = new int [N];
-        for(int i = 0;i < N;i++){  // 初始化
-            arr[i] = i+1;
+    //merge two sorted list, return result head
+    ListNode* merge(ListNode* h1, ListNode* h2){
+        if(h1 == NULL){
+            return h2;
+        }
+        if(h2 == NULL){
+            return h1;
         }
         
-        int res = 0;
-        FullArray(arr,N,0,res);
-        delete [] arr;
+        if(h1->val < h2->val){
+            h1->next = merge(h1->next, h2);
+            return h1;
+        }
+        else{
+            h2->next = merge(h1, h2->next);
+            return h2;
+        }
+    }
+    
+    ListNode* sortList(ListNode* head) {
+        //bottom case
+        if(head == NULL){
+            return head;
+        }
+        if(head->next == NULL){
+            return head;
+        }
         
-        return res;
-    }
-    
-    template <typename T>
-    inline void swap(T* array, unsigned int i, unsigned int j)
-    {
-    	T t = array[i];
-    	array[i] = array[j];
-    	array[j] = t;
-    }
-    
-    /*
-    * 递归输出序列的全排列
-    */
-    template <typename T>
-    void FullArray(T* array, size_t array_size, unsigned int index, int &sum)
-    {
-    
-    	if (index >= array_size)  // 搜索到最后位置时结束输出
-    	{
-    		++sum;
-    		return;
-    	}
-    
-    	for (unsigned int i = index; i < array_size; ++i)
-    	{
-    
-    		if (array[i] % (index + 1)  && (index + 1) % array[i]) {  // 判断是否满足条件
-    			continue;
-    		}
-    
-    		swap(array, i, index);  // 将第i个位置换至index，index为当前子序列头部
-    		FullArray(array, array_size, index + 1, sum);  // 将第index位置确定后，递归排列index+1之后的位置
-    		swap(array, i, index);  // 将之前的交换返回，以备i+1位置的数交换至index
-    	}
+        //p1 move 1 step every time, p2 move 2 step every time, pre record node before p1
+        ListNode* p1 = head;
+        ListNode* p2 = head;
+        ListNode* pre = head;
+        
+        while(p2 != NULL && p2->next != NULL){
+            pre = p1;
+            p1 = p1->next;
+            p2 = p2->next->next;
+        }
+        //change pre next to null, make two sub list(head to pre, p1 to p2)
+        pre->next = NULL;
+        
+        //handle those two sub list
+        ListNode* h1 = sortList(head);
+        ListNode* h2 = sortList(p1);
+        
+        return merge(h1, h2);
+        
     }
 };
+
+// java
+public class Solution {
+  
+    public ListNode sortList(ListNode head) {
+        if (head == null || head.next == null)
+          return head;
+            
+        // step 1. cut the list to two halves
+        ListNode prev = null, slow = head, fast = head;
+        
+        while (fast != null && fast.next != null) {
+          prev = slow;
+          slow = slow.next;
+          fast = fast.next.next;
+        }
+        
+        prev.next = null;
+        
+        // step 2. sort each half
+        ListNode l1 = sortList(head);
+        ListNode l2 = sortList(slow);
+        
+        // step 3. merge l1 and l2
+        return merge(l1, l2);
+    }
+  
+    ListNode merge(ListNode l1, ListNode l2) {
+        ListNode l = new ListNode(0), p = l;
+        
+        while (l1 != null && l2 != null) {
+            if (l1.val < l2.val) {
+                p.next = l1;
+                l1 = l1.next;
+            } else {
+                p.next = l2;
+                l2 = l2.next;
+            }
+            p = p.next;
+        }
+        
+        if (l1 != null)
+            p.next = l1;
+    
+        if (l2 != null)
+            p.next = l2;
+    
+        return l.next;
+    }
+
+}

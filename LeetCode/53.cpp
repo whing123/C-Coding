@@ -1,6 +1,6 @@
 /* *题目：
- *  661
- *  Image Smoother
+ *  53
+ *  Maximum Subarray
  * *思路：
  *  
  * *技法：
@@ -9,61 +9,51 @@
 
 class Solution {
 public:
-    vector<vector<int>> imageSmoother(vector<vector<int>>& M) {
-        int w = M[0].size();
-        int h = M.size();
+    int maxSubArray(vector<int>& nums) {
+        int sum = nums[0];
+        int realMax, maxV;
+        realMax = maxV = sum;
         
-        vector<vector<int>> res;
-        
-        for(int i = 0; i < h; ++i){
-            vector<int> tmp;
-            for(int j = 0; j < w; ++j){
-                int sum = M[i][j];
-                int cnt = 1;
-                
-                if(i-1 >= 0 && j-1 >= 0){
-                    cnt += 3;
-                    sum += M[i-1][j-1];
-                    sum += M[i-1][j];
-                    sum += M[i][j-1];
-                }else if(i-1 >= 0){
-                    cnt += 1;
-                    sum += M[i-1][j];
-                }else if(j-1 >= 0){
-                    cnt += 1;
-                    sum += M[i][j-1];
+        // sum为当前小序列和，maxV为当前小序列的最大值，realMax为当前所有搜索过的序列其最大值
+        int i = 0;
+        while(i < nums.size()){
+            while(i+1 < nums.size() && sum >= 0){ // 和非负时，继续向后加
+                if(sum+nums[i+1] > maxV){  
+                    maxV = sum+nums[i+1];  // 更新当前最大
                 }
-                
-                if(i+1 < h && j+1 < w){
-                    cnt += 3;
-                    sum += M[i+1][j+1];
-                    sum += M[i+1][j];
-                    sum += M[i][j+1];
-                }else if(i+1 < h){
-                    cnt += 1;
-                    sum += M[i+1][j];
-                }else if(j+1 < w){
-                    cnt += 1;
-                    sum += M[i][j+1];
-                }
-                
-                if(i+1 < h && j-1 >= 0){
-                    cnt += 1;
-                    sum += M[i+1][j-1];
-                }
-                
-                if(i-1 >= 0 && j+1 < w){
-                    cnt += 1;
-                    sum += M[i-1][j+1];
-                }
-                
-                
-                tmp.push_back(sum/cnt);
+                sum += nums[i+1];
+                i++;
             }
             
-            res.push_back(tmp);
+            if(maxV > realMax){  //当前序列结束后，更新历史最大值
+                realMax = maxV;
+            }
+            
+            if(i+1 < nums.size()){ //下个序列起始设置
+                maxV = sum = nums[i+1]; 
+            }
+            i++;
         }
         
-        return res;
+        return realMax;
+    }
+};
+
+
+class Solution {
+public:
+    int maxSubArray(vector<int>& nums) {
+        int sum = nums[0];
+        for(int i = 1; i < nums.size(); ++i){
+            if(nums[i-1] > 0){ // 如果前一个大于0，有增益，则加到i上
+                nums[i] += nums[i-1];
+            }
+            
+            if(nums[i] > sum){ // update max
+                sum = nums[i];
+            }
+        }
+        
+        return sum;
     }
 };

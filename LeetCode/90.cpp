@@ -1,29 +1,37 @@
 /* *题目：
- *  66
- *  Plus One
- * *思路：
- *  
- * *技法：
- *  
+ *  90
+ *  Subsets II
  */
 
 class Solution {
 public:
-    vector<int> plusOne(vector<int>& digits) {
-        int d = 1;
-        for(int i = digits.size() - 1;i >= 0;)
-        {
-            digits[i] += d;
-            if(digits[i] < 10)
-            {    
-                return digits;
-            }
-            
-            digits[i] %= 10;
-            i--;
+    vector<vector<int>> subsetsWithDup(vector<int>& nums) {
+        vector<vector<int>> res;
+        vector<int> seq;
+        res.push_back(seq);
+        if(nums.size() == 0){
+            return res;
         }
         
-        digits.insert(digits.begin(),1);
-        return digits;
+        sort(nums.begin(), nums.end()); // 有重复时必不可少
+        dfs(res, nums, seq, 0);
+        return res;
+    }
+    
+    void dfs(vector<vector<int>>& res, vector<int>& nums, vector<int>& cur, int start){
+        if(cur.size() > 0){
+            res.push_back(cur);
+        }
+        
+        unordered_set<int> hash;
+        for(int i = start; i < nums.size(); ++i){
+            if(hash.find(nums[i]) == hash.end()){
+                cur.push_back(nums[i]);
+                dfs(res, nums, cur, i+1);
+                cur.pop_back();
+                
+                hash.insert(nums[i]);
+            }
+        }
     }
 };

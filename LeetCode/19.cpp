@@ -1,36 +1,55 @@
 /* *题目：
- *  485
- *  Max Consecutive Ones
+ *  19
+ *  Remove Nth Node From End of List
  * *思路：
  *  
  * *技法：
  *  
  */
 
+ /**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode(int x) : val(x), next(NULL) {}
+ * };
+ */
 class Solution {
 public:
-    int findMaxConsecutiveOnes(vector<int>& nums) {
-        int size = nums.size();
+    ListNode* removeNthFromEnd(ListNode* head, int n) {
+        int count = 0;
+        int i, N;
+        ListNode *tmp = head, *tmp2;
         
-        int i = 0;
-        int maxNum = 0;
-        int cnt = 0;
-        while(i < size){
-            if(nums[i] == 1){
-                while(i < size && nums[i] == 1){ //为该段连续的1计数
-                    cnt++;
-                    i++;
-                }
-                maxNum = cnt > maxNum ? cnt : maxNum;  //比之前的大，更新之
-                if(i == size){
-                    break;
-                }
-                cnt = 0;
-                i++;
-            }else{  //为0跳过
-                i++;
-            }
+        while(tmp != NULL)
+        {
+            tmp = tmp->next;
+            count++;
         }
-        return maxNum;
+        
+        N = count + 1 - n;
+        
+        if(N == 1)
+        {
+            tmp = head;
+            head = head->next;
+            delete tmp;
+            return head;
+        }
+        
+        i = 1;
+        tmp = head;
+        while(i < N)
+        {
+            tmp2 = tmp;
+            tmp = tmp->next;
+            i++;
+        }
+        
+        tmp2->next = tmp->next;
+        delete tmp;
+        return head;
+        
     }
 };

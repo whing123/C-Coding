@@ -1,13 +1,9 @@
 /* *题目：
- *  111
- *  Minimum Depth of Binary Tree
- * *思路：
- *  
- * *技法：
- *  
+ *  113
+ *  Path Sum II
  */
 
- /**
+/**
  * Definition for a binary tree node.
  * struct TreeNode {
  *     int val;
@@ -18,24 +14,38 @@
  */
 class Solution {
 public:
-    int minDepth(TreeNode* root) {
+    vector<vector<int>> pathSum(TreeNode* root, int sum) {
+        vector<vector<int>> res;
+            
         if(root == NULL){
-            return 0;
-        }
-        return minD(root);
+            return res;
+        } 
+        
+        vector<int> path;
+        helper(root, sum, path, res);
+        
+        return res;
     }
-    int minD(TreeNode* root);
     
+    void helper(TreeNode* root, int sum, vector<int> & path, vector<vector<int>>& res){
+        if(root == NULL){
+            return;
+        }
+        
+        path.push_back(root->val);
+        if(root->left == NULL && root->right == NULL){
+            int s = 0;
+            for(int i = 0; i < path.size(); ++i){
+                s += path[i];
+            }
+            if(s == sum){
+                res.push_back(path);
+            }
+        }
+           
+        helper(root->left, sum, path, res);
+        helper(root->right, sum, path, res);
+        
+        path.pop_back();
+    }
 };
-
-int Solution::minD(TreeNode* root){
-    if(root == NULL){
-        return INT_MAX;
-    }
-    if(root->left == NULL && root->right == NULL){
-        return 1;
-    }
-    int heightL = minD(root->left);
-    int heightR = minD(root->right);
-    return 1 + (heightL < heightR ? heightL : heightR);
-}

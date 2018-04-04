@@ -1,6 +1,6 @@
 /* *题目：
- *  343
- *  Integer Break
+ *  165
+ *  Compare Version Numbers
  * *思路：
  *  
  * *技法：
@@ -9,31 +9,55 @@
 
 class Solution {
 public:
-    int integerBreak(int n) {
-        int res = 1;
-        switch(n){
-            case 2:
-                return 1;
-            case 3:
-                return 2;
-            default:
-                //将n往3拆分，用3作为因子，根据最后一个3与余数的乘积
-                int i = n / 3 - 1;
-                /*
-                while(i-- > 0){
-                    res *= 3;
-                }*/
-                res = pow(3,i);
-                int yushu = n % 3;
-                if(yushu == 2){  // 5 < 3 * 2， 拆开大
-                    res *= 6;
-                }else if(yushu == 1){ // 4 > 3 * 1，不拆大
-                    res *= 4;
-                }else{  //余数为0时，继续把最后一个3乘上
-                    res *= 3;
-                }
-        }
+    int compareVersion(string version1, string version2) {
+        int size1 = version1.size();
+        int size2 = version2.size();
         
-        return res;
+        int v1 = 0, v2 = 0;
+        
+        int i1 = 0, i2 = 0;
+        int i;
+        stack<int> vstack1, vstack2;
+        while(i1 < size1 || i2 < size2){  //从左到右，每一段每一段比较，'.'相当于分隔符，每一段都是十进制数
+            while(i1 < size1 && version1[i1] != '.'){
+                vstack1.push(version1[i1]-'0');
+                i1++;
+            }
+            if(version1[i1] == '.'){
+                i1++;
+            }
+            i = 0;
+            while(!vstack1.empty()){
+                v1 += vstack1.top() * pow(10,i);
+                vstack1.pop();
+                i++;
+            }
+            
+            while(i2 < size2 && version2[i2] != '.'){
+                vstack2.push(version2[i2]-'0');
+                i2++;
+            }
+            if(version2[i2] == '.'){
+                i2++;
+            }
+            i = 0;
+            while(!vstack2.empty()){
+                v2 += vstack2.top() * pow(10,i);
+                vstack2.pop();
+                i++;
+            }
+            
+            if(v1 == v2){
+                v1 = 0;
+                v2 = 0;
+            }
+            if(v1 > v2){
+                return 1;
+            }
+            if(v1 < v2){
+                return -1;
+            }
+        }
+        return  0;
     }
 };

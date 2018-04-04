@@ -1,39 +1,32 @@
 /* *题目：
- *  438
- *  Find All Anagrams in a String
- * *思路：
- *  
- * *技法：
- *  
+ *  110
+ *  Balanced Binary Tree
  */
 
+ /**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+ * };
+ */
 class Solution {
 public:
-    vector<int> findAnagrams(string s, string p) {
-        int lenP = p.length();
-        int lenS = s.length();
-        
-        vector<int> result;
-        vector<int> hashP(26,0);
-        vector<int> hashTest(26,0);
-        
-        for(int i = 0;i < lenP;i++){
-            hashP[p[i]-'a']++;
+    bool isBalanced(TreeNode* root) {
+        if(root == NULL){
+            return true;
         }
+        return abs(height(root->left)-height(root->right)) <= 1 && isBalanced(root->left) && isBalanced(root->right);
+    }
     
-        int i = 0;
-        while(i < lenS){
-           // move 1 step
-           hashTest[s[i]-'a']++;
-           if(i >= lenP){
-               hashTest[s[i-lenP]-'a']--;
-           }
-           
-           if(hashTest == hashP){
-               result.push_back(i-lenP+1);
-           }
-           i++;
+    int height(TreeNode* root){
+        if(root == NULL){
+            return 0;
         }
-        return result;
+        int hLeft = height(root->left);
+        int hRight = height(root->right);
+        return 1 + (hLeft < hRight ? hRight : hLeft);  
     }
 };

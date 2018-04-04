@@ -1,6 +1,6 @@
 /* *题目：
- *  283
- *  Move Zeroes
+ *  28
+ *  Implement strStr()
  * *思路：
  *  
  * *技法：
@@ -9,18 +9,20 @@
 
 class Solution {
 public:
-    void moveZeroes(vector<int>& nums) {
-        int size = nums.size();
-        for(int i = 0, j = size;i < j;){
-            if(nums[i] == 0){
-                j--;
-                for(int k = i;k < j;k++){
-                    nums[k] = nums[k+1];
-                }
-                nums[j] = 0;
+    int strStr(string haystack, string needle) {
+        int size = haystack.size();
+        int sizeN = needle.size();
+        if(size == 0 && size == sizeN){
+            return 0;
+        }
+        int i = 0;
+        while(i+sizeN-1 < size){
+            if(needle == haystack.substr(i,sizeN)){
+                return i;
             }else{
                 i++;
             }
         }
+        return -1;
     }
 };

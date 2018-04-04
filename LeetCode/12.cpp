@@ -1,6 +1,6 @@
 /* *题目：
- *  412
- *  Fizz Buzz
+ *  12
+ *  Integer to Roman
  * *思路：
  *  
  * *技法：
@@ -9,19 +9,24 @@
 
 class Solution {
 public:
-    vector<string> fizzBuzz(int n) {
-        vector<string> fB;
-        for(int i = 1;i <= n;i++){
-            if(i % 3 == 0 && i % 5 == 0){
-                fB.push_back("FizzBuzz");
-            }else if(i % 3 == 0){
-                fB.push_back("Fizz");
-            }else if(i % 5 == 0){
-                fB.push_back("Buzz");
-            }else{
-                fB.push_back(to_string(i));
-            }
-        }
-        return fB;
+    string intToRoman(int num) {
+         string roman[][10] = {  
+            {"", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"},  
+            {"", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC"},  
+            {"", "C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM"},  
+            {"", "M", "MM", "MMM"}  
+        };  
+          
+        string ret = "";  
+        int digit = 0;  
+        while (num != 0) {  
+            int remain = num % 10;  
+            ret = roman[digit][remain] + ret;  
+            digit++;  
+            num /= 10;  
+        }  
+          
+        return ret;  
+        
     }
 };

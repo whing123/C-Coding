@@ -1,38 +1,40 @@
 /* *题目：
- *  303
- *  Range Sum Query - Immutable
+ *  125
+ *  Valid Palindrome
  * *思路：
  *  
  * *技法：
  *  
  */
 
-class NumArray {
+class Solution {
 public:
-    NumArray(vector<int> &nums) {
-        num = nums;
-        sum = vector<int>(nums.size(),0);
-        for(int i = 0;i < nums.size();i++){
-            if(i > 0){
-                sum[i] = sum[i-1] + nums[i];
-            }else{
-                sum[i] = nums[i];
+    bool isPalindrome(string s) {
+        int size = s.size();
+        if(size == 0){
+            return true;
+        }
+        vector<char> str;
+        int i = 0;
+        while(i < size){
+            if(('A' <= s[i] && s[i] <= 'Z') || ('a' <= s[i] && s[i] <= 'z') || ('0' <= s[i] && s[i] <= '9')){
+                if('A' <= s[i] && s[i] <= 'Z'){
+                    str.push_back(s[i] + 32);
+                }else{
+                    str.push_back(s[i]);
+                }
+            }
+            i++;
+        }
+        
+        size = str.size();
+        int tmp1 = size / 2;
+        int tmp2 = size - 1;
+        for(i = 0;i < tmp1;i++){
+            if(str[i] != str[tmp2 - i]){
+                return false;
             }
         }
+        return true;
     }
-
-    int sumRange(int i, int j) {
-        int t;
-        t = sum[j] - sum[i] + num[i];
-        return t;
-    }
-private:
-    vector<int> num;
-    vector<int> sum;
 };
-
-
-// Your NumArray object will be instantiated and called as such:
-// NumArray numArray(nums);
-// numArray.sumRange(0, 1);
-// numArray.sumRange(1, 2);

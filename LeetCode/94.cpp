@@ -1,37 +1,35 @@
 /* *题目：
- *  459
- *  Repeated Substring Pattern
+ *  94
+ *  Binary Tree Inorder Traversal
  * *思路：
  *  
  * *技法：
  *  
  */
 
+ /**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+ * };
+ */
 class Solution {
 public:
-    bool repeatedSubstringPattern(string str) {
-        int lenStr = str.size();
-        if(lenStr == 0){
-            return true;   
-        }
+    vector<int> inorderTraversal(TreeNode* root) {
+        vector<int> res;
+        inorder(root,res);
+        return res;
+    }
     
-        string subStr;
-        int lenSubStr = 1;
-        int i;
-        
-        while(lenSubStr <= lenStr/2){
-            subStr = str.substr(0,lenSubStr);
-            i = 2;
-            while(/*subStr.compare()*/lenSubStr * i <= lenStr && subStr == str.substr(lenSubStr * (i-1),lenSubStr)){ //compare #1 and #2
-                i++;
-            }
-            i--;
-            if(lenSubStr * i == lenStr){
-                return true;
-            }else{
-                lenSubStr++;
-            }
+    void inorder(TreeNode* root, vector<int>& add){
+        if(root == NULL){
+            return;
         }
-        return false;
+        inorder(root->left,add);
+        add.push_back(root->val);
+        inorder(root->right,add);
     }
 };

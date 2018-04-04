@@ -4,6 +4,7 @@
  *  
  */
 
+// 计算所有元素的单调和
 class MonoSum {
 public:
     int calcMonoSum(vector<int> A, int n) {

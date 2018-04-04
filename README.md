@@ -1,23 +1,11 @@
 # C-Coding
 C++ source codes
 
-## Others
-|序号  |    题目  |                 描述                        |
-|:----|:--------:|:-------------------------------------------:|
-|1|线段重合问题||
-|2|数组找第二大|冒泡排序|
-|3|字符串中找到最大的数字串|数字串比较大小，去掉前导0；字符串去掉特殊子串|
-|4|cell状态改变，相邻状态的异或||
-|5|模仿数据库操作|string字符串分割|
-|6|熊按战斗力吃糖充饥|sort比较函数|
-|7|温度区间||
-|8|求第N个质数||
-
 ## OJ
-|序号  |    题目  |                 描述                        |
-|:----|:--------:|:-------------------------------------------:|
-|1|A+B Problem|基本输入输出|
-|2|big int|超长整数相加|
+| 序号 | 题目 | 描述 | is done |
+|:---|:---:|:---:|:---:|
+|1| A+B Problem | 基本输入输出 |
+|2| big int |超长整数相加|
 |3|link|将两个线性表合并成为一个线性表|
 |4|edit|字符串操作|
 |5|二哥摘苹果||
@@ -65,256 +53,390 @@ C++ source codes
 |47|静态查找表||
 |48|二哥学集合论||
 |49|有序分数序列||
-|50|二哥的地图||
+|50| 二哥的地图 | 矩形中岛屿的数量 DFS | done |
 |51|大鱼||
 |52|怎么还是那个数列？！||
 
 
+## Others
+| 序号 | 题目 | 描述 | is done |
+|:---|:---:|:---:|:---:|
+|13| 判断正方形 | | |
+
+| 序号  | 题目 | 数字 | is done |
+|:---|:---:|:---:|:---:|
+|8| 求第N个质数 | 质数 素数 |
+|19| 时针分针夹角 || done |
+
+| 序号  | 题目 | 数组 | is done |
+|:---|:---:|:---:|:---:|
+|2| 数组找第二大 | 冒泡排序 |
+|9| 二维数组排序 | 二叉堆 |
+|4| cell状态改变，相邻状态的异或 | |
+|1| 线段重合问题 ||
+|7| 温度区间 ||
+|18| 温度置信区间 | | done |
+|6| 熊按战斗力吃糖充饥 | 贪心 sort比较函数 |
+|21| 滑动窗口最大值最小值 || done |
+
+| 序号  | 题目 | 字符串 | is done |
+|:---|:---:|:---:|:---:|
+|3| 字符串中找到最大的数字串 | 数字串比较大小，去掉前导0；字符串去掉特殊子串 |
+|5| 模仿数据库操作 | string字符串分割 |
+|14| 字符串去重 || done |
+|16| 安置路灯 | 贪心 | done |
+
+
+| 序号  | 题目 | 栈 | is done |
+|:---|:---:|:---:|:---:|
+|12| 简单合法表达式 | |
+
+| 序号  | 题目 | DFS | is done |
+|:---|:---:|:---:|:---:|
+|10| 矩阵自上而下的路径和，相邻行不同列 | DFS |
+|15| 背包糖果的装法 || done |
+|17| 酒店房间 | | done |
+|20| 组成三角形 || done |
+
+
+| 序号  | 题目 | 二叉树 | is done |
+|:---|:---:|:---:|:---:|
+|11| 二叉搜索树的下几个节点 | |
+
+
 
 ## LeetCode
-|序号  |    题目  |                 描述                        |
-|:----|:--------:|:-------------------------------------------:|
-|1|Hamming Distance|求汉明距离|
-|2|Judge Route Circle||
-|3|Merge Two Binary Trees||
-|4|Array Partition I||
-|5|Number Complement||
-|6|Keyboard Row||
-|7|Reverse Words in a String III||
-|8|Reverse String||
-|9|Baseball Game||
-|10|Distribute Candies||
-|11|Reshape the Matrix||
-|12|Fizz Buzz||
-|13|Island Perimeter||
-|14|Next Greater Element I||
-|15|Average of Levels in Binary Tree|求二叉树每一层的平均值|
-|16|Longest Uncommon Subsequence I||
-|17|Nim Game||
-|18|Single Number||
-|19|Max Consecutive Ones||
-|20|Maximum Depth of Binary Tree||
-|21|Invert Binary Tree||
-|22|Detect Capital||
-|23|Add Digits||
-|24|Find All Numbers Disappeared in an Array||
-|25|Sum of Two Integers|不使用+-号求和|
-|26|Find the Difference||
-|27|Two Sum IV - Input is a BST||
-|28|Move Zeroes||
-|29|Construct String from Binary Tree||
-|30|Convert BST to Greater Tree||
-|31|Construct the Rectangle||
-|32|Range Addition II||
-|33|Excel Sheet Column Number||
-|34|Minimum Moves to Equal Array Elements||
-|35|Intersection of Two Arrays||
-|36|Ransom Note||
-|37|Best Time to Buy and Sell Stock II||
-|38|Minimum Absolute Difference in BST||
-|39|Sum of Left Leaves||
-|40|Assign Cookies||
-|41|Two Sum II - Input array is sorted||
-|42|Binary Tree Tilt||
-|43|Majority Element||
-|44|First Unique Character in a String||
-|45|Delete Node in a Linked List||
-|46|Same Tree||
-|47|Valid Anagram||
-|48|Relative Ranks||
-|49|Minimum Index Sum of Two Lists||
-|50|Roman to Integer||
-|51|Contains Duplicate||
-|52|Reverse Linked List||
-|53|Image Smoother||
-|54|Longest Palindrome||
-|55|Number of Boomerangs||
-|56|Maximum Product of Three Numbers||
-|57|Binary Watch||
-|58|Intersection of Two Arrays II||
-|59|Missing Number||
-|60|Diameter of Binary Tree||
-|61|Base 7||
-|62|Student Attendance Record I||
-|63|Reverse String II||
-|64|Longest Continuous Increasing Subsequence||
-|65|Convert Sorted Array to Binary Search Tree||
-|66|Best Time to Buy and Sell Stock||
-|67|Add Strings||
-|68|Convert a Number to Hexadecimal||
-|69|Longest Harmonious Subsequence||
-|70|Happy Number||
-|71|Subtree of Another Tree||
-|72|Binary Tree Level Order Traversal II||
-|73|Set Mismatch||
-|74|Power of Three||
-|75|Power of Two||
-|76|Climbing Stairs||
-|77|Remove Duplicates from Sorted List||
-|78|Search Insert Position||
-|79|Path Sum III||
-|80|Number of 1 Bits||
-|81|Maximum Subarray||
-|82|Remove Element||
-|83|Ugly Number||
-|84|Lowest Common Ancestor of a Binary Search Tree||
-|85|Merge Two Sorted Lists||
-|86|House Robber|DP|
-|87|Binary Tree Paths||
-|88|Symmetric Tree||
-|89|Pascal's Triangle||
-|90|Plus One||
-|91|Power of Four||
-|92|Reverse Vowels of a String||
-|93|Valid Perfect Square||
-|94|Repeated Substring Pattern||
-|95|Maximum Average Subarray I||
-|96|Balanced Binary Tree||
-|97|Pascal's Triangle II||
-|98|Implement Queue using Stacks||
-|99|Number of Segments in a String||
-|100|Factorial Trailing Zeroes||
-|101|Arranging Coins||
-|102|Guess Number Higher or Lower||
-|103|Palindrome Number||
-|104|Remove Duplicates from Sorted Array||
-|105|Two Sum||
-|106|Linked List Cycle||
-|107|Count and Say||
-|108|Path Sum||
-|109|Isomorphic Strings||
-|110|Find All Anagrams in a String||
-|111|Perfect Number||
-|112|Valid Parentheses||
-|113|Minimum Depth of Binary Tree||
-|114|Implement Stack using Queues||
-|115|Word Pattern||
-|116|Palindrome Linked List||
-|117|Add Binary||
-|118|Remove Linked List Elements||
-|119|Contains Duplicate II||
-|120|Sum of Square Numbers||
-|121|Merge Sorted Array||
-|122|Length of Last Word||
-|123|Longest Common Prefix||
-|124|Intersection of Two Linked Lists||
-|125|Range Sum Query - Immutable||
-|126|Nth Digit||
-|127|Can Place Flowers||
-|128|Heaters||
-|129|Reverse Bits||
-|130|Min Stack||
-|131|Implement strStr()||
-|132|K-diff Pairs in an Array||
-|133|Sqrt(x)||
-|134|Third Maximum Number||
-|135|Count Primes||
-|136|Valid Palindrome|只考虑句子中的字母数字并忽略大小写的回文判断|
-|137|Excel Sheet Column Title||
-|138|First Bad Version||
-|139|Rotate Array||
-|140|Reverse Integer||
-|141|Complex Number Multiplication||
-|142|Battleships in a Board||
-|143|Counting Bits||
-|144|Find Bottom Left Tree Value||
-|145|Find All Duplicates in an Array||
-|146|Queue Reconstruction by Height||
-|147|Find Largest Value in Each Tree Row||
-|148|Beautiful Arrangement||
-|149|Arithmetic Slices||
-|150|Most Frequent Subtree Sum||
-|151|Single Number III||
-|152|Minimum Moves to Equal Array Elements II||
-|153|Teemo Attacking||
-|154|Sort Characters By Frequency||
-|155|Product of Array Except Self||
-|156|Minesweeper||
-|157|Top K Frequent Elements||
-|158|Total Hamming Distance||
-|159|Binary Tree Inorder Traversal||
-|160|Next Greater Element II||
-|161|Linked List Random Node||
-|162|4Sum II||
-|163|Shuffle an Array||
-|164|Maximum XOR of Two Numbers in an Array||
-|165|Integer Break||
-|166|Count Numbers with Unique Digits||
-|167|Add Two Numbers II||
-|168|Minimum Time Difference||
-|169|Diagonal Traverse||
-|170|Binary Tree Preorder Traversal||
-|171|Magical String||
-|172|Integer to Roman||
-|173|Is Subsequence||
-|174|Reconstruct Original Digits from English||
-|175|Target Sum||
-|176|Bulb Switcher||
-|177|Binary Tree Level Order Traversal||
-|178|Minimum Path Sum||
-|179|Swap Nodes in Pairs||
-|180|Valid Sudoku||
-|181|Bulls and Cows||
-|182|Triangle||
-|183|Remove Nth Node From End of List||
-|184|Rotate Function||
-|185|Rectangle Area||
-|186|Linked List Cycle II||
-|187|Add Two Numbers||
-|188|ZigZag Conversion||
-|189|Continuous Subarray Sum||
-|190|Compare Version Numbers||
-|191|String to Integer (atoi)||
-|192|Lonely Pixel II||
-|193|Lonely Pixel I||
-|194|Employee Importance|递归搜索，map使用|
-|195|Trim a Binary Search Tree|递归Trim二叉搜索树|
-|196|Max Area of Island|上下左右四个方向递归搜索|
-|197|Binary Number with Alternating Bits|10进制转其他进制，检查2进制相邻两位是否相同|
-|198|Second Minimum Node In a Binary Tree|递归寻找所有的叶子节点|
-|199|Find Mode in Binary Search Tree|寻找最高频节点值，二叉树遍历|
-|200|Valid Palindrome II|回文判断，左右是否相互包含|
-|201|Count Binary Substrings||
-|202|Degree of an Array||
-|203|1-bit and 2-bit Characters||
-|204|String Compression|十进制数字提取出每一位|
-|205|Palindromic Substrings||
-|206|House Robber II|DP|
-|207|2 Keys Keyboard|DP|
-|208|Longest Word in Dictionary|map按键值排序|
-|209|Repeated String Match|string 判断子串|
-|210|Find Pivot Index||
-|211|Longest Univalue Path||
-|212|Flood Fill||
-|213|Self Dividing Numbers||
-|214|Sentence Similarity||
-|215|Shortest Unsorted Continuous Subarray||
-|216|Maximum Binary Tree||
-|217|Delete and Earn||
-|218|Find Smallest Letter Greater Than Target||
-|219|License Key Formatting||
-|220|Largest Palindrome Product||
-|221|Non-decreasing Array||
-|222|Single Element in a Sorted Array||
-|223|Shortest Completing Word||
-|224|Min Cost Climbing Stairs||
-|225|Daily Temperatures||
-|226|Container With Most Water||
-|227|Map Sum Pairs||
-|228|Replace Words||
-|229|Print Binary Tree||
-|230|Maximum Width of Binary Tree||
-|231|Friend Circles||
-|232|Delete Node in a BST||
-|233|Kth Smallest Element in a BST||
+| 序号 | 题目 | 描述 | is Done |
+|:---|:---:|:---:|:---:|
+
+|476|Number Complement||
+|500|Keyboard Row||
+|682|Baseball Game||
+|575|Distribute Candies||
+|412|Fizz Buzz||
+|463|Island Perimeter||
+|496|Next Greater Element I||
+|292|Nim Game||
+|136|Single Number||
+|258|Add Digits||
+|389|Find the Difference||
+|492|Construct the Rectangle||
+|598|Range Addition II||
+|171|Excel Sheet Column Number||
+|530|Minimum Absolute Difference in BST||
+|455|Assign Cookies||
+|237|Delete Node in a Linked List||
+|242|Valid Anagram||
+|506|Relative Ranks||
+|599|Minimum Index Sum of Two Lists||
+|206|Reverse Linked List||
+|409|Longest Palindrome||
+|447|Number of Boomerangs||
+|401|Binary Watch||
+|350|Intersection of Two Arrays II||
+|405|Convert a Number to Hexadecimal||
+|594|Longest Harmonious Subsequence||
+|202|Happy Number||
+|645|Set Mismatch||
+
+
+
+|367|Valid Perfect Square||
+|172|Factorial Trailing Zeroes||
+|205|Isomorphic Strings||
+|438|Find All Anagrams in a String||
+|290|Word Pattern||
+|400|Nth Digit||
+|475|Heaters||
+
+|168|Excel Sheet Column Title||
+|406|Queue Reconstruction by Height||
+|423|Reconstruct Original Digits from English||
+|24|Swap Nodes in Pairs||
+|36|Valid Sudoku||
+|299|Bulls and Cows||
+|396|Rotate Function||
+|720|Longest Word in Dictionary|map按键值排序|
+|728|Self Dividing Numbers||
+|734|Sentence Similarity||
+|744|Find Smallest Letter Greater Than Target||
+|482|License Key Formatting||
+|479|Largest Palindrome Product||
+|748|Shortest Completing Word||
+|739|Daily Temperatures||
+|677|Map Sum Pairs||
+|498|Diagonal Traverse||
+
+
+| 序号 | 题目 | 数字 | is done |
+|:---|:---:|:---:|:---:|
+|191| Number of 1 Bits || done |
+|461| Hamming Distance | 求两个数的汉明距离 | done |
+|477| Total Hamming Distance | 求一组数的汉明距离 | done |
+|190| Reverse Bits | | done |
+|263| Ugly Number | 丑数 | done |
+|371| Sum of Two Integers | 不使用+-号求和 | done |
+|374| Guess Number Higher or Lower | 二分查找 | done |
+|9| Palindrome Number | | done |
+|504|Base 7||
+|2| Add Two Numbers | 大数求和 链表存储 | done |
+|445| Add Two Numbers II || done |
+|454|4Sum II||
+|69| Sqrt(x) | Implement int sqrt(int x) | done |
+|260|Single Number III||
+|7| Reverse Integer | 反转整数 | done |
+|507|Perfect Number||
+|633|Sum of Square Numbers||
+|693| Binary Number with Alternating Bits | 10进制转其他进制，检查2进制相邻两位是否相同 | done |
+|204|Count Primes||
+|278|First Bad Version||
+|326|Power of Three||
+|231|Power of Two||
+|342|Power of Four||
+
+
+| 序号 | 题目 | 递归 | is done |
+|:---|:---:|:---:|:---:|
+|779| K-th Symbol in Grammar | 0-01 1-10 | done |
+
+
+| 序号 | 题目  | String | is Done |
+|:---|:---:|:---:|:---:|
+|657|Judge Route Circle||
+|557|Reverse Words in a String III||
+|344|Reverse String||
+|521|Longest Uncommon Subsequence I||
+|520|Detect Capital||
+|696|Count Binary Substrings||
+|12| Integer to Roman ||
+|13| Roman to Integer ||
+|383|Ransom Note||
+|387|First Unique Character in a String||
+|551|Student Attendance Record I||
+|541|Reverse String II||
+|345|Reverse Vowels of a String||
+|459|Repeated Substring Pattern||
+|434|Number of Segments in a String||
+|38|Count and Say||
+|443|String Compression|十进制数字提取出每一位|
+|20|Valid Parentheses||
+|67|Add Binary||
+|686|Repeated String Match|string 判断子串|
+|680|Valid Palindrome II|回文判断，左右是否相互包含|
+|58|Length of Last Word||
+|14|Longest Common Prefix||
+|28|Implement strStr()||
+|125|Valid Palindrome|只考虑句子中的字母数字并忽略大小写的回文判断|
+|537|Complex Number Multiplication||
+|539|Minimum Time Difference||
+|6|ZigZag Conversion||
+|165|Compare Version Numbers||
+|8| String to Integer (atoi) |  | done |
+|415|Add Strings||
+|481|Magical String||
+|648|Replace Words||
+
+
+| 序号 | 题目 | 数组 Array | is done |
+|:---|:---:|:---:|:---:|
+|1| Two Sum | 和为定值的两个数的下标 | done |
+|15| 3Sum | 含重复数组中和为定值0的三个数 二分查找 | done |
+|16| 3Sum Closest | 含重复数组中最接近定值的三个数的和 二分查找 | done |
+|18| 4Sum | 含重复数组中和为定值的4个数 3Sum拓展 二分查找 DFS| done |
+|561|Array Partition I||
+|566|Reshape the Matrix||
+|766| Toeplitz Matrix | 每一条反对角线上的元素都相等 | done |
+|485|Max Consecutive Ones||
+|283|Move Zeroes||
+|448|Find All Numbers Disappeared in an Array||
+|717|1-bit and 2-bit Characters||
+|169|Majority Element||
+|122|Best Time to Buy and Sell Stock II||
+|167|Two Sum II - Input array is sorted||
+|217|Contains Duplicate||
+|697| Degree of an Array | 元素出现最大频率 | done |
+|661|Image Smoother||
+|268|Missing Number||
+|628|Maximum Product of Three Numbers||
+|674|Longest Continuous Increasing Subsequence||
+|27|Remove Element||
+|35|Search Insert Position||
+|118|Pascal's Triangle||
+|66|Plus One||
+|724|Find Pivot Index||
+|119|Pascal's Triangle II||
+|643|Maximum Average Subarray I||
+|26|Remove Duplicates from Sorted Array||
+|219|Contains Duplicate II||
+|88|Merge Sorted Array||
+|605|Can Place Flowers||
+|581|Shortest Unsorted Continuous Subarray||
+|532| K-diff Pairs in an Array | 差值为k的数对个数 | done |
+|414|Third Maximum Number||
+|189|Rotate Array||
+|665|Non-decreasing Array||
+|442|Find All Duplicates in an Array||
+|495|Teemo Attacking||
+|238|Product of Array Except Self||
+|11|Container With Most Water||
+|75| Sort Colors | 012聚合排序 Two Pointers | done |
+|287| Find the Duplicate Number | 二分查找 数组中的唯一重复数字 | done |
+|540| Single Element in a Sorted Array | 二分查找 数组中的唯一单身数字 | done |
+|349| Intersection of Two Arrays | 二分查找 |
+
+
+|0526|Beautiful Arrangement||
+|384|Shuffle an Array||
+|421|Maximum XOR of Two Numbers in an Array||
+|347|Top K Frequent Elements||
+|462|Minimum Moves to Equal Array Elements II||
+|503|Next Greater Element II||
+|223|Rectangle Area||
+|451|Sort Characters By Frequency||
+|419|Battleships in a Board||
+|441|Arranging Coins||
+|319|Bulb Switcher||
+|453|Minimum Moves to Equal Array Elements||
+
+
+| 序号 | 题目 | 链表 | is done |
+|:---|:---:|:---:|:---:|
+|382|Linked List Random Node||
+|203|Remove Linked List Elements||
+|19|Remove Nth Node From End of List||
+|141|Linked List Cycle||
+|142|Linked List Cycle II||
+|234|Palindrome Linked List||
+|83|Remove Duplicates from Sorted List||
+|160|Intersection of Two Linked Lists||
+|21| Merge Two Sorted Lists | 归并思想 | done |
+|148| Sort List | 归并排序单链表 | done |
+
+
+| 序号  | 题目 | 栈 队列 | is Done |
+|:---|:---:|:---:|:---:|
+|155| Min Stack | 返回最小值的栈 | done |
+|232| Implement Queue using Stacks | 牛客 37  | done |
+|225| Implement Stack using Queues | | done |
+
+
+| 序号 | 题目 | DP | is done |
+|:---|:---:|:---:|:---:|
+|62| Unique Paths | 左上角到右下角的路径和 | done |
+|63| Unique Paths II | 62的基础上增加路障 | done |
+|746| Min Cost Climbing Stairs||
+|121| Best Time to Buy and Sell Stock||
+|70| Climbing Stairs | DP，跳台阶，一次1或2级 | done |
+|53| Maximum Subarray |连续子数组的最大和|
+|198| House Robber | DP | done |
+|213| House Robber II | DP |
+|303| Range Sum Query - Immutable ||
+|338| Counting Bits ||
+|647| Palindromic Substrings ||
+|413| Arithmetic Slices ||
+|343| Integer Break ||
+|357| Count Numbers with Unique Digits ||
+|650| 2 Keys Keyboard|DP|
+|392| Is Subsequence||
+|494| Target Sum|DFS|
+|740| Delete and Earn ||
+|64| Minimum Path Sum ||
+|120| Triangle||
+|523| Continuous Subarray Sum||
+|712| Minimum ASCII Delete Sum for Two Strings | 删到两者一样 2D | done |
+|486| Predict the Winner | 左取一个右取一个谁最多 2D | done |
+|646| Maximum Length of Pair Chain |数对所组成的链的长度 | done |
+|300| Longest Increasing Subsequence | 最长递增子序列 | done |
+|474| Ones and Zeroes | 用1s和0s拼最多数量的01串 | done |
+|542| 01 Matrix | 找和0最近的距离 | done |
+|377| Combination Sum IV | 不含重复集合中不限次数取数字其和为定值，允许同一组合内不同次序 注意与拼凑硬币的区别 | done |
+|152| Maximum Product Subarray | 连续子序列的最大乘积 | done |
+
+
+| 序号 | 题目 | DFS | is Done |
+|:---|:---:|:---:|:---:|
+|690|Employee Importance|递归搜索，map使用，BFS|
+|695|Max Area of Island|上下左右四个方向递归搜索|
+|733|Flood Fill||
+|531|Lonely Pixel I||
+|533|Lonely Pixel II||
+|529| Minesweeper | BFS |
+|547| Friend Circles | |
+|698| Partition to K Equal Sum Subsets | 将数组分成k个和相等的子集 | done |
+|337| House Robber III | 二叉树父子不能同时偷 | done |
+|200| Number of Islands | 矩形中岛屿数量 | done |
+|473| Matchsticks to Square | 与698类似 | done |
+|114| Flatten Binary Tree to Linked List | 二叉树转右侧链表 | done |
+|78| Subsets | 数组不含重复元素，求数组所有子集 | done |
+|90| Subsets II | 数组包含重复元素，求数组所有子集，注意与491对比 | done |
+|491| Increasing Subsequences | 数组包含重复元素，求所有的递增子序列 | done |
+|39| Combination Sum | 不含重复集合中不限次数取数字其和为定值 | done |
+|40| Combination Sum II | 含重复集合中取数字其和为定值 | done |
+|216| Combination Sum III | 1-9中选k个元素其和为定值 | done |
+
+
+| 序号 | 题目 | BFS | is Done |
+|:---|:---:|:---:|:---:|
+
+
+| 序号 | 题目 | 二叉树 | is Done |
+|:---|:---:|:---:|:---:|
+|617| Merge Two Binary Trees | 将另一个二叉树合并到原二叉树 DFS | done |
+|669| Trim a Binary Search Tree | 递归Trim二叉搜索树 [L R] DFS | done |
+|226| Invert Binary Tree | 交换左右子树 DFS | done |
+|653|Two Sum IV - Input is a BST||
+|606| Construct String from Binary Tree | 二叉树生成带括号的字符串 DFS | done |
+|538| Convert BST to Greater Tree | 二叉搜索树每个节点加上所有大于它的节点值 | done |
+|404| Sum of Left Leaves | 所有左叶子的值之和 | done |
+|563|Binary Tree Tilt||
+|543|Diameter of Binary Tree||
+|108| Convert Sorted Array to Binary Search Tree | 有序数组转平衡的二叉搜索树 DFS | done |
+|109| Convert Sorted List to Binary Search Tree | 有序链表转平衡的二叉搜索树 | done |
+|671| Second Minimum Node In a Binary Tree | 根节点比左右儿子值小，求第二小 | done |
+|257| Binary Tree Paths | 遍历所有根到叶子路径 DFS | done |
+|100| Same Tree | 两个二叉树是否相同 DFS | done |
+|572| Subtree of Another Tree | 子树判断 | done |
+|101| Symmetric Tree | 二叉树是否镜像对称 DFS BFS | done |
+|112| Path Sum | 是否存在根到叶子的路径其和为定值 DFS | done |
+|113| Path Sum II | 所有根到叶子和为定值路径 DFS | done |
+|437| Path Sum III | 二叉树任意长度竖直路径中其和为定值的数目 | done |
+|110| Balanced Binary Tree | 判断平衡二叉树 DFS | done |
+|501| Find Mode in Binary Search Tree | 寻找最高频节点值 DFS | done |
+|508| Most Frequent Subtree Sum | 最高频子树之和 | done |
+|654| Maximum Binary Tree | 数组的最大值作为根节点，最大值左边右边都是最大二叉树 与构造平衡二叉搜索树类似 | done |
+|104| Maximum Depth of Binary Tree | 求二叉树最大深度，树高 DFS | done |
+|111| Minimum Depth of Binary Tree | 二叉树根到叶子最小深度 与牛客35对比 DFS BFS | done |
+|655| Print Binary Tree | 打印二叉树，包括空节点，还要对齐 二叉树求最大宽度 求高度 | done |
+|623| Add One Row to Tree | 增加一层节点 | done |
+|230| Kth Smallest Element in a BST | 二叉树/二叉搜索树第k个节点 | done |
+|662| Maximum Width of Binary Tree | 所有层起终点之间的编号距离 | done |
+|450| Delete Node in a BST | 二叉搜索树删除一个节点 | done |
+|94| Binary Tree Inorder Traversal | 中序遍历 | done |
+|144| Binary Tree Preorder Traversal | 前序遍历 | done |
+|105| Construct Binary Tree from Preorder and Inorder Traversal | 前序中序构造二叉树 DFS | done | 
+|106| Construct Binary Tree from Inorder and Postorder Traversal | 中序后序构造二叉树 DFS | done |
+|102| Binary Tree Level Order Traversal | 层序遍历 BFS | done |
+|103| Binary Tree Zigzag Level Order Traversal | 二叉树层序Z字形遍历 层序遍历 BFS | done |
+|637| Average of Levels in Binary Tree | 求二叉树每一层的平均值 层序遍历 | done |
+|515| Find Largest Value in Each Tree Row | 寻找每一层的最大值 层序遍历 DFS BFS | done |
+|107| Binary Tree Level Order Traversal II | 自底向上层序遍历 BFS | done |
+|98| Validate Binary Search Tree | 二叉搜索树BST判断 DFS | done |
+|173| Binary Search Tree Iterator | BST二叉搜索树下一个最小值 | done |
+|145| Binary Tree Postorder Traversal | 二叉树后序遍历 递归与迭代 | done |
+|129| Sum Root to Leaf Numbers | 所有根到叶子路径组成的十进制数之和 DFS | done |
+|297| Serialize and Deserialize Binary Tree | 序列化二叉树 | done |
+|199| Binary Tree Right Side View | 二叉树每层最右侧节点 DFS BFS | done |
+|513| Find Bottom Left Tree Value | 找最后一行左下角的节点值 DFS BFS | done |
+|235| Lowest Common Ancestor of a Binary Search Tree | 二叉搜索树最低公共祖先 | done |
+|236| Lowest Common Ancestor of a Binary Tree | 二叉树最低公共祖先 | done |
+|124| Binary Tree Maximum Path Sum | 分支路径最大和 DFS | done |
+|687| Longest Univalue Path | 最长的单一值路径，包括分支路径 | done |
+
 
 
 ## NewCoder
-|序号  |    题目  |                 描述                        |
-|:----|:--------:|:-------------------------------------------:|
-|1|懂二进制|求两整数有多少个bit不同|
-|2|最大差值|求满足0≤a≤b<n的A[b]-A[a]的最大值|
-|3|数组单调和||
+| 序号 | 题目 | 描述 | is done |
+|:---|:---:|:---:|:---:|
 |4|好多鱼||
 |5|最大和||
 |6|字符串最后一个单词的长度||
@@ -324,23 +446,125 @@ C++ source codes
 |10|矩阵转置||
 |11|找位置||
 |12|数串||
-|13|树的高度||
-|14|求数列的和||
+|14| 求数列的和 ||
 |15|滑雪||
-|16|句子反转||
-|17|二叉树的序列化||
+|16| 句子反转 | 将句子中的单词位置反转 | done |
+
 |18|年终奖||
 |19|袋鼠过河||
-|20|拓扑结构相同子树||
-|21|幸运数|n进制|
+|21| 幸运数 | n进制 |
 |22|身份证分组||
 |23|filename||
-|24|拼凑面额|dp|
 |25|头条校招||
-|26|素数对|素数|
+
 |27|统计字符||
 |28|电话号码分身||
 |29|集合|set|
-|30|输出单层结点|层序遍历|
 |31|数字翻转||
 |32|买苹果||
+
+
+| 序号 | 题目 | 常规 | is done |
+|1| 懂二进制 | 求两整数有多少个bit不同 汉明距离 | done |
+|26| 素数对 | 素数 | done |
+|54| 第一个只出现一次的字符 | map统计次数 剑指offer | done |
+|60| 字符流中第一个只出现一次的字符 | map统计次数 vector记录顺序 剑指offer | done |
+|61| 数据流中的中位数 | 剑指offer | done |
+
+
+| 序号 | 题目 | 非常规 | is done |
+|:---|:---:|:---:|:---:|
+|53| 二维数组中的查找 | 右上角开始查找 剑指offer | done |
+|68| 加法求和，不用加减乘除 | 剑指offer |
+|70| 1+2+3+...+n | 剑指offer |
+|62| 整数中1出现的次数 | 1-n之间1出现的次数和 剑指offer |
+|36| 二进制中1的个数 | 某个数的二进制表示中1的个数 剑指offer | done |
+
+| 序号 | 题目 | Array | is done |
+|:---|:---:|:---:|:---:|
+|2| 最大差值 | 求满足0≤a≤b<n的A[b]-A[a]的最大值 | done |
+|3| 数组单调和 | | done |
+
+
+| 序号 | 题目 | 链表 | is done |
+|:---|:---:|:---:|:---:|
+|33| 删除链表中重复的结点 | 剑指offer | done | 
+|39| 从尾到头打印链表 | 剑指offer |
+|40| 反转链表 |递归 剑指offer | done |
+|47| 合并两个排序的链表 | 剑指offer |
+|50| 链表中倒数第k个结点 | 剑指offer |
+|63| 两个链表的第一个公共结点 | 剑指offer | done |
+|73| 链表中环的入口 | 剑指offer | done | 
+|79| 复杂链表的复制 | 剑指offer |
+
+
+| 序号 | 题目| 栈 队列| is done |
+|:---|:---:|:---:|:---:|
+|37| 两个栈来实现一个队列 | 剑指offer |
+|56| 包含min函数的栈 | 剑指offer | done |
+
+
+| 序号 | 题目| 递归 | is done |
+|:---|:---:|:---:|:---:|
+|34| 替换空格 | 剑指offer | done |
+|55| power实现，求数值的整数次方，递归 | 剑指offer | done |
+
+
+| 序号 | 题目| DFS | is done |
+|:---|:---:|:---:|:---:|
+
+
+| 序号 | 题目 | DP | is done |
+|:---|:---:|:---:|:---:|
+|24| 拼凑面额 | DP | done |
+|52| 第N个丑数 | 剑指offer DP | done |
+|64| 跳台阶 | 剑指offer DP | done |
+|65| 矩形覆盖 | 剑指offer | done |
+|66| 斐波那契数列 | 剑指offer DP | done |
+|69| 变态跳台阶 | 剑指offer | done |
+
+
+| 序号 | 题目 | 数组 Array | is done |
+|:---|:---:|:---:|:---:|
+|72| 数组中重复的数字 | 剑指offer | done |
+|75| 旋转数组的最小数字 | 剑指offer |
+|76| 连续子数组的最大和 | 连续子序列的最大和 剑指offer | done |
+|77| 数组中只出现一次的数字 | 剑指offer |
+|78| 数字在排序数组中出现的次数 | 剑指offer |
+|80| 数组中出现次数超过一半的数字 | 剑指offer |
+|81| 把数组排成最小的数 | 剑指offer |
+|82| 栈的压入、弹出序列 | 剑指offer |
+|83| 和为S的两个数字 | 二分查找 剑指offer | done |
+|85| 最小的K个数 | Top K问题 剑指offer | done | 
+
+
+| 序号 | 题目| String | is done |
+|:---|:---:|:---:|:---:|
+|74| 翻转字符串单词顺序 | 反转字符串单词顺序 剑指offer | done |
+|84| 左旋转字符串 | 或右旋 剑指offer | done |
+|86| 字符串的排列 | 全排列 剑指offer DFS | done | 
+|59| 表示数值的字符串 | 剑指offer | done |
+|87| 把字符串转换成整数 | 剑指offer | done |
+
+
+| 序号 | 题目 | 二叉树 | is done |
+|:---|:---:|:---:|:---:|
+|30| 输出单层结点 | 层序遍历 | done |
+|48| 从上往下打印二叉树 | 层序遍历 剑指offer | done |
+|43| 层序遍历 | 剑指offer | done |
+|71| 按之字形顺序打印二叉树 | 层序遍历 剑指offer | done |
+|13| 树的高度 | 根据父子关系求树高 DFS | done |
+|35| 二叉树的深度 | 递归 剑指offer | done |
+|41| 判断一颗二叉树是不是对称的 | 左右对称 剑指offer | done |
+|42| 二叉树的镜像 | 将其变换为原二叉树的镜像 剑指offer | done |
+|20| 拓扑结构相同子树 | 子树判断，注意与44子结构的区别 | done |
+|44| 二叉树子结构判断 | 子结构判断 剑指offer | done |
+|45| 判断平衡二叉树 | 剑指offer | done |
+|49| 二叉树中和为某一值的路径 | 根到叶子 剑指offer | done |
+|38| 前序中序重建二叉树 | 剑指offer | done |
+|46| 判断数组是不是某二叉搜索树的后序遍历 | 剑指offer | done |
+|51| 中序遍历下个节点 | 剑指offer | done |
+|17| 二叉树的序列化 | | done |
+|57| 序列化二叉树 | 剑指offer | done |
+|58| 二叉搜索树第k个节点 | 也是二叉树第k个节点 剑指offer | done |
+|67| 二叉搜索树与双向链表 | 将该二叉搜索树转换成一个排序的双向链表 剑指offer | done |

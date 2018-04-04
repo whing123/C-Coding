@@ -1,55 +1,34 @@
 /* *题目：
- *  654
- *  Maximum Binary Tree
- * *思路：
- *  
+ *  216
+ *  Combination Sum III
  */
 
- /**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
- * };
- */
 class Solution {
 public:
-    TreeNode* constructMaximumBinaryTree(vector<int>& nums) {
-        if(nums.size() == 0){
-            return NULL;
+    vector<vector<int>> combinationSum3(int k, int n) {
+        vector<vector<int>> res;
+        vector<int> seq;
+
+        vector<int> nums(9);
+        for(int i = 0; i < 9; ++i){
+            nums[i] = i+1;
         }
-        
-        TreeNode *root;
-        makeTree(root, nums, 0, nums.size()-1);
-        
-        return root;
+        dfs(nums, n, k, res, seq, 0, 0);
+        return res;
     }
     
-    void makeTree(TreeNode* &root, vector<int>& nums, int left, int right){
-        if(left > right){
+    void dfs(vector<int>& nums, int target, int k, vector<vector<int>>& res, vector<int>& cur, int cursum, int start){
+        if(cursum == target && cur.size() == k){
+            res.push_back(cur);
+            return;
+        }else if(cursum > target || cur.size() > k){
             return;
         }
         
-        int index = findMaxIndex(nums, left, right);
-        root = new TreeNode(nums[index]);
-        makeTree(root->left, nums, left, index-1); // left
-        makeTree(root->right, nums, index+1, right); // right
-    }
-    
-    // find the index of Max
-    int findMaxIndex(vector<int>& nums, int left, int right){
-        int index = 0;
-        int tmp = INT_MIN;
-        for(int i = left; i <= right; ++i){
-            if(nums[i] > tmp){
-                tmp = nums[i];
-                index = i;
-            }
+        for(int i = start; i < nums.size(); ++i){
+            cur.push_back(nums[i]);
+            dfs(nums, target, k, res, cur, cursum+nums[i], i+1);
+            cur.pop_back();
         }
-        
-        return index;
     }
-    
 };

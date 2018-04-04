@@ -1,33 +1,37 @@
 /* *题目：
- *  507
- *  Perfect Number
- * *思路：
- *  
- * *技法：
- *  
+ *  111
+ *  Minimum Depth of Binary Tree
  */
 
+ /**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+ * };
+ */
 class Solution {
 public:
-    bool checkPerfectNumber(int num) {
-        if(num == 0 || num == 1){
-            return false;
+    int minDepth(TreeNode* root) {
+        if(root == NULL){
+            return 0;
         }
-        
-        int sum = 1;
-        int snum = sqrt(num);
-        for(int i = 2;i <= snum;i++){
-            if(num%i == 0){
-                sum += i;
-                sum += num/i;
-            }
-        }
-        if(snum * snum == num){
-            sum -= snum;
-        }
-        
-        if(sum == num)
-            return true;
-        return false;
+        return minD(root);
     }
+    int minD(TreeNode* root);
+    
 };
+
+int Solution::minD(TreeNode* root){
+    if(root == NULL){
+        return INT_MAX;
+    }
+    if(root->left == NULL && root->right == NULL){ // 得到叶子处判断
+        return 1;
+    }
+    int heightL = minD(root->left);
+    int heightR = minD(root->right);
+    return 1 + (heightL < heightR ? heightL : heightR);
+}

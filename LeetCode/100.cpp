@@ -1,24 +1,49 @@
 /* *题目：
- *  172
- *  Factorial Trailing Zeroes
- * *思路：
- *  
- * *技法：
- *  
+ *  100
+ *  Same Tree
  */
 
+ /**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+ * };
+ */
 class Solution {
 public:
-    int trailingZeroes(int n) {
-        if (n < 5)
-		return 0;
-		
-	    int sum_5 = 0;
-
-        while (n / 5 != 0) {
-        	n /= 5;
-        	sum_5 += n;
+    bool isSameTree(TreeNode* p, TreeNode* q) {
+        if(p == NULL && q == NULL){
+            return true;
         }
-    	return sum_5;
+        
+        if(p != NULL && q != NULL){
+            if(p->val == q->val){
+                if(isSameTree(p->left,q->left)&&isSameTree(p->right,q->right)){
+                    return true;
+                }
+                
+            }
+        }
+        
+        return false;
+    }
+};
+
+// better
+class Solution {
+public:
+    bool isSameTree(TreeNode* p, TreeNode* q) {
+        if(p == NULL && q == NULL){
+            return true;
+        }
+        
+        if(p == NULL || q == NULL){
+            return false;
+        }
+        
+        return p->val == q->val && isSameTree(p->left, q->left) && isSameTree(p->right, q->right);
     }
 };

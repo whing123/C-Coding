@@ -1,25 +1,23 @@
 /* *题目：
- *  740
- *  Delete and Earn
+ *  217
+ *  Contains Duplicate
  * *思路：
+ *  
+ * *技法：
  *  
  */
 
 class Solution {
 public:
-    int deleteAndEarn(vector<int>& nums) {
-        int n = 10001;
-        vector<int> values(n, 0);
-        for (int num : nums)
-            values[num] += num;
-
-        int take = 0, skip = 0;
-        for (int i = 0; i < n; i++) {
-            int takei = skip + values[i];
-            int skipi = max(skip, take);
-            take = takei;
-            skip = skipi;
+    bool containsDuplicate(vector<int>& nums) {
+        int size = nums.size();
+        map<int,int> mapNum;
+        for(int i = 0;i < size;i++){
+            if(mapNum.find(nums[i])!=mapNum.end()){
+                return true;
+            }
+            mapNum.insert(pair<int,int>(nums[i],i));
         }
-        return max(take, skip);
+        return false;
     }
 };

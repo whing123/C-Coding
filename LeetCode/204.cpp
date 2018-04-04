@@ -1,55 +1,28 @@
 /* *题目：
- *  443
- *  String Compression
- * *思路：
- *  
- * *技法：
- *  
+ *  204
+ *  Count Primes
  */
 
 class Solution {
 public:
-    int compress(vector<char>& chars) {
-        int size = chars.size();
+    int countPrimes(int n) {
+        bool * isPrime = new bool[n];
+        for(int i = 2;i < n;i++)
+            isPrime[i] = true;
         
-        int len = 0;
-        for(int i = 0 ; i < size;){
-            int start = i;
-            while(i < size && chars[i] == chars[start]){
-                ++i;
-            }
-            
-            chars[len] = chars[start]; // 保存当前字符
-            len++;
-            
-            int tmp = i - start;
-            if(tmp > 1){ // 长度超过1时
-                len += numOfDigits(chars, tmp, len); // 长度字符化，并存储
-            }
+        for(int i = 2; i * i < n; i++){
+            if(!isPrime[i])
+                continue;
+            for(int j = i * i; j < n; j += i)
+                isPrime[j] = false;
         }
         
-        return len;
-    }
-    
-    int numOfDigits(vector<char>& chars, int number, int start){
-        int res = 0; // number位数
-        
-        // number提取每一位并字符化
-        vector<char> tmp;
-        while(number > 9){
-            ++res;
-            tmp.push_back('0' + number % 10);
-            number /= 10;
+        int count = 0;
+        for(int i = 2; i < n; i++){
+            if(isPrime[i])
+                count++;
         }
-        ++res;
-        tmp.push_back('0' + number);
-        
-        // 存在chars里，要反转tmp
-        int j = 0;
-        for(int i = tmp.size()-1; i >= 0; --i, ++j){
-            chars[start + j] = tmp[i];
-        }
-        
-        return res;
+
+        return count;
     }
 };

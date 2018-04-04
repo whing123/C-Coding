@@ -1,24 +1,42 @@
 /* *题目：
- *  419
- *  Battleships in a Board
+ *  142
+ *  Linked List Cycle II
  * *思路：
  *  
  * *技法：
  *  
  */
 
+ /**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode(int x) : val(x), next(NULL) {}
+ * };
+ */
 class Solution {
 public:
-    int countBattleships(vector<vector<char>>& board) {
-        int cnt = 0;
-        for(int i = 0;i < board.size();i++){
-            for(int j = 0;j < board[0].size();j++){
-                //船的起始点很特殊，左边和上边是'.'
-                if(board[i][j] == 'X' && (i == 0 || board[i-1][j] == '.') && (j == 0 || board[i][j-1] == '.')){
-                    cnt++;
-                }
-            }
+    ListNode *detectCycle(ListNode *head) {
+        ListNode *fast, *slow;
+        fast = slow = head;
+        
+        while(fast != NULL){
+            slow = slow->next;
+            fast = fast->next;
+            if(fast == NULL)
+                break;
+            fast = fast->next;
+            if(slow == fast)
+                break;
         }
-        return cnt;
+        if(fast == NULL)
+            return NULL;
+        slow = head;
+        while(slow != fast){
+            slow = slow->next;
+            fast = fast->next;
+        }
+        return slow;
     }
 };

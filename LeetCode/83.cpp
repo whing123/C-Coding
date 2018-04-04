@@ -1,32 +1,39 @@
 /* *题目：
- *  263
- *  Ugly Number
+ *  83
+ *  Remove Duplicates from Sorted List
  * *思路：
  *  
  * *技法：
  *  
  */
 
+ /**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode(int x) : val(x), next(NULL) {}
+ * };
+ */
 class Solution {
 public:
-    bool isUgly(int num) {
-        if(num < 1){
-            return false;
+    ListNode* deleteDuplicates(ListNode* head) {
+        if(head == NULL){
+            return head;
         }
-        if(num == 1){
-            return true;
-        }
-        while(num > 1){
-            if(num % 2 == 0){
-                num /= 2;
-            }else if(num % 3 == 0){
-                num /= 3;
-            }else if(num % 5 == 0){
-                num /= 5;
-            }else{
-                return false;
+        ListNode* curr;
+        ListNode* tmp;
+        
+        curr = head;
+        while(curr->next){
+            if(curr->next->val == curr->val){
+                tmp = curr->next;
+                curr->next = curr->next->next;
+                delete tmp;
+                continue;
             }
+            curr = curr->next;
         }
-        return true;
+        return head;
     }
 };

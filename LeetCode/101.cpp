@@ -1,34 +1,82 @@
 /* *题目：
  *  101
- *  Arranging Coins
+ *  Symmetric Tree
  * *思路：
  *  
  * *技法：
  *  
  */
 
+ /**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+ * };
+ */
 class Solution {
 public:
-    int arrangeCoins(int n) {
-        int i = pow(2,0.5)*pow(n,0.5)-1; // (2Y)^0.5
-        while(1){
-            if((pow(i,2)+i)/2 <= n && (pow(i,2)+3*i)/2 >= n){ // (n^2+n)/2 <= Y <= (n^2+3n)/2
-                break;
-            }
-            i++;
+    bool isSymmetric(TreeNode* root) {
+        if(root == NULL){
+            return true;
         }
-        return i;
+        vector<int> leftTree, rightTree;
+        getLeft(root->left,leftTree);
+        getRight(root->right,rightTree);
+        if(leftTree.size() != rightTree.size()){
+            return false;
+        }
+        for(int i = 0;i < leftTree.size();i++){
+            if(leftTree[i] != rightTree[i]){
+                return false;
+            }
+        }
+        return true;
+    }
+    
+    void getLeft(TreeNode* root, vector<int>& tmp){
+        if(root == NULL){
+            tmp.push_back(0);
+            return;
+        }
+        tmp.push_back(root->val);
+        getLeft(root->left,tmp);
+        //tmp.push_back(root->val);
+        getLeft(root->right,tmp);
+    }
+    
+    void getRight(TreeNode* root, vector<int>& tmp){
+        if(root == NULL){
+            tmp.push_back(0);
+            return;
+        }
+        tmp.push_back(root->val);
+        getRight(root->right,tmp);
+        //tmp.push_back(root->val);
+        getRight(root->left,tmp);
     }
 };
 
+// better
 class Solution {
 public:
-    int arrangeCoins(int n) {
-        // (i^2 + i)/2 <= n
-        // i^2 + i <= 2n
-        // i^2 + i + 1/4 <= 2n + 1/4
-        // i + 0.5 <= sqrt(2n + 1/4)
-        // i <= sqrt(2n + 1/4) - 0.5
-        return (int)(pow(2 * (long)n + 0.25, 0.5) - 0.5);
+    bool isSymmetric(TreeNode* root) {
+        if(root == NULL){
+            return true;
+        }
+        
+        return isSys(root->left, root->right);
+    }
+    
+    bool isSys(TreeNode* ltree, TreeNode* rtree){
+        if(ltree == NULL && rtree == NULL){
+            return true;
+        }else if(ltree == NULL || rtree == NULL){
+            return false;
+        }
+        
+        return ltree->val == rtree->val && isSys(ltree->left, rtree->right) && isSys(ltree->right, rtree->left);
     }
 };

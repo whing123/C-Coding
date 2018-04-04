@@ -1,37 +1,29 @@
 /* *题目：
- *  482
- *  License Key Formatting
+ *  219
+ *  Contains Duplicate II
  * *思路：
+ *  
+ * *技法：
  *  
  */
 
-
 class Solution {
 public:
-    string licenseKeyFormatting(string S, int K) {
-        int size = S.length();
-        
-        string res;
-        for(int i = size - 1; i >= 0;){
-            int j = K;
-            while(i >=0 && j > 0){ // get K chars
-                if(S[i] != '-'){ // avoid '-'
-                    if('a' <= S[i] && S[i] <= 'z'){ // change to A-Z
-                        S[i] -= 32;
-                    }
-                    res.insert(0,1,S[i]);
-                    --j;
+    bool containsNearbyDuplicate(vector<int>& nums, int k) {
+        int size = nums.size();
+        unordered_map<int,int> Map;
+        unordered_map<int,int>::iterator it;
+        for(int i = 0;i < size;i++){
+            if((it = Map.find(nums[i])) == Map.end()){
+                Map[nums[i]] = i; 
+            }else{
+                if(i - it->second <= k){
+                    return true;
+                }else{
+                    it->second = i;
                 }
-                --i;
-            }
-            while(i >=0 && S[i] == '-') // avoid leading '-'
-                --i;
-            
-            if(i >= 0){ // if there left any
-                res.insert(0,1,'-');
             }
         }
-        
-        return res;
+        return false;
     }
 };

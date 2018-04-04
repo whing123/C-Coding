@@ -1,73 +1,47 @@
 /* *题目：
- *  680
- *  Valid Palindrome II
- * *思路：
- *  
- * *技法：
- *  
+ *  200
+ *  Number of Islands
  */
 
 class Solution {
 public:
-	bool validPalindrome(string s) {
-		int size = s.length();
+    int numIslands(vector<vector<char>>& grid) {
+        int n = grid.size();
+        if(n == 0){
+            return 0;
+        }
+        int m = grid[0].size();
         
-        // suppose it is no need to delete
-        // left is in right
-		if (isSubStr(s.substr(0, size / 2), reverse(s.substr((size + 1) / 2, size / 2)))) {
-			return true;
-		}
+        int res = 0;
+        for(int i = 0; i < n; ++i){
+            for(int j = 0; j < m; ++j){
+                if(grid[i][j] == '1'){
+                    grid[i][j] = '0';
+                    search(grid, n, m, i, j);
+                    res++;
+                }
+            }
+        }
         
-        // need to delete one
-        
-        // even num, left is in right
-		if ((size - 1) % 2 == 0 && isSubStr(s.substr(0, (size - 1) / 2), reverse(s.substr((size - 1) / 2, size - (size - 1) / 2)))) {
-			return true;
-		}
-        // even num, right is in left
-		if ((size - 1) % 2 == 0 && isSubStr(reverse(s.substr((size - 1) / 2 + 1, (size - 1) / 2)), s.substr(0, size - (size - 1) / 2))) {
-			return true;
-		}
-        
-        // odd num, left is in right
-		if ((size - 1) % 2 == 1 && isSubStr(s.substr(0, (size - 1) / 2), reverse(s.substr((size - 1) / 2 + 1, size - (size - 1) / 2 - 1)))) {
-			return true;
-		}
-        
-        // odd num, right is in left
-		if ((size - 1) % 2 == 1 && isSubStr(reverse(s.substr((size - 1) / 2 + 2, (size - 1) / 2)), s.substr(0, size - (size - 1) / 2 - 1))) {
-			return true;
-		}
-        
-		return false;
-	}
-
-	// check if b contains a, continuity not needed
-	bool isSubStr(string a, string b) {
-		int start = 0;
-		int j;
-		for (int i = 0; i < a.length(); ++i) {
-			for (j = start; j < b.length(); ++j) {
-				if (a[i] == b[j]) {
-					start = j + 1;
-					break;
-				}
-			}
-
-			if (j == b.length()) {
-				return false;
-			}
-		}
-		return true;
-	}
-
-	// reverse a string
-	string reverse(string a) {
-		for (int i = 0; i < a.length() / 2; ++i) {
-			char tmp = a[i];
-			a[i] = a[a.length() - 1 - i];
-			a[a.length() - 1 - i] = tmp;
-		}
-		return a;
-	}
+        return res;
+    }
+    
+    void search(vector<vector<char>>& grid, int n, int m, int i, int j){
+        if(i-1 >= 0 && grid[i-1][j] == '1'){ // 上
+            grid[i-1][j] = grid[i][j];
+            search(grid, n, m, i-1, j);
+        }
+        if(i+1 < n && grid[i+1][j] == '1'){ // 下
+            grid[i+1][j] = grid[i][j];
+            search(grid, n, m, i+1, j);
+        }
+        if(j-1 >= 0 && grid[i][j-1] == '1'){ // 左
+            grid[i][j-1] = grid[i][j];
+            search(grid, n, m, i, j-1);
+        }
+        if(j+1 < m && grid[i][j+1] == '1'){ // 右
+            grid[i][j+1] = grid[i][j];
+            search(grid, n, m, i, j+1);
+        }
+    }
 };

@@ -1,28 +1,36 @@
 /* *题目：
- *  104
- *  Maximum Depth of Binary Tree
+ *  20
+ *  Valid Parentheses
  * *思路：
  *  
  * *技法：
  *  
  */
 
- /**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
- * };
- */
 class Solution {
 public:
-    int maxDepth(TreeNode* root) {
-        if(root == NULL){
-            return 0;
+    bool isValid(string s) {
+        unordered_map<char,char> Map;
+        Map['('] = ')';
+        Map['{'] = '}';
+        Map['['] = ']';
+        
+        stack<char> match;
+        int i = 0;
+        while(i < s.size()){
+            if(Map.find(s[i]) == Map.end()){  //遇到右侧括号时
+                if(match.empty() || Map[match.top()] != s[i]){ //和栈顶不匹配时
+                    return false;
+                }
+                match.pop();  //匹配时
+            }else{    //遇到左侧括号时
+                match.push(s[i]);
+            }
+            i++;
         }
-        int leftD = maxDepth(root->left), rightD = maxDepth(root->right);
-        return 1 +  (leftD > rightD ? leftD : rightD);
+        if(match.empty()){
+            return true;
+        }
+        return false;
     }
 };

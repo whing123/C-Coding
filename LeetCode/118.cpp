@@ -1,41 +1,31 @@
 /* *题目：
- *  203
- *  Remove Linked List Elements
+ *  118
+ *  Pascal's Triangle
  * *思路：
  *  
  * *技法：
  *  
  */
 
- /**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     ListNode *next;
- *     ListNode(int x) : val(x), next(NULL) {}
- * };
- */
 class Solution {
 public:
-    ListNode* removeElements(ListNode* head, int val) {
-        ListNode *prev, *curr;
-        ListNode *first = new ListNode(0);
-        first->next = head;
-        prev = first;
-        curr = head;
-        
-        while(curr != NULL){
-            if(curr->val == val){
-                prev->next = curr->next;
-                delete curr;
-                curr = prev->next;
-                continue;
+    vector<vector<int>> generate(int numRows) {
+        vector<vector<int>> nums;
+        int j;
+        nums.resize(numRows);
+        for(int i = 0;i < numRows;i++)
+        {
+            nums[i].resize(i+1);
+            nums[i][0] = 1;
+            for(j =  1;j <= i/2;j++)
+            {
+                nums[i][j] = nums[i-1][j-1] + nums[i-1][j];
             }
-            prev = curr;
-            curr = curr->next;
+            
+            for(j =  0;j <= i/2;j++){
+                nums[i][i-j] = nums[i][j];
+            }
         }
-        head = first->next;
-        delete first;
-        return head;
+        return nums;
     }
 };

@@ -1,22 +1,31 @@
 /* *题目：
- *  35
- *  Search Insert Position
- * *思路：
- *  
- * *技法：
- *  
+ *  78
+ *  Subsets
  */
 
 class Solution {
 public:
-    int searchInsert(vector<int>& nums, int target) {
-        int size = nums.size();
-        
-        for(int i = 0;i < size;i++){
-            if(target <= nums[i]){  // 按顺序由小到大搜索
-                return i;
-            }
+    vector<vector<int>> subsets(vector<int>& nums) {
+        vector<int> seq;
+        vector<vector<int>> res;
+        res.push_back(seq);
+        if(nums.size() == 0){
+            return res;
         }
-        return size;
+        
+        dfs(nums, res, seq, 0);
+        return res;
+    }
+    
+    void dfs(vector<int>& nums, vector<vector<int>>& res, vector<int>& seq, int start){
+        if(seq.size() > 0){
+            res.push_back(seq);
+        }
+        
+        for(int i = start; i < nums.size(); ++i){
+            seq.push_back(nums[i]);
+            dfs(nums, res, seq, i+1);
+            seq.pop_back();
+        }
     }
 };

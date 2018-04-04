@@ -1,32 +1,24 @@
 /* *题目：
- *  547
- *  Friend Circles
+ *  231
+ *  Power of Two
  * *思路：
+ *  
+ * *技法：
  *  
  */
 
 class Solution {
 public:
-    int findCircleNum(vector<vector<int>>& M) {
-        vector<int> visited(M.size(), 0); // visited[i] means if ith person is visited in this algorithm
-        
-        int count = 0;
-        for(int i = 0; i < M.size(); ++i){
-            if(visited[i] == 0){ 
-                dfs(M, visited, i);
-                count++;
-            }
+    bool isPowerOfTwo(int n) {
+        while(n >= 2){
+            if(n % 2 == 0)
+                n /= 2;
+            else
+                return false;
         }
-        
-        return count;
-    }
-    
-    void dfs(vector<vector<int>>& M, vector<int>& v, int i){
-        for(int j = 0; j < M.size(); ++j){
-            if(M[i][j] == 1 && v[j] == 0){ // We found an unvisited person in the current friend cycle 
-                v[j] = 1;
-                dfs(M, v, j); // Start DFS on this new found person
-            }
+        if(n == 1){
+            return true;
         }
+        return false;
     }
 };

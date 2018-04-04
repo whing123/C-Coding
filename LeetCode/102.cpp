@@ -1,32 +1,53 @@
 /* *题目：
- *  374
- *  Guess Number Higher or Lower
+ *  102
+ *  Binary Tree Level Order Traversal
  * *思路：
  *  
  * *技法：
  *  
  */
 
-// Forward declaration of guess API.
-// @param num, your guess
-// @return -1 if my number is lower, 1 if my number is higher, otherwise return 0
-int guess(int num);
-
+ /**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+ * };
+ */
 class Solution {
 public:
-    int guessNumber(int n) {
-        int left = 1;
-        int right = n;
-        int num = (left + right) / 2;
-        int ret;
-        while((ret = guess(num)) !=  0){
-            if(ret == -1){
-                right = num - 1;
-            }else{
-                left = num + 1;
-            }
-            num = ((long)left + (long)right) / 2;
+    vector<vector<int>> levelOrder(TreeNode* root) {
+        vector<vector<int>> result;
+        if(!root){
+            return result;
         }
-        return num;
+        queue<TreeNode*> curLevel, nextLevel;
+        TreeNode* curr;
+        curLevel.push(root);
+        while(!curLevel.empty()){
+            vector<int> tmp;
+
+            while(!curLevel.empty()){
+                curr = curLevel.front();
+                curLevel.pop();
+                tmp.push_back(curr->val);
+
+                if(curr->left){
+                    nextLevel.push(curr->left);
+                }
+                if(curr->right){
+                    nextLevel.push(curr->right);
+                }
+            }
+            
+            result.push_back(tmp);
+            while(!nextLevel.empty()){
+                curLevel.push(nextLevel.front());
+                nextLevel.pop();
+            }
+        }
+        return result;
     }
 };

@@ -1,75 +1,42 @@
 /* *题目：
- *  445
- *  Add Two Numbers II
+ *  167
+ *  Two Sum II - Input array is sorted
  * *思路：
  *  
  * *技法：
  *  
  */
 
- /**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     ListNode *next;
- *     ListNode(int x) : val(x), next(NULL) {}
- * };
- */
 class Solution {
 public:
-    ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
-        stack<int> num1, num2;
-        ListNode *tmp1 = l1;
-        ListNode *tmp2 = l2;
+    vector<int> twoSum(vector<int>& numbers, int target) {
+        int size = numbers.size();
+        int j;
         
-        //置入栈中
-        while(tmp1 != NULL){
-            num1.push(tmp1->val);
-            tmp1 = tmp1->next;
-        }
-        while(tmp2 != NULL){
-            num2.push(tmp2->val);
-            tmp2 = tmp2->next;
-        }
+        int tmp;
+        vector<int> res;
         
-        ListNode *res = new ListNode(0);  //头结点
-        ListNode *tmp;
-        int sum = 0;
-        int carry = 0;
-        while(!num1.empty() || !num2.empty()){
-            if(!num1.empty() && !num2.empty()){  //两个栈都不空
-                sum = num1.top() + num2.top() + carry;
-                carry = sum / 10;
-                sum %= 10;
-                num1.pop();
-                num2.pop();
-            }else if(!num1.empty()){ //1不空2空
-                sum = num1.top() + carry;
-                carry = sum / 10;
-                sum %= 10;
-                num1.pop();
-            }else{  //1空2不空
-                sum = num2.top() + carry;
-                carry = sum / 10;
-                sum %= 10;
-                num2.pop();
+        int newsize = size-1;
+        for(int i = 0;i < newsize;i++){
+            tmp = target - numbers[i];
+            if(tmp < numbers[i+1]){   //第二个数如果比当前数还小，后面没有更小的了,后面再继续会加剧这个趋势
+                return res;
             }
-            
-            //插入头结点之后
-            tmp = new ListNode(sum);
-            tmp->next = res->next;
-            res->next = tmp;
+            for(j = i+1;j < size;j++){
+                if(numbers[j] == tmp){  //找到的话
+                    res.push_back(i+1);
+                    res.push_back(j+1);
+                    i = size;  //退出外层循环设置
+                    break;
+                }
+            }
+            if(i == size){  
+                break;
+            }
+            while(i+1 < size && numbers[i] == numbers[i+1]){ //第一次发现这个数无效后，跳过后面与它相同的数
+                i++;
+            }
         }
-        
-        //补上进位
-        if(carry){
-            tmp = new ListNode(carry);
-            tmp->next = res->next;
-            res->next = tmp;
-        }
-        
-        tmp = res->next;
-        delete res;
-        return tmp;
+        return res;
     }
 };

@@ -1,6 +1,6 @@
 /* *题目：
- *  121
- *  Best Time to Buy and Sell Stock
+ *  66
+ *  Plus One
  * *思路：
  *  
  * *技法：
@@ -9,18 +9,21 @@
 
 class Solution {
 public:
-    int maxProfit(vector<int>& prices) {
-        if(prices.size() < 2){
-            return 0;
+    vector<int> plusOne(vector<int>& digits) {
+        int d = 1;
+        for(int i = digits.size() - 1;i >= 0;)
+        {
+            digits[i] += d;
+            if(digits[i] < 10)
+            {    
+                return digits;
+            }
+            
+            digits[i] %= 10;
+            i--;
         }
-        int maxProfit = 0;
-        int curMin = prices[0];
-        int tmp;
-        for(int i = 1;i < prices.size();i++){
-            curMin = curMin > prices[i] ? prices[i] : curMin;
-            tmp = prices[i] - curMin;
-            maxProfit =  maxProfit > tmp ? maxProfit : tmp;
-        }
-        return maxProfit;
+        
+        digits.insert(digits.begin(),1);
+        return digits;
     }
-}
+};

@@ -1,32 +1,111 @@
 /* *题目：
- *  657
- *  Judge Route Circle
+ *  2
+ *  Add Two Numbers
  * *思路：
  *  
  * *技法：
  *  
  */
 
+ /**
+  Definition for singly-linked list.
 
-
+  struct ListNode {
+      int val;
+      ListNode *next;
+      ListNode(int x) : val(x), next(NULL) {}
+  };
+ **/
 class Solution {
 public:
-    bool judgeCircle(string moves) {
-        vector<int> cnt(4,0);
+    ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
+        ListNode *p1 = l1, *p2 = l2, *result = NULL, *rear = NULL;
+        int sum, d;
         
-        for(auto ch : moves){
-            switch(ch){
-                case 'U':cnt[0]++;break;
-                case 'D':cnt[1]++;break;
-                case 'L':cnt[2]++;break;
-                case 'R':cnt[3]++;break;
+        d = 0;
+        while(p1 != NULL && p2 != NULL)
+        {
+            sum = p1->val + p2->val + d;
+            if(sum / 10 != 0)
+            {
+                d = 1;
+            }
+            else
+            {
+                d = 0;
+            }
+            
+            if(rear == NULL)
+            {
+                rear = result = new ListNode(sum % 10);
+            }
+            else
+            {
+                rear->next = new ListNode(sum % 10);
+                rear = rear->next;
+            }
+            
+            p1 = p1->next;
+            p2 = p2->next;
+        }
+        
+        if(p1 == NULL && p2 == NULL)
+        {
+            if(d == 1)
+            {
+                rear->next = new ListNode(d);
+                rear = rear->next;
+            }
+        }
+        else if(p1 == NULL)
+        {
+            while(p2 != NULL)
+            {
+                sum = p2->val + d;
+                if(sum / 10 != 0)
+                {
+                    d = 1;
+                }
+                else
+                {
+                    d = 0;
+                }
+                rear->next = new ListNode(sum % 10);
+                rear = rear->next;
+                
+                p2 = p2->next;
+            }
+            if(d != 0)
+            {
+                rear->next = new ListNode(d);
+                rear = rear->next;
+            }
+        }
+        else if(p2 == NULL)
+        {
+            while(p1 != NULL)
+            {
+                sum = p1->val + d;
+                if(sum / 10 != 0)
+                {
+                    d = 1;
+                }
+                else
+                {
+                    d = 0;
+                }
+                rear->next = new ListNode(sum % 10);
+                rear = rear->next;
+                
+                p1 = p1->next;
+            }
+            if(d != 0)
+            {
+                rear->next = new ListNode(d);
+                rear = rear->next;
             }
         }
         
-        if(cnt[0]!=cnt[1] || cnt[2]!=cnt[3]){
-            return false;
-        }
-        
-        return true;
+        return result;
     }
 };

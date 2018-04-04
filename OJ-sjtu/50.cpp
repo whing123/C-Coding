@@ -1,13 +1,11 @@
 /* *题目：
  *  1994
  *  二哥的地图
- * *思路：
- *  
- * *技法：
- *  
+    
+    0代表陆地，-1代表海洋 
  */
 
- #include<iostream>
+#include<iostream>
 using namespace std;
  
 int k=0;//计数

@@ -1,37 +1,52 @@
 /* *题目：
- *  205
- *  Isomorphic Strings
- * *思路：
- *  
- * *技法：
- *  
+ *  109
+ *  Convert Sorted List to Binary Search Tree
  */
 
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode(int x) : val(x), next(NULL) {}
+ * };
+ */
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+ * };
+ */
 class Solution {
 public:
-    bool isIsomorphic(string s, string t) {
-        unordered_map<char,char> Map;
-        
-        // map from s to t
-        for(int i = 0;i < s.size();i++){
-            if(Map.find(s[i]) == Map.end()){
-                Map[s[i]] = t[i];
-            }else if(Map[s[i]] != t[i]){
-                return false;
-            }
+    TreeNode* sortedListToBST(ListNode* head) {
+        vector<int> List;
+        ListNode* tmp = head;
+        while(tmp){
+            List.push_back(tmp->val);
+            tmp = tmp->next;
         }
         
-        Map.clear();
-        
-        // map from t to s
-        for(int i = 0;i < s.size();i++){
-            if(Map.find(t[i]) == Map.end()){
-                Map[t[i]] = s[i];
-            }else if(Map[t[i]] != s[i]){
-                return false;
-            }
+        return makeTree(List); 
+    }
+    
+    TreeNode* makeTree(vector<int>& vec){
+        if(vec.size() == 0){
+            return NULL;
         }
         
-        return true;
+        int mid = vec.size() / 2;
+        TreeNode* root = new TreeNode(vec[mid]);
+        
+        vector<int> ltree(vec.begin(), vec.begin()+mid);
+        root->left = makeTree(ltree);
+        
+        vector<int> rtree(vec.begin()+mid+1, vec.end());
+        root->right = makeTree(rtree);
+        
+        return root;
     }
 };

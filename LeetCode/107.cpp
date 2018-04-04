@@ -1,40 +1,88 @@
 /* *题目：
- *  38
- *  Count and Say
- * *思路：
- *  
- * *技法：
- *  
+ *  107
+ *  Binary Tree Level Order Traversal II
  */
 
+ /**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+ * };
+ */
 class Solution {
 public:
-    string countAndSay(int n) {
-        if(n == 1)
-            return "1";
-        else
-            return trans(countAndSay(n-1));
-    }
-    
-    string trans(string a){
-        string re = "";
-        int i, j;
-        
-        i = 0;
-        while(i < a.length()){
-            j = 0;
-            while(i+1 < a.length() && a[i] == a[i+1]){
-                j++;
-                i++;
-            }
-            char c[100];
-            string tmp = "";
-            sprintf(c, "%d" ,j+1);
-            tmp.assign(c);
-            re += tmp;
-            re.append(1, a[i]);
-            i++;
+    vector<vector<int>> levelOrderBottom(TreeNode* root) {
+        vector<vector<int>> result;
+        if(root == NULL){
+            return result;
         }
-        return re;
+
+        queue<TreeNode*> curlevel, nextlevel;
+        curlevel.push(root);
+        while(!curlevel.empty()){
+
+            vector<int> tmp;
+            while(!curlevel.empty()){
+                TreeNode* cur = curlevel.front();
+                curlevel.pop();
+                tmp.push_back(cur->val);
+                
+                if(cur->left){
+                    nextlevel.push(cur->left);
+                }
+                if(cur->right){
+                    nextlevel.push(cur->right);
+                }
+            }
+
+            result.insert(result.begin(), tmp);
+
+            while(!nextlevel.empty()){
+                curlevel.push(nextlevel.front());
+                nextlevel.pop();
+            }
+        }
+
+        return result;
+    }
+};
+
+// better
+class Solution {
+public:
+    vector<vector<int>> levelOrderBottom(TreeNode* root) {
+        vector<vector<int>> result;
+        if(root == NULL){
+            return result;
+        }
+        
+        queue<TreeNode*> curlevel;
+        curlevel.push(root);
+        while(!curlevel.empty()){
+
+            vector<int> tmp;
+            int size = curlevel.size();
+            while(size--){
+                TreeNode* cur = curlevel.front();
+                curlevel.pop();
+                tmp.push_back(cur->val);
+                
+                if(cur->left){
+                    curlevel.push(cur->left);
+                }
+                if(cur->right){
+                    curlevel.push(cur->right);
+                }
+            }
+
+            result.push_back(tmp);
+        }
+        
+        reverse(result.begin(), result.end());
+        
+        return result;
     }
 };

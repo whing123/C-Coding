@@ -1,29 +1,54 @@
 /* *题目：
- *  9
- *  Palindrome Number
- * *思路：
- *  
- * *技法：
- *  
+ *  103
+ *  Binary Tree Zigzag Level Order Traversal
  */
 
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+ * };
+ */
 class Solution {
 public:
-    bool isPalindrome(int x) {
-        if(x < 0)
-            return false;
-        int re = 0;
-        int tmp = x;
-
-        re += x % 10;
-        x = x / 10;
-        while(x > 0)
-        {
-            re *= 10;
-            re += x % 10;
-            x = x / 10;
+    vector<vector<int>> zigzagLevelOrder(TreeNode* root) {
+        vector<vector<int>> res;
+        if(root == NULL){
+            return res;
         }
         
-        return re == tmp;
+        queue<TreeNode*> d;
+        d.push(root);
+        bool dir = false;
+        
+        while(!d.empty()){
+            vector<int> vec;
+            int size = d.size();
+            
+            while(size--){
+                TreeNode* p = d.front();
+                d.pop();
+                vec.push_back(p->val);
+                
+                if(p->left != NULL){
+                    d.push(p->left);
+                }
+                if(p->right != NULL){
+                    d.push(p->right);
+                }
+            }
+            
+            if(dir){ // to reverse
+                reverse(vec.begin(), vec.end());
+            }
+            dir = !dir;
+            
+            res.push_back(vec);
+        }
+        
+        return res;
     }
 };

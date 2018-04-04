@@ -1,6 +1,6 @@
 /* *题目：
- *  202
- *  Happy Number
+ *  70
+ *  Climbing Stairs
  * *思路：
  *  
  * *技法：
@@ -9,27 +9,13 @@
 
 class Solution {
 public:
-    bool isHappy(int n) {
-        unordered_map<int,int> cycle;
-        while(1){
-            if((n = sumOfSquare(n)) == 1){
-                return true;
-            }else{
-                cycle[n]++;
-                if(cycle[n] > 1){
-                    break;
-                }
-            }
+    int climbStairs(int n) {
+        vector<int> result(n+1);
+        result[0] = 1;
+        result[1] = 1;
+        for(int i = 2; i <= n;i++){
+            result[i] = result[i-2] + result[i-1];
         }
-        return false;
-    }
-    
-    int sumOfSquare(int n){
-        int sum = 0;
-        while(n > 0){
-            sum += pow(n % 10,2);
-            n /= 10;
-        }
-        return sum;
+        return result[n];
     }
 };

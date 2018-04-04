@@ -1,43 +1,40 @@
 /* *题目：
- *  530
- *  Minimum Absolute Difference in BST
+ *  38
+ *  Count and Say
  * *思路：
  *  
  * *技法：
  *  
  */
 
- /**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
- * };
- */
 class Solution {
 public:
-    int getMinimumDifference(TreeNode* root) {
-        vector<int> res;
-        searchAllNodes(root,res); //前序遍历
-        sort(res.begin(),res.end()); //排序
-        
-        int value = INT_MAX;
-        for(int i = 0; i < res.size()-1;i++){
-            if(abs(res[i]-res[i+1]) < value){  //寻找最小差异
-                value = abs(res[i]-res[i+1]);
-            }
-        }
-        return value;
+    string countAndSay(int n) {
+        if(n == 1)
+            return "1";
+        else
+            return trans(countAndSay(n-1));
     }
     
-    void searchAllNodes(TreeNode* root, vector<int> &table){ 
-        if(root == NULL){
-            return;
+    string trans(string a){
+        string re = "";
+        int i, j;
+        
+        i = 0;
+        while(i < a.length()){
+            j = 0;
+            while(i+1 < a.length() && a[i] == a[i+1]){
+                j++;
+                i++;
+            }
+            char c[100];
+            string tmp = "";
+            sprintf(c, "%d" ,j+1);
+            tmp.assign(c);
+            re += tmp;
+            re.append(1, a[i]);
+            i++;
         }
-        table.push_back(root->val);
-        searchAllNodes(root->left,table);
-        searchAllNodes(root->right,table);
+        return re;
     }
 };

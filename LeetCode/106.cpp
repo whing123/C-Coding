@@ -1,36 +1,37 @@
 /* *题目：
- *  141
- *  Linked List Cycle
- * *思路：
- *  
- * *技法：
- *  
+ *  106
+ *  Construct Binary Tree from Inorder and Postorder Traversal
  */
 
- /**
- * Definition for singly-linked list.
- * struct ListNode {
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
  *     int val;
- *     ListNode *next;
- *     ListNode(int x) : val(x), next(NULL) {}
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
  * };
  */
 class Solution {
 public:
-    bool hasCycle(ListNode *head) {
-        int i = 0;
-        ListNode *fast, *slow;
-        fast = slow = head;
-        while(fast != NULL)
-        {
-            slow = slow->next;
-            fast = fast->next;
-            if(fast == NULL)
-                break;
-            fast = fast->next;
-            if(slow == fast)
-                return true;
+    TreeNode* buildTree(vector<int>& inorder, vector<int>& postorder) {
+        if(postorder.size() == 0){
+            return NULL;
         }
-        return false;
+        
+        TreeNode* root = new TreeNode(postorder[postorder.size()-1]);
+        int index;
+        for(int i = 0; i < inorder.size(); ++i){ // find root
+            if(inorder[i] == root->val){
+                index = i;
+            }
+        }
+        
+        vector<int> postL(postorder.begin(), postorder.begin()+index), postR(postorder.begin()+index, postorder.end()-1);
+        vector<int> inL(inorder.begin(), inorder.begin()+index), inR(inorder.begin()+index+1, inorder.end());
+        root->left = buildTree(inL, postL);
+        root->right = buildTree(inR, postR);
+        
+        return root;
     }
 };

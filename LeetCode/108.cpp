@@ -1,6 +1,6 @@
 /* *题目：
- *  112
- *  Path Sum
+ *  108
+ *  Convert Sorted Array to Binary Search Tree
  * *思路：
  *  
  * *技法：
@@ -18,28 +18,22 @@
  */
 class Solution {
 public:
-    bool hasPathSum(TreeNode* root, int sum) {
-       int add = 0;
-       return  hasPath(root,sum,add);
-    }
-    
-    bool hasPath(TreeNode* root, int sum, int& add){
-        if(root == NULL){
-            return false;
+    TreeNode* sortedArrayToBST(vector<int>& nums) {
+        if(nums.size() == 0){
+            return NULL;
+        }else if(nums.size() == 1){
+            return new TreeNode(nums[0]);
         }
-        add += root->val;
-        if(root->left == NULL && root->right == NULL){  // leaf node
-            if(add == sum){
-                return true;
-            }else{
-                add -= root->val;
-                return false;
-            }
-        }
-        if(hasPath(root->left,sum,add) || hasPath(root->right,sum,add)){
-            return true;
-        }
-        add -= root->val;
-        return false;
+        
+        int mid = nums.size()/2;
+        
+        TreeNode* root = new TreeNode(nums[mid]);
+        
+        vector<int> left = vector<int>(nums.begin(), nums.begin()+mid);
+        vector<int> right = vector<int>(nums.begin()+mid+1, nums.end());
+        root->left = sortedArrayToBST(left);
+        root->right = sortedArrayToBST(right);
+                                      
+        return root;
     }
 };

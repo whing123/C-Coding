@@ -1,36 +1,58 @@
 /* *题目：
- *  20
- *  Valid Parentheses
- * *思路：
- *  
- * *技法：
- *  
+ *  112
+ *  Path Sum
  */
 
+ /**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+ * };
+ */
 class Solution {
 public:
-    bool isValid(string s) {
-        unordered_map<char,char> Map;
-        Map['('] = ')';
-        Map['{'] = '}';
-        Map['['] = ']';
-        
-        stack<char> match;
-        int i = 0;
-        while(i < s.size()){
-            if(Map.find(s[i]) == Map.end()){  //遇到右侧括号时
-                if(match.empty() || Map[match.top()] != s[i]){ //和栈顶不匹配时
-                    return false;
-                }
-                match.pop();  //匹配时
-            }else{    //遇到左侧括号时
-                match.push(s[i]);
-            }
-            i++;
+    bool hasPathSum(TreeNode* root, int sum) {
+       int add = 0;
+       return  hasPath(root,sum,add);
+    }
+    
+    bool hasPath(TreeNode* root, int sum, int& add){
+        if(root == NULL){
+            return false;
         }
-        if(match.empty()){
+        add += root->val;
+        if(root->left == NULL && root->right == NULL){  // leaf node
+            if(add == sum){
+                return true;
+            }else{
+                add -= root->val;
+                return false;
+            }
+        }
+        if(hasPath(root->left,sum,add) || hasPath(root->right,sum,add)){
             return true;
         }
+        add -= root->val;
         return false;
+    }
+};
+
+// better
+class Solution {
+public:
+    bool hasPathSum(TreeNode* root, int sum) {
+        if(root == NULL){
+            return false;
+        }
+        
+        sum -= root->val;
+        if(root->left == NULL && root->right == NULL && sum == 0){
+            return true;
+        }
+        
+        return hasPathSum(root->left, sum) || hasPathSum(root->right, sum);
     }
 };

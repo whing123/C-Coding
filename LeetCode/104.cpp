@@ -1,23 +1,24 @@
 /* *题目：
- *  26
- *  Remove Duplicates from Sorted Array
- * *思路：
- *  
- * *技法：
- *  
+ *  104
+ *  Maximum Depth of Binary Tree
  */
 
+ /**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+ * };
+ */
 class Solution {
 public:
-    int removeDuplicates(vector<int>& nums) {
-        for(int i = 0;i < nums.size();)
-        {
-            while(i+1 < nums.size() && nums[i] == nums[i+1])
-            {
-                nums.erase(nums.begin()+i);
-            }
-            i++;
+    int maxDepth(TreeNode* root) {
+        if(root == NULL){
+            return 0;
         }
-        return nums.size();
+        int leftD = maxDepth(root->left), rightD = maxDepth(root->right);
+        return 1 +  (leftD > rightD ? leftD : rightD);
     }
 };

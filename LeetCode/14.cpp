@@ -1,6 +1,6 @@
 /* *题目：
- *  496
- *  Next Greater Element I
+ *  14
+ *  Longest Common Prefix
  * *思路：
  *  
  * *技法：
@@ -9,34 +9,25 @@
 
 class Solution {
 public:
-    vector<int> nextGreaterElement(vector<int>& findNums, vector<int>& nums) {
-        unordered_map<int, int> nums2;  //nums2的数，及其下标
-        for(int i = 0; i < nums.size(); i++){
-            nums2[nums[i]] = i;
+    string longestCommonPrefix(vector<string>& strs) {
+        string result;
+        if(strs.size() == 0){
+            return result;
         }
-        
-        vector<int> pos; //位置
-        unordered_map<int, int>::iterator it;
-        for(int i = 0; i < findNums.size(); i++){
-            if((it = nums2.find(findNums[i])) != nums2.end()){  //在nums2中找对应的下标位置
-                pos.push_back(it->second);
-            }
-        }
-        
-        vector<int> res;
-        int j;
-        for(int i = 0; i < findNums.size(); i++){
-            for(j = pos[i] + 1; j < nums.size();j++){  //在右边查找
-                if(nums[j] > findNums[i]){  //查找第一大
-                    res.push_back(nums[j]);
+        int i, j = 0;
+        while(j < strs[0].size()){
+            char tmp = strs[0][j];
+            for(i = 1;i < strs.size();i++){  // 第一个字符串的每一个字符与后续字符串相同位置字符进行比较
+                if(j >= strs[i].size() || tmp != strs[i][j]){
                     break;
                 }
             }
-            if(j == nums.size()){  //若没找到
-                res.push_back(-1);
+            if(i != strs.size()){ // 出现不一样或者已达到某一字符串的长度，退出
+                break;
             }
+            result.push_back(tmp);
+            j++;
         }
-        
-        return res;
+        return result;
     }
 };

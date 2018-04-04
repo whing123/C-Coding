@@ -1,6 +1,6 @@
 /* *题目：
- *  481
- *  Magical String
+ *  171
+ *  Excel Sheet Column Number
  * *思路：
  *  
  * *技法：
@@ -9,31 +9,20 @@
 
 class Solution {
 public:
-    int magicalString(int n) {
-        vector<int> self, cnt;
-        self.push_back(1);
-        cnt.push_back(1);
-        cnt.push_back(2);
-        
-        int dir; //2 添加2； 1 添加1
-        int pos = 1; //记录cnt里当前位置，表示下次往self里要添加的数量
-        int i;
-        while(self.size() < n){
-            dir = self[self.size()-1] == 1 ? 2 : 1;  //接下来添加的数字，与self最后一个数不同
-            i = cnt[pos];  //插入的数目
-            while(i){
-                self.push_back(dir);
-                i--;
-            }
-            cnt.push_back(self[++pos]); //根据self中pos下一个数为cnt追加下一个数字
+    int titleToNumber(string s) {
+        int size = s.size();
+        int sum = 0;
+        for(int i = 0;i < size;i++){
+            sum += (s[size - 1 - i] - 'A' + 1) * pow_26(i);
         }
-        
-        int res = 0;
-        for(i = 0;i < n;i++){
-            if(self[i] == 1){  //数1的个数
-                res++;
-            }
-        }
-        return res;
+        return sum;
     }
-};
+    
+    int pow_26(int n){
+        int pow = 1;
+        for(int i = 0;i < n;i++){
+            pow *= 26;
+        }
+        return pow;
+    }
+}

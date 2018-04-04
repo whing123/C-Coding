@@ -1,51 +1,39 @@
 /* *题目：
- *  450
- *  Delete Node in a BST
- * *思路：
- *  
+ *  232
+ *  Implement Queue using Stacks
  */
 
- /**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
- * };
- */
-class Solution {
+
+class Queue {
 public:
-    TreeNode* deleteNode(TreeNode* root, int key) {
-        if(root == NULL){
-            return NULL;
+    // Push element x to the back of queue.
+    void push(int x) {
+        stack<int> tmp;
+        while(!s.empty()){
+            tmp.push(s.top());
+            s.pop();
         }
-        
-        if(root->val > key){ // 左子树查找
-            root->left = deleteNode(root->left, key);
-        }else if(root->val < key){ // 右子树查找
-            root->right = deleteNode(root->right, key);
-        }else{ // 如果已找到
-            if (root->left && root->right) { // 左右均不空
-                root->val = findMin(root->right);
-                root->right = deleteNode(root->right, root->val);
-            }else { // 左右至少空一个
-                TreeNode* to_delete = root;
-                if (root->left) root = root->left;
-                else if (root->right) root = root->right;
-                else root = NULL;
-                delete to_delete;
-            }
+        s.push(x);
+        while(!tmp.empty()){
+            s.push(tmp.top());
+            tmp.pop();
         }
-        
-        return root;
     }
-    
-    int findMin(TreeNode* root){
-        while(root->left != NULL){
-            root = root->left;
-        }
-        
-        return root->val;
+
+    // Removes the element from in front of queue.
+    void pop(void) {
+        s.pop();
     }
+
+    // Get the front element.
+    int peek(void) {
+        return s.top();
+    }
+
+    // Return whether the queue is empty.
+    bool empty(void) {
+        return s.empty();
+    }
+private:
+    stack<int> s;
 };

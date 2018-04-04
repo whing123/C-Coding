@@ -1,43 +1,47 @@
 /* *题目：
- *  232
- *  Implement Queue using Stacks
- * *思路：
- *  
- * *技法：
- *  
+ *  98
+ *  Validate Binary Search Tree
  */
 
-
-class Queue {
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+ * };
+ */
+class Solution {
 public:
-    // Push element x to the back of queue.
-    void push(int x) {
-        stack<int> tmp;
-        while(!s.empty()){
-            tmp.push(s.top());
-            s.pop();
+    bool isValidBST(TreeNode* root) {
+        if(root == NULL){
+            return true;
         }
-        s.push(x);
-        while(!tmp.empty()){
-            s.push(tmp.top());
-            tmp.pop();
+        
+        if(root->left != NULL && root->val <= maxL(root->left)){
+            return false;
         }
+        if(root->right != NULL && root->val >= minR(root->right)){
+            return false;
+        }
+        
+        return isValidBST(root->left) && isValidBST(root->right);
     }
+           
+    int minR(TreeNode* root){ // 右子树最小值
+        while(root->left != NULL){
+            root = root->left;
+        }
+        
+        return root->val;
+    }
+           
+    int maxL(TreeNode* root){ // 左子树最大值
+        while(root->right != NULL){
+            root = root->right;
+        }
 
-    // Removes the element from in front of queue.
-    void pop(void) {
-        s.pop();
+        return root->val;
     }
-
-    // Get the front element.
-    int peek(void) {
-        return s.top();
-    }
-
-    // Return whether the queue is empty.
-    bool empty(void) {
-        return s.empty();
-    }
-private:
-    stack<int> s;
 };

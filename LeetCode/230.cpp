@@ -1,11 +1,11 @@
 /* *题目：
- *  662
- *  Maximum Width of Binary Tree
+ *  230
+ *  Kth Smallest Element in a BST
  * *思路：
  *  
  */
 
-/**
+ /**
  * Definition for a binary tree node.
  * struct TreeNode {
  *     int val;
@@ -16,36 +16,31 @@
  */
 class Solution {
 public:
-    int widthOfBinaryTree(TreeNode* root) {
-        if(!root){
-            return 0;
-        }
-        
-        int maxL = 0;
-        
-        queue<pair<TreeNode*,int>> tmp;
-        tmp.push(pair<TreeNode*,int>(root,1)); // id from 1
-        while(!tmp.empty()){
-            int l = tmp.front().second, r = l;
-            for(int i = 0, n = tmp.size(); i < n; ++i){
-                TreeNode* p = tmp.front().first; 
-                r = tmp.front().second;
-                tmp.pop();
+    int kthSmallest(TreeNode* root, int k) {
+        return smallest(root, k);
+    } 
+private:
+    int smallest(TreeNode* node, int& k) {
+        if (!node) return -1;
+        int val = smallest(node-> left, k);
+        if (!k) return val;
+        if (!--k) return node-> val; 
+        return smallest(node-> right, k);
+    }
+};
 
-                if(p->left){
-                    tmp.push(pair<TreeNode*,int>(p->left, 2 * r));
-                }
-                if(p->right){
-                    tmp.push(pair<TreeNode*,int>(p->right, 2 * r + 1));
-                }
-            }
-            
-            if(maxL < r - l + 1){
-                maxL = r-l+1;
-            }
-
-        }
-        
-        return maxL;  
+class Solution {
+public:
+    int kthSmallest(TreeNode* root, int k) {
+        vector<int> vSmallest;
+        Smallestkth(root, k, vSmallest);
+        return vSmallest[k-1];
+    }
+    
+    void Smallestkth(TreeNode* root, int k, vector<int> &vSmallest)
+    {
+        if(root->left) Smallestkth(root->left, k, vSmallest);
+        vSmallest.push_back(root->val);
+        if(root->right) Smallestkth(root->right, k, vSmallest);
     }
 };

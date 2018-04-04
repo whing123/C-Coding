@@ -1,36 +1,68 @@
 /* *题目：
- *  238
- *  Product of Array Except Self
+ *  155
+ *  Min Stack
  * *思路：
  *  
  * *技法：
  *  
  */
 
-class Solution {
+class MinStack {
 public:
-    vector<int> productExceptSelf(vector<int>& nums) {
-        int size = nums.size();
-        vector<int> pre(size,1), post(size,1);
-        
-        //前向累乘
-        pre[0] = nums[0];
-        for(int i = 1;i < size;i++){
-            pre[i] = pre[i-1] * nums[i];
-        }
-        
-        //后向累乘
-        post[size-1] = nums[size-1];
-        for(int i = size-2;i >= 0;i--){
-            post[i] = post[i+1] * nums[i];
-        }
-        
-        vector<int> res(size,0);
-        res[0] = post[1];
-        res[size-1] = pre[size-2];
-        for(int i = 1;i < size-1;i++){
-            res[i] = pre[i-1] * post[i+1];  //前向累乘 * 后向累乘
-        }
-        return res;
+    /** initialize your data structure here. */
+    MinStack() {
+        head = NULL;
     }
+    
+    void push(int x) {
+        if(!head){
+            head = new node(x,x);
+            return;
+        }
+        int m;
+        if(x < head->min_val){
+            m = x;
+        }else{
+            m = head->min_val;
+        }
+        node *tmp = new node(x,m);
+        tmp->next = head;
+        head = tmp;
+    }
+    
+    void pop() {
+        if(head){
+            node *tmp = head;
+            head = head->next;
+            delete tmp;
+        }
+    }
+    
+    int top() {
+        return head->val; 
+    }
+    
+    int getMin() {
+        return head->min_val;
+    }
+private:
+    struct node{
+        int val;
+        int min_val;
+        node *next;
+        node(int a, int b):val(a),min_val(b){ 
+            next = NULL;
+        }
+        ~node(){}
+    };
+    node *head;
 };
+
+/**
+ * Your MinStack object will be instantiated and called as such:
+ * MinStack obj = new MinStack();
+ * obj.push(x);
+ * obj.pop();
+ * int param_3 = obj.top();
+ * int param_4 = obj.getMin();
+ */

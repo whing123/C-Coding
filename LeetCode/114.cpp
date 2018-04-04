@@ -1,41 +1,73 @@
 /* *题目：
- *  225
- *  Implement Stack using Queues
- * *思路：
- *  
- * *技法：
- *  
+ *  114
+ *  Flatten Binary Tree to Linked List
  */
 
-class Stack {
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+ * };
+ */
+
+// each node's right child points to the next node of a pre-order traversal
+class Solution {
 public:
-    // Push element x onto stack.
-    void push(int x) {
-        que.push(x);
+    void flatten(TreeNode* root) {
+        TreeNode* prev = NULL;
+        pre(root, prev);
     }
-
-    // Removes the element on top of the stack.
-    void pop() {
-        int size = que.size();
-        queue<int> tmp;
-        int i = 1;
-        while(i < size){
-            tmp.push(que.front());
-            que.pop();
-            i++;
+    
+    void pre(TreeNode* root, TreeNode*& prev){
+        if(root != NULL){
+            pre(root->right, prev); // right
+            pre(root->left, prev); // left
+            
+            // root
+            root->right = prev;
+            root->left = NULL;
+            
+            prev =  root;
         }
-        que = tmp;
     }
+};
 
-    // Get the top element.
-    int top() {
-        return que.back();
-    }
+class Solution {
+public:
+    void flatten(TreeNode* root) {
+        if (!root) return;
 
-    // Return whether the stack is empty.
-    bool empty() {
-        return que.empty();
+        flatten(root->left);
+        flatten(root->right);
+
+        TreeNode *tmp = root->right;
+        root->right = root->left;
+        root->left = nullptr;
+        while (root->right)
+            root = root->right;
+        root->right = tmp;
     }
-private:
-    queue<int> que;
+};
+
+class Solution {
+public:
+    void flatten(TreeNode* root) {
+        while (root) {
+            if (root->left && root->right) {
+                TreeNode* t = root->left;
+                while (t->right)
+                    t = t->right;
+                t->right = root->right;
+            }
+
+            if(root->left)
+                root->right = root->left;
+            root->left = NULL;
+            
+            root = root->right;
+        }
+    }
 };
