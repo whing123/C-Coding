@@ -1,10 +1,6 @@
 /* *题目：
  *  225
  *  Implement Stack using Queues
- * *思路：
- *  
- * *技法：
- *  
  */
 
 class Stack {

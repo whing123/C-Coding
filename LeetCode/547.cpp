@@ -14,7 +14,7 @@ public:
         for(int i = 0; i < M.size(); ++i){
             if(visited[i] == 0){ 
                 dfs(M, visited, i);
-                count++;
+                count++; // number of circles
             }
         }
         

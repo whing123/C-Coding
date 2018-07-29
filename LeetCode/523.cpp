@@ -1,10 +1,6 @@
 /* *题目：
  *  523
  *  Continuous Subarray Sum
- * *思路：
- *  
- * *技法：
- *  
  */
 
 class Solution {

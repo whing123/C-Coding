@@ -1,10 +1,6 @@
 /* *题目：
  *  9
  *  Palindrome Number
- * *思路：
- *  
- * *技法：
- *  
  */
 
 class Solution {

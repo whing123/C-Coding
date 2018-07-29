@@ -19,6 +19,7 @@ public:
         return res;
     }
     
+    // 递归
     int getfirstK(vector<int> data ,int k, int s, int e){
         if(s > e){
             return -1;
@@ -35,6 +36,7 @@ public:
         return mid;
     }
     
+    // 迭代
     int getlastK(vector<int> data ,int k, int s, int e){
         while(s <= e){
             int mid = s + (e-s)/2;

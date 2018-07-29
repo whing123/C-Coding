@@ -37,3 +37,25 @@ public:
         return false;
     }
 };
+
+// better
+class Solution {
+public:
+    bool isSymmetric(TreeNode* root) {
+        if(root == NULL){
+            return true;
+        }
+        
+        return isSys(root->left, root->right);
+    }
+    
+    bool isSys(TreeNode* ltree, TreeNode* rtree){
+        if(ltree == NULL && rtree == NULL){
+            return true;
+        }else if(ltree == NULL || rtree == NULL){
+            return false;
+        }
+        
+        return ltree->val == rtree->val && isSys(ltree->left, rtree->right) && isSys(ltree->right, rtree->left);
+    }
+};

@@ -1,11 +1,38 @@
 /* *题目：
  *  122
  *  Best Time to Buy and Sell Stock II
- * *思路：
- *  
- * *技法：
- *  
  */
+
+// best
+class Solution {
+public:
+    int maxProfit(vector<int>& prices) {
+        int N = prices.size();
+        if(N < 2)
+            return 0;
+        
+        int curMin;
+        int curMax;
+        int maxP = 0;
+        
+        int i = 0;
+        while(i+1 < N){
+            // find min
+            while(i+1 < N && prices[i+1] <= prices[i])
+                i++;
+            curMin = prices[i];
+            // find max
+            while(i+1 < N && prices[i+1] >= prices[i])
+                i++;
+            curMax = prices[i];
+            
+            maxP += curMax - curMin;
+        }
+        
+        return maxP;
+    }
+};
+
 
 class Solution {
 public:

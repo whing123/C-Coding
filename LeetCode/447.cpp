@@ -1,10 +1,6 @@
 /* *题目：
  *  447
- *  Number of Boomerangs
- * *思路：
- *  
- * *技法：
- *  
+ *  Number of Boomerangs 
  */
 
 class Solution {

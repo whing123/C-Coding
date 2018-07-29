@@ -1,10 +1,6 @@
 /* *题目：
  *  136
  *  Single Number
- * *思路：
- *  
- * *技法：
- *  
  */
 
 class Solution {

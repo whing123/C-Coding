@@ -1,10 +1,7 @@
 /* *题目：
  *  19
  *  Remove Nth Node From End of List
- * *思路：
- *  
- * *技法：
- *  
+
  */
 
  /**
@@ -51,5 +48,33 @@ public:
         delete tmp;
         return head;
         
+    }
+};
+
+// better
+class Solution {
+public:
+    ListNode* removeNthFromEnd(ListNode* head, int n) {
+        ListNode *slow, *fast, *prev, *newHead = new ListNode(0); // 伪头节点
+        slow = fast = head;
+        prev = newHead;
+        prev->next = head;
+        
+        while(fast && n--){ // 先走n步
+            fast = fast->next;
+        }
+        
+        while(fast){ // 一起走
+            fast = fast->next;
+            prev = slow;
+            slow = slow->next;
+        }
+        
+        prev->next = slow->next;
+        delete slow;
+        
+        head = newHead->next;
+        delete newHead;
+        return head;
     }
 };

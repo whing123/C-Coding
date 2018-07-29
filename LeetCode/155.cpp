@@ -1,10 +1,6 @@
 /* *题目：
  *  155
- *  Min Stack
- * *思路：
- *  
- * *技法：
- *  
+ *  Min Stack 
  */
 
 class MinStack {
@@ -56,6 +52,32 @@ private:
         ~node(){}
     };
     node *head;
+};
+
+// better
+class MinStack {
+public:
+    /** initialize your data structure here. */
+    stack<int> data, min_d;
+
+    void push(int value) {
+        data.push(value);
+        if(min_d.size() == 0 || value < min_d.top()){
+            min_d.push(value);
+        }else{
+            min_d.push(min_d.top());
+        }
+    }
+    void pop() {
+        data.pop();
+        min_d.pop();
+    }
+    int top() {
+        return data.top();
+    }
+    int getMin() {
+        return min_d.top();
+    }
 };
 
 /**

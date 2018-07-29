@@ -1,10 +1,6 @@
 /* *题目：
  *  695
  *  Max Area of Island
- * *思路：
- *  
- * *技法：
- *  
  */
 
 class Solution {

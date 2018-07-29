@@ -1,10 +1,6 @@
 /* *题目：
  *  53
  *  Maximum Subarray
- * *思路：
- *  
- * *技法：
- *  
  */
 
 class Solution {
@@ -39,7 +35,7 @@ public:
     }
 };
 
-
+// better
 class Solution {
 public:
     int maxSubArray(vector<int>& nums) {
@@ -55,5 +51,41 @@ public:
         }
         
         return sum;
+    }
+};
+
+// better
+class Solution {
+public:
+    int maxSubArray(vector<int>& nums) {
+        int sum = INT_MIN, cursum = 0;
+        for(int i = 0; i < nums.size(); ++i){
+            if(cursum > 0){ // 如果前一个大于0，有增益，则加到i上
+                cursum += nums[i];
+            }else{
+                cursum = nums[i];
+            }
+            
+            if(cursum > sum){ // update max
+                sum = cursum;
+            }
+        }
+        
+        return sum;
+    }
+};
+
+class Solution {
+public:
+    // 时间复杂度 O(n)
+    int maxSubArray(vector<int>& nums) {
+        int result = INT_MIN;
+        int sum = 0;
+        for (int i = 0; i < nums.size(); i++) {
+            sum = max(sum+nums[i], nums[i]);
+            result = max(result, sum);
+        }
+
+        return result;
     }
 };

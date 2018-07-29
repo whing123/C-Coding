@@ -2,9 +2,9 @@
  *  647
  *  Palindromic Substrings
  * *思路：
- *  when we consider the substring s[i-j, ..., i+j], i is the middle index of the substring; When we consider the substring s[i-1-j, ..., i+j], (i-1, i) is the middle index of the substring
- * *技法：
- *  
+ *  when we consider the substring s[i-j, ..., i+j], i is the middle index of the substring; 
+    When we consider the substring s[i-1-j, ..., i+j], (i-1, i) is the middle index of the substring
+
  */
 
  int countSubstrings(string s) {

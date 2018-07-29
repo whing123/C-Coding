@@ -1,9 +1,6 @@
 /* *题目：
  *  203
  *  Remove Linked List Elements
- * *思路：
- *  
- * *技法：
  *  
  */
 

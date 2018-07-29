@@ -1,10 +1,6 @@
 /* *题目：
  *  191
  *  Number of 1 Bits
- * *思路：
- *  
- * *技法：
- *  
  */
 
 class Solution {
@@ -29,5 +25,19 @@ public:
             i++;
         }
         return cnt;
+    }
+};
+
+// better
+class Solution {
+public:
+    int hammingWeight(uint32_t n) {
+        int res = 0;
+        while(n)
+        {
+            n &= n - 1;
+            ++ res;
+        }
+        return res;
     }
 };

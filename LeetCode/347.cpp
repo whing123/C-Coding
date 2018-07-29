@@ -1,10 +1,6 @@
 /* *题目：
  *  347
  *  Top K Frequent Elements
- * *思路：
- *  
- * *技法：
- *  
  */
 
 struct less_{

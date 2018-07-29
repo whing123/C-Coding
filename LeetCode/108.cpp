@@ -1,10 +1,6 @@
 /* *题目：
  *  108
  *  Convert Sorted Array to Binary Search Tree
- * *思路：
- *  
- * *技法：
- *  
  */
 
  /**

@@ -2,9 +2,8 @@
  *  690
  *  Employee Importance
  * *思路：
- *  
- * *技法：
  *  递归搜索，map使用
+    return the total importance value of this employee and all his subordinates
  */
 
 

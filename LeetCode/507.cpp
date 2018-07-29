@@ -1,10 +1,8 @@
 /* *题目：
  *  507
  *  Perfect Number
- * *思路：
- *  
- * *技法：
- *  
+ Perfect Number is a positive integer that
+  is equal to the sum of all its positive divisors except itself
  */
 
 class Solution {

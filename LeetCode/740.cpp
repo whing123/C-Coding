@@ -1,8 +1,6 @@
 /* *题目：
  *  740
- *  Delete and Earn
- * *思路：
- *  
+ *  Delete and Earn  
  */
 
 class Solution {

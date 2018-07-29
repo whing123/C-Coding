@@ -1,10 +1,6 @@
 /* *题目：
  *  125
  *  Valid Palindrome
- * *思路：
- *  
- * *技法：
- *  
  */
 
 class Solution {

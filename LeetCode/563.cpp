@@ -2,9 +2,8 @@
  *  563
  *  Binary Tree Tilt
  * *思路：
- *  
- * *技法：
- *  
+The tilt of a tree node is defined as the absolute difference 
+between the sum of all left subtree node values and the sum of all right subtree node values
  */
 
  /**

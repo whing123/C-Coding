@@ -2,9 +2,7 @@
  *  83
  *  Remove Duplicates from Sorted List
  * *思路：
- *  
- * *技法：
- *  
+  
  */
 
  /**

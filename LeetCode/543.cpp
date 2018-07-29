@@ -1,10 +1,6 @@
 /* *题目：
  *  543
  *  Diameter of Binary Tree
- * *思路：
- *  
- * *技法：
- *  
  */
 
  /**
@@ -16,6 +12,9 @@
  *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
  * };
  */
+
+// The diameter of a binary tree is the length of the 
+// longest path between any two nodes in a tree
 class Solution {
 public:
     int diameterOfBinaryTree(TreeNode* root) {

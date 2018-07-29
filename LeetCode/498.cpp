@@ -1,10 +1,7 @@
 /* *题目：
  *  498
  *  Diagonal Traverse
- * *思路：
- *  
- * *技法：
- *  
+
  */
 
 class Solution {

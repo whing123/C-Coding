@@ -1,10 +1,7 @@
 /* *题目：
  *  338
  *  Counting Bits
- * *思路：
- *  
- * *技法：
- *  
+ 
  */
 
 class Solution {
