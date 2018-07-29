@@ -173,6 +173,7 @@ C++ source codes
 |498| Diagonal Traverse | Z字形扫描矩阵 | done |
 
 | 序号 | 题目 | 基础 | is done |
+|:---|:---:|:---:|:---:|
 |832| Flipping an Image | 横向翻转，再01颠倒 | done |
 
 
@@ -204,6 +205,7 @@ C++ source codes
 |342|Power of Four|||
 
 | 序号 | 题目 | bit manipulation | is done |
+|:---|:---:|:---:|:---:|
 |136| Single Number | 其他都是2个 异或 | done |
 |137| Single Number II | 其他都是3个 此类题通用解法 | done |
 
@@ -214,6 +216,7 @@ C++ source codes
 
 
 | 序号 | 题目 | 贪婪法 | is done |
+|:---|:---:|:---:|:---:|
 |763| Partition Labels | 字符串分割为不相交的段 | done |
 |605| Can Place Flowers | 相邻位置不能种花 | done |
 
@@ -309,6 +312,7 @@ C++ source codes
 
 
 | 序号 | 题目 | Array Hash | is done |
+|:---|:---:|:---:|:---:|
 |560| Subarray Sum Equals K | 连续子数组和为定值 Hash | done |
 
 | 序号 | 题目 | 二分查找 | is done |
@@ -508,6 +512,7 @@ C++ source codes
 
 
 | 序号 | 题目 | 常规 | is done |
+|:---|:---:|:---:|:---:|
 |1| 懂二进制 | 求两整数有多少个bit不同 汉明距离 | done |
 |26| 素数对 | 素数 | done |
 |54| 第一个只出现一次的字符 | map统计次数 剑指offer | done |
