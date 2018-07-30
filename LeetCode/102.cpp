@@ -3,8 +3,6 @@
  *  Binary Tree Level Order Traversal
  * *思路：
  *  
- * *技法：
- *  
  */
 
  /**
@@ -16,38 +14,38 @@
  *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
  * };
  */
+
+// better
 class Solution {
 public:
     vector<vector<int>> levelOrder(TreeNode* root) {
         vector<vector<int>> result;
-        if(!root){
+        if(root == NULL){
             return result;
         }
-        queue<TreeNode*> curLevel, nextLevel;
-        TreeNode* curr;
-        curLevel.push(root);
-        while(!curLevel.empty()){
-            vector<int> tmp;
-
-            while(!curLevel.empty()){
-                curr = curLevel.front();
-                curLevel.pop();
-                tmp.push_back(curr->val);
-
-                if(curr->left){
-                    nextLevel.push(curr->left);
+        
+        queue<TreeNode*> level;
+        level.push(root);
+        while(!level.empty()){
+            int size = level.size();
+            vector<int> tmp(size, 0);
+            
+            while(size--){
+                TreeNode* node = level.front();
+                level.pop();
+                tmp[(tmp.size()-1) - size] = node->val;
+                
+                if(node->left){
+                    level.push(node->left);
                 }
-                if(curr->right){
-                    nextLevel.push(curr->right);
+                if(node->right){
+                    level.push(node->right);
                 }
             }
             
             result.push_back(tmp);
-            while(!nextLevel.empty()){
-                curLevel.push(nextLevel.front());
-                nextLevel.pop();
-            }
         }
+        
         return result;
     }
 };
