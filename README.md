@@ -295,7 +295,6 @@ C++ source codes
 |442|Find All Duplicates in an Array|||
 |495|Teemo Attacking|||
 |238|Product of Array Except Self|||
-|11| Container With Most Water | 积雨水问题 | done |
 |75| Sort Colors | 012聚合排序 Two Pointers | done |
 |0526|Beautiful Arrangement|||
 |384|Shuffle an Array|||
@@ -309,6 +308,8 @@ C++ source codes
 |441|Arranging Coins|||
 |319|Bulb Switcher|||
 |453| Minimum Moves to Equal Array Elements | 移动最少的步数使所有元素相同，每次给n-1元素+1 | done |
+|11| Container With Most Water | 积雨水问题 一次 | done |
+|42| Trapping Rain Water | 积雨水问题 累积 | done |
 
 
 | 序号 | 题目 | Array Hash | is done |
@@ -318,7 +319,8 @@ C++ source codes
 | 序号 | 题目 | 二分查找 | is done |
 |:---|:---:|:---:|:---:|
 |33| Search in Rotated Sorted Array | 旋转数组的查找 | done |
-|729| My Calendar I | 二分查找 find可能的区间 | done |
+|729| My Calendar I | 不能有重合 二分查找 find可能的区间 | done |
+|731| My Calendar II | 不能有三重合 非二分查找 | done |
 |74| Search a 2D Matrix | 二分查找 从左到右有序 下一层比上一层大 find可能的区间 | done |
 |240| Search a 2D Matrix II | 从左到右从上到下有序 递归 | done |
 |15| 3Sum | 含重复数组中和为定值0的三个数 二分查找 | done |
@@ -412,7 +414,7 @@ C++ source codes
 |216| Combination Sum III | 1-9中选k个元素其和为定值 | done |
 |22| Generate Parentheses | 生成括号 | done |
 |841| Keys and Rooms | 访问所有房间 | done |
-
+|79| Word Search | 矩形中搜索组成字符串的路径 | done |
 
 
 | 序号 | 题目 | backtracking | is Done |
