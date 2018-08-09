@@ -2,9 +2,7 @@
  *  319
  *  Bulb Switcher
  * *思路：
- *  
- * *技法：
- *  
+  
  */
 
 class Solution {

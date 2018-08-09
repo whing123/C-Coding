@@ -2,9 +2,7 @@
  *  219
  *  Contains Duplicate II
  * *思路：
- *  
- * *技法：
- *  
+
  */
 
 class Solution {

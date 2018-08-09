@@ -64,22 +64,25 @@ C++ source codes
 |13| 判断正方形 | | |
 |28| ABCD四个小组比赛 | map转vector 网易游戏 | done |
 |29| 矩形之和 | 网易游戏 | done |
+|30| 找共同朋友最多的陌生人 | 拼多多 | done |
+|31| 将字符串打印成正方形 | 拼多多 | done |
+|32| 分割整数，可以加小数点 | 拼多多 | done |
 
 | 序号 | 题目 | 数字 | is done |
 |:---|:---:|:---:|:---:|
-|8| 求第N个质数 | 质数 素数 |
+|8| 求第N个质数 | 质数 素数 | |
 |27| 素数有限域 | 微众 | done |
 |19| 时针分针夹角 | 拼多多 | done |
 
 | 序号 | 题目 | 数组 | is done |
 |:---|:---:|:---:|:---:|
-|2| 数组找第二大 | 冒泡排序 |
-|9| 二维数组排序 | 二叉堆 |
-|4| cell状态改变，相邻状态的异或 | |
-|1| 线段重合问题 ||
-|7| 温度区间 ||
+|2| 数组找第二大 | 冒泡排序 ||
+|9| 二维数组排序 | 二叉堆 ||
+|4| cell状态改变，相邻状态的异或 | ||
+|1| 线段重合问题 |||
+|7| 温度区间 |||
 |18| 温度置信区间 | 拼多多 | done |
-|6| 熊按战斗力吃糖充饥 | 贪心 sort比较函数 |
+|6| 熊按战斗力吃糖充饥 | 贪心 sort比较函数 ||
 |21| 滑动窗口最大值最小值 | 拼多多 | done |
 |25| 最小的k个数 | Top K 建堆 搜狐 | done |
 |26| 成长值 任务值 | 搜狐 | done |
@@ -94,7 +97,7 @@ C++ source codes
 
 | 序号 | 题目 | 栈 | is done |
 |:---|:---:|:---:|:---:|
-|12| 简单合法表达式 | |
+|12| 简单合法表达式 | ||
 
 | 序号 | 题目 | 递归 | is done |
 |:---|:---:|:---:|:---:|
@@ -112,11 +115,11 @@ C++ source codes
 
 | 序号 | 题目 | 二叉树 | is done |
 |:---|:---:|:---:|:---:|
-|11| 二叉搜索树的下几个节点 | |
+|11| 二叉搜索树的下几个节点 | 阿里 ||
 
 
 ## LeetCode
-| 序号 | 题目 | 描述 | is Done |
+| 序号 | 题目 | 描述 | is done |
 |:---|:---:|:---:|:---:|
 |476|Number Complement|||
 |500|Keyboard Row|||
@@ -157,7 +160,6 @@ C++ source codes
 |406|Queue Reconstruction by Height|||
 |423|Reconstruct Original Digits from English|||
 |24|Swap Nodes in Pairs|||
-|36|Valid Sudoku|||
 |299|Bulls and Cows|||
 |396|Rotate Function|||
 |720|Longest Word in Dictionary|map按键值排序||
@@ -171,11 +173,11 @@ C++ source codes
 |677|Map Sum Pairs|||
 |498| Diagonal Traverse | Z字形扫描矩阵 | done |
 
-| 序号 | 题目 | 基础 | is done |
+| 序号 | 题目 | 矩阵 | is done |
 |:---|:---:|:---:|:---:|
 |832| Flipping an Image | 横向翻转，再01颠倒 | done |
 |48| Rotate Image | 顺时针旋转矩阵90度 | done |
-
+|36| Valid Sudoku | 按数独规则对已填充数字进行check | done |
 
 
 | 序号 | 题目 | 数字 | is done |
@@ -204,6 +206,7 @@ C++ source codes
 |231|Power of Two|||
 |342|Power of Four|||
 
+
 | 序号 | 题目 | bit manipulation | is done |
 |:---|:---:|:---:|:---:|
 |136| Single Number | 其他都是2个 异或 | done |
@@ -219,18 +222,20 @@ C++ source codes
 |:---|:---:|:---:|:---:|
 |763| Partition Labels | 字符串分割为不相交的段 | done |
 |605| Can Place Flowers | 相邻位置不能种花 | done |
+|55| Jump Game | 每次最多跳A[i]次 是否能跳到最后 | done |
 
 
-| 序号 | 题目  | String | is Done |
+| 序号 | 题目  | String | is done |
 |:---|:---:|:---:|:---:|
+|451| Sort Characters By Frequency | 按频次给字母排序 | done |
 |657|Judge Route Circle|||
 |557|Reverse Words in a String III|||
 |344|Reverse String|||
 |521|Longest Uncommon Subsequence I|||
-|520|Detect Capital|||
+|520| Detect Capital | 大写格式检测 | done |
 |696|Count Binary Substrings|||
-|12| Integer to Roman |||
-|13| Roman to Integer |||
+|12| Integer to Roman | 整数转罗马数字 | done |
+|13| Roman to Integer | 罗马数字转整数 | done |
 |383|Ransom Note|||
 |387|First Unique Character in a String|||
 |551|Student Attendance Record I|||
@@ -272,12 +277,11 @@ C++ source codes
 |169|Majority Element|||
 |122| Best Time to Buy and Sell Stock II | 股票交易 贪婪法 | done |
 |167|Two Sum II - Input array is sorted|||
-|217|Contains Duplicate|||
 |697| Degree of an Array | 元素出现最大频率 | done |
 |661|Image Smoother|||
 |268|Missing Number|||
 |628|Maximum Product of Three Numbers|||
-|27|Remove Element|||
+|27| Remove Element | remove目标值 | done |
 |35|Search Insert Position|||
 |118|Pascal's Triangle|||
 |66|Plus One|||
@@ -285,7 +289,6 @@ C++ source codes
 |119|Pascal's Triangle II|||
 |643|Maximum Average Subarray I|||
 |26|Remove Duplicates from Sorted Array|||
-|219|Contains Duplicate II|||
 |88|Merge Sorted Array|||
 |581|Shortest Unsorted Continuous Subarray|||
 |532| K-diff Pairs in an Array | 差值为k的数对个数 | done |
@@ -296,20 +299,23 @@ C++ source codes
 |495|Teemo Attacking|||
 |238|Product of Array Except Self|||
 |75| Sort Colors | 012聚合排序 Two Pointers | done |
-|0526|Beautiful Arrangement|||
-|384|Shuffle an Array|||
+|526|Beautiful Arrangement|||
+|384| Shuffle an Array | 随机洗牌 | done |
 |421|Maximum XOR of Two Numbers in an Array|||
 |347| Top K Frequent Elements | 前K个次数最多的数字 | done |
-|462|Minimum Moves to Equal Array Elements II|||
 |503|Next Greater Element II|||
 |223|Rectangle Area|||
-|451|Sort Characters By Frequency|||
-|419|Battleships in a Board|||
+|419| Battleships in a Board | 数战船一行或一列，数起点即可 | done |
 |441|Arranging Coins|||
-|319|Bulb Switcher|||
+|319| Bulb Switcher | n个灯泡第i轮每i个进行反转 | done |
 |453| Minimum Moves to Equal Array Elements | 移动最少的步数使所有元素相同，每次给n-1元素+1 | done |
+|462| Minimum Moves to Equal Array Elements II | 每次只给一个元素+-1 | done |
 |11| Container With Most Water | 积雨水问题 一次 | done |
 |42| Trapping Rain Water | 积雨水问题 累积 | done |
+|217| Contains Duplicate | 数组中是否包含重复元素 | done |
+|219| Contains Duplicate II | 给定步长内是否存在相等的两个数 | done |
+|220| Contains Duplicate III | 给定步长内是否存在diff在给定范围内的两个数 | done |
+|56| Merge Intervals | 区间合并 | done |
 
 
 | 序号 | 题目 | Array Hash | is done |
@@ -346,7 +352,7 @@ C++ source codes
 |86| Partition List | 以给定值划分链表为前后两部分 two pointers | done |
 
 
-| 序号  | 题目 | 栈 队列 | is Done |
+| 序号  | 题目 | 栈 队列 | is done |
 |:---|:---:|:---:|:---:|
 |155| Min Stack | 返回最小值的栈 牛客56 | done |
 |232| Implement Queue using Stacks | 用栈实现队列 牛客37  | done |
@@ -390,7 +396,7 @@ C++ source codes
 |279| Perfect Squares | 由平方数相加组成某个数的最少个数 | done |
 
 
-| 序号 | 题目 | DFS | is Done |
+| 序号 | 题目 | DFS | is done |
 |:---|:---:|:---:|:---:|
 |690| Employee Importance | 该员工及其所有下属的重要性之和 map使用 BFS| done |
 |695| Max Area of Island | 最大的岛屿面积 上下左右四个方向递归搜索 | done |
@@ -409,7 +415,7 @@ C++ source codes
 |78| Subsets | 数组不含重复元素，求数组所有子集 | done |
 |90| Subsets II | 数组包含重复元素，求数组所有子集，注意与491对比 | done |
 |491| Increasing Subsequences | 数组包含重复元素，求所有的递增子序列 | done |
-|39| Combination Sum | 不含重复集合中不限次数取数字其和为定值 | done |
+|39| Combination Sum | 不含重复集合中不限次数取数字其和为定值 不考虑拿取顺序 | done |
 |40| Combination Sum II | 含重复集合中取数字其和为定值 | done |
 |216| Combination Sum III | 1-9中选k个元素其和为定值 | done |
 |22| Generate Parentheses | 生成括号 | done |
@@ -417,19 +423,20 @@ C++ source codes
 |79| Word Search | 矩形中搜索组成字符串的路径 | done |
 
 
-| 序号 | 题目 | backtracking | is Done |
+| 序号 | 题目 | backtracking | is done |
 |:---|:---:|:---:|:---:|
 |46| Permutations | 不重复序列的全排列 | done |
 |47| Permutations II | 含重复序列的全排列 | done |
 
 
 
-| 序号 | 题目 | BFS | is Done |
+| 序号 | 题目 | BFS | is done |
 |:---|:---:|:---:|:---:|
 |||||
 
-| 序号 | 题目 | 二叉树 | is Done |
+| 序号 | 题目 | 二叉树 | is done |
 |:---|:---:|:---:|:---:|
+|872| Leaf-Similar Trees | 叶子序列相同的树 找所有叶子 | done |
 |617| Merge Two Binary Trees | 将另一个二叉树合并到原二叉树 DFS | done |
 |669| Trim a Binary Search Tree | 递归Trim二叉搜索树 [L R] DFS | done |
 |226| Invert Binary Tree | 交换左右子树 DFS | done |
@@ -454,7 +461,8 @@ C++ source codes
 |508| Most Frequent Subtree Sum | 最高频子树之和 | done |
 |654| Maximum Binary Tree | 数组的最大值作为根节点，最大值左边右边都是最大二叉树 与构造平衡二叉搜索树类似 | done |
 |104| Maximum Depth of Binary Tree | 求二叉树最大深度，树高 DFS | done |
-|111| Minimum Depth of Binary Tree | 二叉树根到叶子最小深度 与牛客35对比 DFS BFS | done |
+|559| Maximum Depth of N-ary Tree | 求N叉树最大深度 DFS | done |
+|111| Minimum Depth of Binary Tree | 二叉树树根到叶子最小深度 与牛客35对比 DFS BFS | done |
 |655| Print Binary Tree | 打印二叉树，包括空节点，还要对齐 二叉树求最大宽度 求高度 | done |
 |623| Add One Row to Tree | 增加一层节点 | done |
 |230| Kth Smallest Element in a BST | 二叉树/二叉搜索树第k个节点 | done |
@@ -502,7 +510,7 @@ C++ source codes
 |16| 句子反转 | 将句子中的单词位置反转 | done |
 |18|年终奖|||
 |19|袋鼠过河|||
-|21| 幸运数 | n进制 |
+|21| 幸运数 | n进制 ||
 |22|身份证分组|||
 |23|filename|||
 |25|头条校招|||
@@ -515,6 +523,8 @@ C++ source codes
 
 | 序号 | 题目 | 常规 | is done |
 |:---|:---:|:---:|:---:|
+|93| 16进制转10进制 | | done |
+|92| 去重排序 | set | done |
 |1| 懂二进制 | 求两整数有多少个bit不同 汉明距离 | done |
 |26| 素数对 | 素数 | done |
 |54| 第一个只出现一次的字符 | map统计次数 剑指offer | done |
@@ -556,13 +566,14 @@ C++ source codes
 
 | 序号 | 题目| 递归 | is done |
 |:---|:---:|:---:|:---:|
+|91| 汽水瓶 | | done |
 |34| 替换空格 | 剑指offer | done |
 |55| power实现，求数值的整数次方，递归 | 剑指offer | done |
 
 
 | 序号 | 题目| DFS | is done |
 |:---|:---:|:---:|:---:|
-|||||
+|94| 走到第n步时投骰子的方法 | 1-6不限次数取出和为定值 要考虑投骰子的顺序 与Leetcode 39对比 美团 | done |
 
 | 序号 | 题目 | DP | is done |
 |:---|:---:|:---:|:---:|
@@ -576,6 +587,8 @@ C++ source codes
 
 | 序号 | 题目 | 数组 Array | is done |
 |:---|:---:|:---:|:---:|
+|89| 更新会话列表 | 网易游戏 | done |
+|90| 字符迷阵中寻找特定的单词 | 网易游戏 | done |
 |72| 数组中重复的数字 | 剑指offer | done |
 |76| 连续子数组的最大和 | 连续子序列的最大和 剑指offer | done |
 |77| 数组中只出现一次的数字 | 除了两个数字外，其他的数字都出现了两次 剑指offer | done |
@@ -594,6 +607,7 @@ C++ source codes
 
 | 序号 | 题目| String | is done |
 |:---|:---:|:---:|:---:|
+|88| 钟表调时间 | 网易游戏 | done |
 |74| 翻转字符串单词顺序 | 反转字符串单词顺序 剑指offer | done |
 |84| 左旋转字符串 | 或右旋 剑指offer | done |
 |86| 字符串的排列 | 全排列 剑指offer DFS | done | 

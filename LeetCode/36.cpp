@@ -2,9 +2,7 @@
  *  36
  *  Valid Sudoku
  * *思路：
- *  
- * *技法：
- *  
+ 
  */
 
 class Solution {
@@ -20,11 +18,11 @@ public:
         {
             for(j = 0;j < 9;j++)
             {
-                if(!checkOut(col_check, board[j][i] - '0'))
+                if(!checkOut(col_check, board[j][i] - '0')) // each col
                     return false;
-                if(!checkOut(row_check, board[i][j] - '0'))
+                if(!checkOut(row_check, board[i][j] - '0')) // each row
                     return false;
-                if(!checkOut(box_check, board[i/3*3+j/3][i%3*3+j%3] - '0'))
+                if(!checkOut(box_check, board[i/3*3+j/3][i%3*3+j%3] - '0')) // each 3x3
                     return false;
             }
             memset(col_check, 0, sizeof(col_check));
@@ -34,6 +32,7 @@ public:
         return true;
     }
     
+    // check repetition
     bool checkOut(int check[], int val)
     {
         if(val < 0)

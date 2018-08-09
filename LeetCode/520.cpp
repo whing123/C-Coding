@@ -2,9 +2,7 @@
  *  520
  *  Detect Capital 
  * *思路：
- *  
- * *技法：
- *  
+ 
  */
 
 class Solution {
@@ -24,6 +22,7 @@ public:
         }else if(!firstCh && sum == 0){  //全小写 
             return true;
         }
+        
         return false;
     }
     

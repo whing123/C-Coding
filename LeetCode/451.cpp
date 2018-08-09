@@ -2,9 +2,7 @@
  *  451
  *  Sort Characters By Frequency
  * *思路：
- *  
- * *技法：
- *  
+ 
  */
 
 struct lessThan{

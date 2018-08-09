@@ -2,9 +2,7 @@
  *  384
  *  Shuffle an Array
  * *思路：
- *  
- * *技法：
- *  
+
  */
 
 class Solution {

@@ -2,9 +2,7 @@
  *  27
  *  Remove Element
  * *思路：
- *  
- * *技法：
- *  
+
  */
 
 class Solution {
@@ -20,5 +18,22 @@ public:
             i++;
         }
         return nums.size();
+    }
+};
+
+// better
+class Solution {
+public:
+    int removeElement(vector<int>& nums, int val) {
+        int cnt = 0;
+        for (int i = 0; i < nums.size(); i++) {
+            if (val == nums[i]) {
+                cnt++;
+            } else {
+                nums[i-cnt] = nums[i]; // move to empty pos
+            }
+            
+        }
+        return nums.size() - cnt;
     }
 };

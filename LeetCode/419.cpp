@@ -2,9 +2,7 @@
  *  419
  *  Battleships in a Board
  * *思路：
- *  
- * *技法：
- *  
+    题目已假定战船分离 数起点即可
  */
 
 class Solution {
