@@ -267,6 +267,7 @@ C++ source codes
 | 序号 | 题目 | 数组 Array | is done |
 |:---|:---:|:---:|:---:|
 |1| Two Sum | 和为定值的两个数的下标 | done |
+|84| Largest Rectangle in Histogram | 最大矩形面积 | done |
 |561|Array Partition I|||
 |566|Reshape the Matrix|||
 |766| Toeplitz Matrix | 每一条反对角线上的元素都相等 | done |
@@ -394,6 +395,8 @@ C++ source codes
 |377| Combination Sum IV | 不含重复集合中不限次数取数字其和为定值，允许同一组合内不同次序 注意与拼凑硬币的区别 | done |
 |152| Maximum Product Subarray | 连续子序列的最大乘积 | done |
 |279| Perfect Squares | 由平方数相加组成某个数的最少个数 | done |
+|583| Delete Operation for Two Strings | 最少的删除次数使两个字符串相同 一次删某个字符串的一个字符 两个字符串的最长公共部分（不一定连续） 最长公共子序列 | done |
+|718| Maximum Length of Repeated Subarray | 最长连续公共子序列 | done |
 
 
 | 序号 | 题目 | DFS | is done |
@@ -427,7 +430,6 @@ C++ source codes
 |:---|:---:|:---:|:---:|
 |46| Permutations | 不重复序列的全排列 | done |
 |47| Permutations II | 含重复序列的全排列 | done |
-
 
 
 | 序号 | 题目 | BFS | is done |
@@ -544,6 +546,7 @@ C++ source codes
 |:---|:---:|:---:|:---:|
 |2| 最大差值 | 求满足0≤a≤b<\n的A[b]-A[a]的最大值 | done |
 |3| 数组单调和 | | done |
+|95| 最大矩形面积 | leetcode 84 | done |
 
 
 | 序号 | 题目 | 链表 | is done |
@@ -583,6 +586,7 @@ C++ source codes
 |69| 变态跳台阶 | 剑指offer | done |
 |65| 矩形覆盖 | 剑指offer | done |
 |66| 斐波那契数列 | 剑指offer DP | done |
+|96| 最长公共连续子串 | leetcode 718 | done |
 
 
 | 序号 | 题目 | 数组 Array | is done |
