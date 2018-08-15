@@ -419,8 +419,8 @@ C++ source codes
 |90| Subsets II | 数组包含重复元素，求数组所有子集，注意与491对比 | done |
 |491| Increasing Subsequences | 数组包含重复元素，求所有的递增子序列 | done |
 |39| Combination Sum | 不含重复集合中不限次数取数字其和为定值 不考虑拿取顺序 | done |
-|40| Combination Sum II | 含重复集合中取数字其和为定值 | done |
-|216| Combination Sum III | 1-9中选k个元素其和为定值 | done |
+|40| Combination Sum II | 含重复集合中取数字其和为定值 只能取一次 | done |
+|216| Combination Sum III | 1-9中选k个元素其和为定值 只能取一次 | done |
 |22| Generate Parentheses | 生成括号 | done |
 |841| Keys and Rooms | 访问所有房间 | done |
 |79| Word Search | 矩形中搜索组成字符串的路径 | done |
@@ -525,6 +525,8 @@ C++ source codes
 
 | 序号 | 题目 | 常规 | is done |
 |:---|:---:|:---:|:---:|
+|100| 手串颜色 | | done |
+|99| 用户喜好查询 | | done |
 |93| 16进制转10进制 | | done |
 |92| 去重排序 | set | done |
 |1| 懂二进制 | 求两整数有多少个bit不同 汉明距离 | done |
@@ -547,6 +549,7 @@ C++ source codes
 |2| 最大差值 | 求满足0≤a≤b<\n的A[b]-A[a]的最大值 | done |
 |3| 数组单调和 | | done |
 |95| 最大矩形面积 | leetcode 84 | done |
+|98| 顺时针打印矩阵 | 剑指offer 递归 | done |
 
 
 | 序号 | 题目 | 链表 | is done |
@@ -600,6 +603,7 @@ C++ source codes
 |81| 把数组排成最小的数 | 所有数排成最小的数字 剑指offer | done |
 |82| 栈的压入、弹出序列 | 输入两个整数序列，第一个序列表示栈的压入顺序，判断第二个序列是否为该栈的弹出顺序 剑指offer | done |
 |85| 最小的K个数 | Top K问题 剑指offer | done | 
+|97| 滑动窗口最大值 | 剑指offer | done |
 
 
 | 序号 | 题目 | 二分查找 | is done |
