@@ -12,6 +12,8 @@ struct ListNode {
 			val(x), next(NULL) {
 	}
 };*/
+
+// best
 class Solution {
 public:
     ListNode* FindFirstCommonNode( ListNode* pHead1, ListNode* pHead2) {
@@ -50,6 +52,9 @@ public:
         return p1;
     }
 };
+
+
+// not recommended below
 
 /*
 找出2个链表的长度，然后让长的先走两个链表的长度差，然后再一起走

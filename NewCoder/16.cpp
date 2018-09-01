@@ -18,7 +18,9 @@ int main() {
         int j;
         for (int i = 0; i < line.size();) {
             j = i; // start of current word
-            while(j < line.size() && line[j] != ' ') ++j; // jump to the next of the end of current word
+            while(j < line.size() && line[j] != ' ') // jump to the next of the end of current word
+                ++j; 
+
             reverse(line.begin() + i, line.begin() + j); // reverse current word
             i = j + 1;
         }

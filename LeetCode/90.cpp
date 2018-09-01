@@ -7,14 +7,17 @@ class Solution {
 public:
     vector<vector<int>> subsetsWithDup(vector<int>& nums) {
         vector<vector<int>> res;
+
         vector<int> seq;
         res.push_back(seq);
+
         if(nums.size() == 0){
             return res;
         }
         
         sort(nums.begin(), nums.end()); // 有重复时必不可少
         dfs(res, nums, seq, 0);
+        
         return res;
     }
     

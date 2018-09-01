@@ -6,14 +6,17 @@
 class Solution {
 public:
     vector<vector<int>> subsets(vector<int>& nums) {
-        vector<int> seq;
         vector<vector<int>> res;
+
+        vector<int> seq;
         res.push_back(seq);
+
         if(nums.size() == 0){
             return res;
         }
         
         dfs(nums, res, seq, 0);
+        
         return res;
     }
     

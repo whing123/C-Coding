@@ -9,8 +9,9 @@ public:
         vector<vector<int>> res;
         vector<int> seq;
         
-        sort(candidates.begin(), candidates.end());
+        sort(candidates.begin(), candidates.end()); // 有重复时必不可少
         dfs(candidates, target, res, seq, 0, 0);
+        
         return res;
     }
     
@@ -28,6 +29,7 @@ public:
                 cur.push_back(nums[i]);
                 dfs(nums, target, res, cur, cursum+nums[i], i+1);
                 cur.pop_back();
+
                 hash.insert(nums[i]);
             }
         }

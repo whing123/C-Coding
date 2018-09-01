@@ -16,13 +16,16 @@ public:
     }
     
     void dfs(vector<vector<int>>&res, vector<int> &nums, vector<int>& cur, int start){
-        if(cur.size() > 1) res.push_back(cur);
+        if(cur.size() > 1) 
+            res.push_back(cur);
+        
         unordered_set<int> hash;
         for(int i = start; i < nums.size(); ++i){
             if((cur.empty() || nums[i] >= cur.back()) && hash.find(nums[i]) == hash.end()){
                 cur.push_back(nums[i]);
                 dfs(res, nums, cur, i+1);
                 cur.pop_back();
+
                 hash.insert(nums[i]);
             }
         }

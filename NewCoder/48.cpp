@@ -30,6 +30,7 @@ public:
                 TreeNode* p = tmp.front();
                 res.push_back(p->val);
                 tmp.pop();
+                
                 if(p->left != NULL){
                     tmp.push(p->left);
                 }
