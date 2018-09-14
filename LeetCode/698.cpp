@@ -34,8 +34,9 @@ public:
             return true;
         }
         
-        if(cursum == target && curnum > 0) // when target == 0
+        if(cursum == target && curnum > 0) // when target == 0, need curnum > 0
             return canPartition(nums, k-1, target, 0, 0, 0, taken);
+
         for(int i = start; i < nums.size(); ++i){
             if(taken[i] == 0){
                 taken[i] = 1;

@@ -2,9 +2,6 @@
  *  371
  *  Sum of Two Integers
  * *思路：
- *  
- * *技法：
- *  
  */
 
 class Solution {

@@ -12,9 +12,8 @@ class Solution {
 public:
      int  NumberOf1(int n) {
          int cnt = 0;
-         while(n){
+         while (n) {
              cnt++;
-             
              n = n & (n-1);
          }
          
@@ -26,16 +25,16 @@ public:
 class Solution {
 public:
     int  NumberOf1(int n) {
-        int count=0;
+        int count = 0;
         unsigned int flag = 1;
 
-        while(flag){
+        while (flag) {
 
-            if (n & flag){
+            if (n & flag) {
                 count++;
             }
 
-          	flag = flag<<1;
+          	flag = flag << 1;
         }
 
         return count;

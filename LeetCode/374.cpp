@@ -2,9 +2,6 @@
  *  374
  *  Guess Number Higher or Lower
  * *思路：
- *  
- * *技法：
- *  
  */
 
 // Forward declaration of guess API.

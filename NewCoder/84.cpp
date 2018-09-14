@@ -4,7 +4,6 @@
 
 // 左旋与右旋互补 
 
-
 class Solution {
 public:
     string LeftRotateString(string str, int n) {

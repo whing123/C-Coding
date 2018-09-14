@@ -2,9 +2,7 @@
  *  680
  *  Valid Palindrome II
  * *思路：
- *  
- * *技法：
- *  
+
  */
 
 class Solution {

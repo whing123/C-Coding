@@ -2,9 +2,7 @@
  *  38
  *  Count and Say
  * *思路：
- *  
- * *技法：
- *  
+
  */
 
 class Solution {

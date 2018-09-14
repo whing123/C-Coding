@@ -44,7 +44,8 @@ public:
     // Push element x onto stack.
     void push(int x) {
         que.push(x);
-        for(int i=0;i<que.size()-1;++i){ // 最新在头，最旧在尾
+        
+        for(int i = 0; i < que.size()-1; ++i){ // 最新在头，最旧在尾
             que.push(que.front());
             que.pop();
         }

@@ -28,26 +28,30 @@ public:
         ListNode* p1 = pHead1;
         ListNode* p2 = pHead2;
         while(p1 != p2) {
-            if(p1 != NULL) p1 = p1->next;   
-            if(p2 != NULL) p2 = p2->next;
-            if(p1 != p2) {                  
-                if(p1 == NULL) p1 = pHead2;
-                if(p2 == NULL) p2 = pHead1;
-            }
+            if(p1 != NULL) 
+                p1 = p1->next;
+            else
+                p1 = pHead2;
+            
+            if(p2 != NULL) 
+                p2 = p2->next;
+            else
+                p2 = pHead1;
         }
+        
         return p1;
     }
 };
 
-
+// best
 class Solution {
 public:
     ListNode* FindFirstCommonNode( ListNode *pHead1, ListNode *pHead2) {
         ListNode *p1 = pHead1;
         ListNode *p2 = pHead2;
-        while(p1!=p2){
-            p1 = (p1==NULL ? pHead2 : p1->next);
-            p2 = (p2==NULL ? pHead1 : p2->next);
+        while (p1 != p2) {
+            p1 = (p1 == NULL ? pHead2 : p1->next);
+            p2 = (p2 == NULL ? pHead1 : p2->next);
         }
         return p1;
     }

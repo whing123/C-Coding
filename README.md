@@ -7,12 +7,12 @@ C++ source codes
 |1| A+B Problem | 基本输入输出 ||
 |2| big int |超长整数相加||
 |3| link |将两个线性表合并成为一个线性表||
-|4| edit |字符串操作||
-|5| 二哥摘苹果| ||
-|6|二哥种花生| ||
-|7|二哥养细菌| ||
-|8|西西弗斯式的命运| ||
-|9|排序| ||
+|4| edit | 字符串操作 | |
+|5| 二哥摘苹果| | |
+|6|二哥种花生| | |
+|7|二哥养细菌| | |
+|8|西西弗斯式的命运| | |
+|9| 排序 | | |
 |10|Ackerman函数|||
 |11|ackerman|||
 |12|pascal|||
@@ -51,11 +51,11 @@ C++ source codes
 |45|二哥买草|||
 |46|二哥打游戏|||
 |47|静态查找表|||
-|48|二哥学集合论|||
-|49|有序分数序列|||
+|48| 二哥学集合论 |||
+|49| 有序分数序列 |||
 |50| 二哥的地图 | 矩形中岛屿的数量 DFS | done |
-|51|大鱼| ||
-|52|怎么还是那个数列？！| ||
+|51| 大鱼 | ||
+|52| 怎么还是那个数列？！ | ||
 
 
 ## Others
@@ -72,7 +72,7 @@ C++ source codes
 |:---|:---:|:---:|:---:|
 |8| 求第N个质数 | 质数 素数 | |
 |27| 素数有限域 | 微众 | done |
-|19| 时针分针夹角 | 拼多多 | done |
+|19| 时针分针夹角 | 拼多多 | *1* |
 
 | 序号 | 题目 | 数组 | status |
 |:---|:---:|:---:|:---:|
@@ -87,12 +87,14 @@ C++ source codes
 |25| 最小的k个数 | Top K 建堆 搜狐 | done |
 |26| 成长值 任务值 | 搜狐 | done |
 |33| 棋盘倒立 | 拼多多 | done |
+|36| 区间个数 | 美团点评 | done |
+
 
 | 序号 | 题目 | 字符串 | status |
 |:---|:---:|:---:|:---:|
 |3| 字符串中找到最大的数字串 | 数字串比较大小，去掉前导0；字符串去掉特殊子串 |
 |5| 模仿数据库操作 | string字符串分割 |
-|14| 字符串去重 || done |
+|14| 字符串去重 || *1* |
 |16| 安置路灯 | 贪心 | done |
 
 
@@ -102,17 +104,17 @@ C++ source codes
 
 | 序号 | 题目 | 递归 | status |
 |:---|:---:|:---:|:---:|
-|24| 原点出发，每次+1-1*2，到达x的最少步数 | 招行 | done |
+|24| 原点出发，每次+1-1*2，到达x的最少步数 | 招行 | *1* |
 
 | 序号 | 题目 | DFS | status |
 |:---|:---:|:---:|:---:|
-|10| 矩阵自上而下的路径和，相邻行不同列 | 阿里 DFS | done |
+|10| 矩阵自上而下的路径和，相邻行不同列 | 阿里 DFS | *1* |
 |15| 背包糖果的装法 || done |
 |17| 酒店房间 | 携程 | done |
-|20| 组成三角形 | 拼多多 | done |
+|20| 组成三角形 | 拼多多 | *1* |
 |22| 形成的硬币钱数 | 拼多多面试 | done |
 |23| 来信通知 | 微软 | done |
-|34| 每一列中选一个 组成的字典序最小 且不和输入的重复 | 拼多多 二级 | done |
+|34| 每一列中选一个 组成的字典序最小 且不和输入的重复 | 拼多多 二级 | *1* |
 
 
 | 序号 | 题目 | 二叉树 | status |
@@ -177,10 +179,11 @@ C++ source codes
 |748|Shortest Completing Word|||
 |739|Daily Temperatures|||
 |677|Map Sum Pairs|||
-|498| Diagonal Traverse | Z字形扫描矩阵 | done |
+
 
 | 序号 | 题目 | 矩阵 | status |
 |:---|:---:|:---:|:---:|
+|498| Diagonal Traverse | Z字形扫描矩阵 | done |
 |832| Flipping an Image | 横向翻转，再01颠倒 | done |
 |48| Rotate Image | 顺时针旋转矩阵90度 | done |
 |36| Valid Sudoku | 按数独规则对已填充数字进行check | done |
@@ -188,17 +191,16 @@ C++ source codes
 
 | 序号 | 题目 | 数字 | status |
 |:---|:---:|:---:|:---:|
+|393| UTF-8 Validation | UTF-8验证 | done |
 |191| Number of 1 Bits | 数字的二进制表示中1的个数 | done |
 |461| Hamming Distance | 求两个数的汉明距离 | done |
 |477| Total Hamming Distance | 求一组数的汉明距离 | done |
-|190| Reverse Bits | | done |
+|190| Reverse Bits | 比特反转 | done |
 |263| Ugly Number | 丑数 | done |
 |371| Sum of Two Integers | 不使用+-号求和 | done |
-|374| Guess Number Higher or Lower | 二分查找 | done |
+|374| Guess Number Higher or Lower | 猜数字 二分查找 | done |
 |9| Palindrome Number | 回文数字判断 | done |
 |504|Base 7|||
-|2| Add Two Numbers | 大数求和 链表存储 | done |
-|445| Add Two Numbers II || done |
 |454|4Sum II|||
 |69| Sqrt(x) | Implement int sqrt(int x) | done |
 |260|Single Number III|||
@@ -227,46 +229,46 @@ C++ source codes
 | 序号 | 题目 | 贪婪法 | status |
 |:---|:---:|:---:|:---:|
 |763| Partition Labels | 字符串分割为不相交的段 | done |
-|605| Can Place Flowers | 相邻位置不能种花 | done |
-|55| Jump Game | 每次最多跳A[i]次 是否能跳到最后 | done |
+|605| Can Place Flowers | 相邻位置不能种花 | *1* |
+|55| Jump Game | 每次最多跳A[i]次 是否能跳到最后 | *1* |
+|45| Jump Game II | 用最少的次数跳到最后 | *1* |
 
 
 | 序号 | 题目  | String | status |
 |:---|:---:|:---:|:---:|
+|38| Count and Say | | |
+|415| Add Strings | | |
+|481| Magical String | | |
+|648| Replace Words | | |
 |451| Sort Characters By Frequency | 按频次给字母排序 | done |
-|657|Judge Route Circle|||
-|557|Reverse Words in a String III|||
-|344|Reverse String|||
+|657| Judge Route Circle | | |
+|557| Reverse Words in a String III | | |
+|383| Ransom Note | | |
 |521|Longest Uncommon Subsequence I|||
 |520| Detect Capital | 大写格式检测 | done |
-|696|Count Binary Substrings|||
+|696| Count Binary Substrings | | |
 |12| Integer to Roman | 整数转罗马数字 | done |
 |13| Roman to Integer | 罗马数字转整数 | done |
-|383|Ransom Note|||
-|387|First Unique Character in a String|||
-|551|Student Attendance Record I|||
-|541|Reverse String II|||
+|387| First Unique Character in a String | | |
+|551| Student Attendance Record I | | |
+|344| Reverse String | 首尾双指针 | *1* |
+|541| Reverse String II | 每2k反转前k个 | done |
 |345|Reverse Vowels of a String|||
-|459|Repeated Substring Pattern|||
-|434|Number of Segments in a String|||
-|38|Count and Say|||
-|443|String Compression|十进制数字提取出每一位||
-|20|Valid Parentheses|||
+|459| Repeated Substring Pattern | 判断字符串是否由某个模式重复得到 | *1* |
+|434| Number of Segments in a String | 数单词 | *1* |
+|58| Length of Last Word | 最后一个单词的长度 | done |
+|443| String Compression | 十进制数字提取出每一位 ||
 |67|Add Binary|||
 |686|Repeated String Match|string 判断子串||
-|680|Valid Palindrome II|回文判断，左右是否相互包含||
-|58|Length of Last Word|||
 |14|Longest Common Prefix|||
-|28|Implement strStr()|||
+|28| Implement strStr() | 实现find函数 | done |
 |125| Valid Palindrome | 只考虑句子中的字母数字并忽略大小写的回文判断 | done |
+|680| Valid Palindrome II | 回文判断，左右是否相互包含 | |
 |537|Complex Number Multiplication|||
 |539|Minimum Time Difference|||
 |6|ZigZag Conversion|||
 |165|Compare Version Numbers|||
 |8| String to Integer (atoi) | atoi | done |
-|415|Add Strings|||
-|481|Magical String|||
-|648|Replace Words|||
 |3| Longest Substring Without Repeating Characters | 最长不重复子串 | done |
 
 
@@ -296,8 +298,9 @@ C++ source codes
 |724|Find Pivot Index|||
 |119|Pascal's Triangle II|||
 |643|Maximum Average Subarray I|||
-|26|Remove Duplicates from Sorted Array|||
-|88|Merge Sorted Array|||
+|26| Remove Duplicates from Sorted Array | 有序数组去重 in-place | *1* |
+|80| Remove Duplicates from Sorted Array II | 有序数组去重 超过2个才开始去重 in-place | *1* |
+|88| Merge Sorted Array | 归并思想 | *1* |
 |581|Shortest Unsorted Continuous Subarray|||
 |532| K-diff Pairs in an Array | 差值为k的数对个数 | done |
 |414|Third Maximum Number|||
@@ -330,6 +333,7 @@ C++ source codes
 |:---|:---:|:---:|:---:|
 |560| Subarray Sum Equals K | 连续子数组和为定值 Hash | done |
 
+
 | 序号 | 题目 | 二分查找 | status |
 |:---|:---:|:---:|:---:|
 |1| Two Sum | 和为定值的两个数的下标 牛客83 | *1* |
@@ -349,12 +353,14 @@ C++ source codes
 
 | 序号 | 题目 | 链表 | status |
 |:---|:---:|:---:|:---:|
-|382|Linked List Random Node|||
-|203|Remove Linked List Elements|||
-|19| Remove Nth Node From End of List | 删除倒数第K个节点 | *1* |
 |141|Linked List Cycle|||
 |142|Linked List Cycle II|||
-|234| Palindrome Linked List | 回文链表 | done |
+|382|Linked List Random Node|||
+|203|Remove Linked List Elements|||
+|2| Add Two Numbers | 大数求和 低位在头 | *1* |
+|445| Add Two Numbers II | 大数求和 高位在头 | *1* |
+|19| Remove Nth Node From End of List | 删除倒数第K个节点 | *1* |
+|234| Palindrome Linked List | 回文链表 快慢指针分成两部分 | *1* |
 |83| Remove Duplicates from Sorted List | 有序链表去重 | *1* |
 |160|Intersection of Two Linked Lists|||
 |21| Merge Two Sorted Lists | 归并思想 | *1* |
@@ -365,13 +371,19 @@ C++ source codes
 
 | 序号  | 题目 | 栈 队列 | status |
 |:---|:---:|:---:|:---:|
-|155| Min Stack | 返回最小值的栈 牛客56 | done |
+|20| Valid Parentheses | 验证括号是否匹配 | *1* |
+|155| Min Stack | 返回最小值的栈 牛客56 | *1* |
 |232| Implement Queue using Stacks | 用栈实现队列 牛客37  | *1* |
-|225| Implement Stack using Queues | 用队列实现栈 | done |
+|225| Implement Stack using Queues | 用队列实现栈 | *1* |
 
 
 | 序号 | 题目 | DP | status |
 |:---|:---:|:---:|:---:|
+|303| Range Sum Query - Immutable |||
+|413| Arithmetic Slices |||
+|357| Count Numbers with Unique Digits |||
+|650| 2 Keys Keyboard|DP||
+|392| Is Subsequence |||
 |62| Unique Paths | 左上角到右下角的路径数之和 | *1* |
 |63| Unique Paths II | 62的基础上增加路障 | *1* |
 |70| Climbing Stairs | 跳台阶，一次1或2级 | done |
@@ -383,16 +395,11 @@ C++ source codes
 |300| Longest Increasing Subsequence | 最长递增子序列长度 或非递减 不一定连续 | *1* |
 |198| House Robber | 数组相邻元素不能同时获取，求最大和 DP | done |
 |213| House Robber II | 环形数组相邻元素不能同时获取，求最大和 DP | done |
-|303| Range Sum Query - Immutable |||
 |338| Counting Bits | 二进制1的个数 | done |
 |647| Palindromic Substrings | 回文子串数目和 | done |
 |516| Longest Palindromic Subsequence | 最长回文子序列长度 | done |
 |5| Longest Palindromic Substring | 最长回文子串 | done |
-|413| Arithmetic Slices |||
-|343| Integer Break |||
-|357| Count Numbers with Unique Digits |||
-|650| 2 Keys Keyboard|DP||
-|392| Is Subsequence |||
+|343| Integer Break | 整数拆分使乘积最大 | *1* |
 |740| Delete and Earn | 取一个数要删掉其+1-1的所有数，求取出的最大和 | done |
 |64| Minimum Path Sum | 矩阵左上到右下的路径权重和最小值 | done |
 |120| Triangle | 三角矩阵自上而下路径权重和最小值 | done |
@@ -411,31 +418,34 @@ C++ source codes
 
 | 序号 | 题目 | DFS | status |
 |:---|:---:|:---:|:---:|
-|690| Employee Importance | 该员工及其所有下属的重要性之和 map使用 BFS| done |
-|695| Max Area of Island | 最大的岛屿面积 上下左右四个方向递归搜索 | done |
-|733| Flood Fill | 某一点开始向周围染色 | done |
-|417| Pacific Atlantic Water Flow | 水流入海 | done |
 |531|Lonely Pixel I|||
 |533|Lonely Pixel II|||
 |529| Minesweeper | BFS ||
+|22| Generate Parentheses | 生成括号 | done |
+|841| Keys and Rooms | 访问所有房间 | done |
 |547| Friend Circles | 朋友圈的数目 | done |
-|698| Partition to K Equal Sum Subsets | 将数组分成k个和相等的子集 | done |
 |337| House Robber III | 二叉树父子不能同时偷 | done |
-|494| Target Sum | 一组数的正负和为定值 DFS | done |
-|200| Number of Islands | 矩形中岛屿数量 | done |
-|473| Matchsticks to Square | 与698类似 | done |
 |114| Flatten Binary Tree to Linked List | 二叉树转右侧链表 | done |
+|690| Employee Importance | 该员工及其所有下属的重要性之和 map使用 BFS| done |
+|695| Max Area of Island | 最大的岛屿面积 上下左右四个方向递归搜索 | *1* |
+|200| Number of Islands | 矩形中岛屿数量 | *1* |
+|733| Flood Fill | 某一点开始向周围染色 | *1* |
+|417| Pacific Atlantic Water Flow | 水流入海 | done |
+|494| Target Sum | 一组数的正负和为定值 DFS | *1* |
+|473| Matchsticks to Square | 与698类似 | *1* |
+|698| Partition to K Equal Sum Subsets | 将数组分成k个和相等的子集 | *1* |
 |78| Subsets | 数组不含重复元素，求数组所有子集 | *1* |
 |90| Subsets II | 数组包含重复元素，求数组所有子集，注意与491对比 | *1* |
 |491| Increasing Subsequences | 数组包含重复元素，求所有的递增子序列 | *1* |
 |39| Combination Sum | 不含重复集合中不限次数取数字其和为定值 不考虑拿取顺序 | *1* |
 |40| Combination Sum II | 含重复集合中取数字其和为定值 只能取一次 | *1* |
 |216| Combination Sum III | 1-9中选k个元素其和为定值 只能取一次 | *1* |
-|22| Generate Parentheses | 生成括号 | done |
-|841| Keys and Rooms | 访问所有房间 | done |
 |79| Word Search | 矩形中搜索组成字符串的路径 | *1* |
 |17| Letter Combinations of a Phone Number | 二级DFS | *1* |
 |139| Word Break | 判断字符串是否可由另一字符串集组成 dfs dp | *1* |
+|93| Restore IP Addresses | C N 取 M 组合数 | *1* |
+|756| Pyramid Transition Matrix | 由下往上构造金字塔 | *1* |
+|394| Decode String| 解码字符串 | *1* |
 
 
 | 序号 | 题目 | backtracking | status |
@@ -444,9 +454,11 @@ C++ source codes
 |47| Permutations II | 含重复序列的全排列 | *1* |
 
 
-| 序号 | 题目 | BFS | status |
+| 序号 | 题目 | 图 | status |
 |:---|:---:|:---:|:---:|
-|||||
+|207| Course Schedule | 拓扑排序 检测是否有环 | *1* |
+|210| Course Schedule II | 拓扑排序 返回任一组合即可 | *1* |
+
 
 | 序号 | 题目 | 二叉树 | status |
 |:---|:---:|:---:|:---:|
@@ -467,11 +479,13 @@ C++ source codes
 |508| Most Frequent Subtree Sum | 最高频子树之和 | done |
 |654| Maximum Binary Tree | 数组的最大值作为根节点，最大值左边右边都是最大二叉树 与构造平衡二叉搜索树类似 | done |
 
+
 | 序号 | 题目 | 二叉树对称性 | status |
 |:---|:---:|:---:|:---:|
 |100| Same Tree | 两个二叉树是否相同 DFS | done |
 |572| Subtree of Another Tree | 子树判断 | done |
 |101| Symmetric Tree | 二叉树是否镜像对称 DFS BFS | done |
+
 
 | 序号 | 题目 | 二叉树路径 | status |
 |:---|:---:|:---:|:---:|
@@ -483,6 +497,7 @@ C++ source codes
 |257| Binary Tree Paths | 遍历所有根到叶子路径 DFS | done |
 |543| Diameter of Binary Tree | 最长的路径长度 | done |
 
+
 | 序号 | 题目 | 二叉树高度 | status |
 |:---|:---:|:---:|:---:|
 |104| Maximum Depth of Binary Tree | 求二叉树最大深度，树高 DFS | done |
@@ -490,12 +505,14 @@ C++ source codes
 |111| Minimum Depth of Binary Tree | 二叉树树根到叶子最小深度 与牛客35对比 DFS BFS | done |
 |655| Print Binary Tree | 打印二叉树，包括空节点，还要对齐 二叉树求最大宽度 求高度 | done |
 
+
 | 序号 | 题目 | 二叉树遍历 | status |
 |:---|:---:|:---:|:---:|
 |145| Binary Tree Postorder Traversal | 二叉树后序遍历 递归与迭代 | done |
 |99| Recover Binary Search Tree | 中序遍历查找两个异常点恢复BST | done |
-|94| Binary Tree Inorder Traversal | 中序遍历 | done |
-|144| Binary Tree Preorder Traversal | 前序遍历 | done |
+|94| Binary Tree Inorder Traversal | 中序遍历 | *1* |
+|897| Increasing Order Search Tree | 中序遍历成单链表 | done |
+|144| Binary Tree Preorder Traversal | 前序遍历 | *1* |
 |105| Construct Binary Tree from Preorder and Inorder Traversal | 前序中序构造二叉树 DFS | done | 
 |106| Construct Binary Tree from Inorder and Postorder Traversal | 中序后序构造二叉树 DFS | done |
 |102| Binary Tree Level Order Traversal | 层序遍历 BFS | done |
@@ -503,6 +520,7 @@ C++ source codes
 |637| Average of Levels in Binary Tree | 求二叉树每一层的平均值 层序遍历 | done |
 |515| Find Largest Value in Each Tree Row | 寻找每一层的最大值 层序遍历 DFS BFS | done |
 |107| Binary Tree Level Order Traversal II | 自底向上层序遍历 BFS | done |
+
 
 | 序号 | 题目 | 二叉树 | status |
 |:---|:---:|:---:|:---:|
@@ -564,29 +582,21 @@ C++ source codes
 
 | 序号 | 题目 | 非常规 | status |
 |:---|:---:|:---:|:---:|
-|53| 二维数组中的查找 | 右上角开始查找 剑指offer | *1* |
 |68| 加法求和，不用加减乘除 | 剑指offer | done |
 |70| 1+2+3+...+n | 递归版求和 剑指offer | done |
 |62| 整数中1出现的次数 | 1-n之间1出现的次数和 剑指offer | done |
 |36| 二进制中1的个数 | 某个数的二进制表示中1的个数 剑指offer | done |
 
-| 序号 | 题目 | Array | status |
-|:---|:---:|:---:|:---:|
-|2| 最大差值 | 求满足0≤a≤b<\n的A[b]-A[a]的最大值 | done |
-|3| 数组单调和 | | done |
-|95| 最大矩形面积 | leetcode 84 | done |
-|98| 顺时针打印矩阵 | 剑指offer 递归 | done |
-
 
 | 序号 | 题目 | 链表 | status |
 |:---|:---:|:---:|:---:|
 |33| 删除链表中重复的结点 | 剑指offer | done | 
-|39| 从尾到头打印链表 | 剑指offer | done |
-|40| 反转链表 | 递归 剑指offer | done |
-|47| 合并两个排序的链表 | 剑指offer | done |
+|39| 从尾到头打印链表 | 剑指offer | *1* |
+|40| 反转链表 | 递归 剑指offer | *1* |
+|47| 合并两个排序的链表 | 剑指offer | *1* |
 |50| 链表中倒数第k个结点 | 剑指offer | *1* |
 |63| 两个链表的第一个公共结点 | 剑指offer | *1* |
-|73| 链表中环的入口 | 剑指offer | done | 
+|73| 链表中环的入口 | 剑指offer | *1* | 
 |79| 复杂链表的复制 | 剑指offer | done |
 
 
@@ -599,7 +609,7 @@ C++ source codes
 | 序号 | 题目| 递归 | status |
 |:---|:---:|:---:|:---:|
 |91| 汽水瓶 | | done |
-|34| 替换空格 | 剑指offer | done |
+|34| 替换空格 替换为%20 | 剑指offer 双指针从后遍历见原书47页 | done |
 |55| power实现，求数值的整数次方，递归 | 剑指offer | done |
 
 
@@ -607,15 +617,25 @@ C++ source codes
 |:---|:---:|:---:|:---:|
 |94| 走到第n步时投骰子的方法 | 1-6不限次数取出和为定值 要考虑投骰子的顺序 与Leetcode 39对比 美团 | *1* |
 
+
 | 序号 | 题目 | DP | status |
 |:---|:---:|:---:|:---:|
 |24| 拼凑面额 | DP | *1* |
 |52| 第N个丑数 | 剑指offer DP | done |
+|66| 斐波那契数列 | 剑指offer DP | *1* |
 |64| 跳台阶 | 剑指offer DP | *1* |
 |69| 变态跳台阶 | 剑指offer | done |
 |65| 矩形覆盖 | 剑指offer | done |
-|66| 斐波那契数列 | 剑指offer DP | done |
 |96| 最长公共连续子串 | leetcode 718 | *1* |
+
+
+| 序号 | 题目 | 矩阵 | status |
+|:---|:---:|:---:|:---:|
+|2| 最大差值 | 求满足0≤a≤b<\n的A[b]-A[a]的最大值 | done |
+|3| 数组单调和 | | done |
+|95| 最大矩形面积 | leetcode 84 | done |
+|98| 顺时针打印矩阵 | 剑指offer 递归 | done |
+|53| 二维数组中的查找 | 右上角开始查找 剑指offer | *1* |
 
 
 | 序号 | 题目 | 数组 Array | status |
@@ -635,7 +655,7 @@ C++ source codes
 | 序号 | 题目 | 二分查找 | status |
 |:---|:---:|:---:|:---:|
 |75| 旋转数组的最小数字 | 二分查找 剑指offer | *1* |
-|78| 数字在排序数组中出现的次数 | 二分查找 剑指offer | done |
+|78| 数字在排序数组中出现的次数 | 二分查找 剑指offer | *1* |
 |83| 和为S的两个数字 | 二分查找 剑指offer leetcode 1 two sum | *1* |
 
 
@@ -643,7 +663,7 @@ C++ source codes
 |:---|:---:|:---:|:---:|
 |88| 钟表调时间 | 网易游戏 | done |
 |74| 翻转字符串单词顺序 | 反转字符串单词顺序 剑指offer | *1* |
-|16| 句子反转 | 将句子中的单词位置反转 | done |
+|16| 句子反转 | 将句子中的单词位置反转 | *1* |
 |84| 左旋转字符串 | 或右旋 剑指offer | *1* |
 |86| 字符串的排列 | 全排列 剑指offer DFS | done | 
 |59| 表示数值的字符串 | 剑指offer | done |
@@ -664,7 +684,7 @@ C++ source codes
 |44| 二叉树子结构判断 | 子结构判断 剑指offer | done |
 |45| 判断平衡二叉树 | 剑指offer | done |
 |49| 二叉树中和为某一值的路径 | 根到叶子 剑指offer | done |
-|38| 前序中序重建二叉树 | 剑指offer | done |
+|38| 前序中序重建二叉树 | 剑指offer | *1* |
 |46| 判断数组是不是某二叉搜索树的后序遍历 | 剑指offer | done |
 |51| 中序遍历下个节点 | 剑指offer | done |
 |17| 二叉树的序列化 | | done |

@@ -7,7 +7,7 @@ using namespace std;
 
 int f(int n) {
 
-	for(int i = 0 ; i <= n;)
+	for(int i = 0; i <= n;)
 	if (n < 4) {
 		return n;
 	}

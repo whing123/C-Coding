@@ -1,10 +1,7 @@
 /* *题目：
  *  445
  *  Add Two Numbers II
- * *思路：
- *  
- * *技法：
- *  
+ * *思路： 
  */
 
  /**
@@ -32,23 +29,23 @@ public:
             tmp2 = tmp2->next;
         }
         
-        ListNode *res = new ListNode(0);  //头结点
+        ListNode *head = new ListNode(0);  // 头结点
         ListNode *tmp;
         int sum = 0;
         int carry = 0;
         while(!num1.empty() || !num2.empty()){
-            if(!num1.empty() && !num2.empty()){  //两个栈都不空
+            if(!num1.empty() && !num2.empty()){  // 两个栈都不空
                 sum = num1.top() + num2.top() + carry;
                 carry = sum / 10;
                 sum %= 10;
                 num1.pop();
                 num2.pop();
-            }else if(!num1.empty()){ //1不空2空
+            }else if(!num1.empty()){ // 1不空2空
                 sum = num1.top() + carry;
                 carry = sum / 10;
                 sum %= 10;
                 num1.pop();
-            }else{  //1空2不空
+            }else{  // 1空2不空
                 sum = num2.top() + carry;
                 carry = sum / 10;
                 sum %= 10;
@@ -57,19 +54,19 @@ public:
             
             //插入头结点之后
             tmp = new ListNode(sum);
-            tmp->next = res->next;
-            res->next = tmp;
+            tmp->next = head->next;
+            head->next = tmp;
         }
         
         //补上进位
         if(carry){
             tmp = new ListNode(carry);
-            tmp->next = res->next;
-            res->next = tmp;
+            tmp->next = head->next;
+            head->next = tmp;
         }
         
-        tmp = res->next;
-        delete res;
+        tmp = head->next;
+        delete head;
         return tmp;
     }
 };

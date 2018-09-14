@@ -3,8 +3,6 @@
  *  Binary Tree Inorder Traversal
  * *思路：
  *  
- * *技法：
- *  
  */
 
  /**
@@ -31,5 +29,30 @@ public:
         inorder(root->left,add);
         add.push_back(root->val);
         inorder(root->right,add);
+    }
+};
+
+
+// iterative
+class Solution {
+public:
+    vector<int> inorderTraversal(TreeNode* root) {
+        vector<int> res;
+        
+        stack<TreeNode*> st;
+        TreeNode* cur = root;
+        while (cur || !st.empty()) {
+            if (cur) {
+                st.push(cur);
+                cur = cur->left;
+            } else {
+                cur = st.top();
+                st.pop();
+                res.push_back(cur->val);
+                cur = cur->right;
+            }
+        }
+        
+        return res;
     }
 };

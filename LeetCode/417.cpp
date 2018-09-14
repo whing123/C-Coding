@@ -1,11 +1,14 @@
 /*
   417
   Pacific Atlantic Water Flow
+  能达到P和A的点
 */
 
 /*
-The parameter o in dfs means which ocean it has been reached. Let the Pacific flow first and mark as 'P', 
+The parameter o in dfs means which ocean it has been reached. 
+Let the Pacific flow first and mark as 'P', 
 then let Atlantic flow to get the intersection.
+先让P泛滥，再让A泛滥，遇到P则符合要求
 */
 class Solution {
 public:

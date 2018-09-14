@@ -20,7 +20,7 @@ void dfs(vector<string>& strs, int N, int L, set<string>& hashSet, string& res, 
 		return;
 	}
     
-    if (s > res){
+    if (s > res) {
         return;
     }
 

@@ -2,9 +2,7 @@
  *  28
  *  Implement strStr()
  * *思路：
- *  
- * *技法：
- *  
+    find函数
  */
 
 class Solution {
@@ -12,12 +10,13 @@ public:
     int strStr(string haystack, string needle) {
         int size = haystack.size();
         int sizeN = needle.size();
-        if(size == 0 && size == sizeN){
+        if(sizeN == 0) {
             return 0;
         }
+        
         int i = 0;
-        while(i+sizeN-1 < size){
-            if(needle == haystack.substr(i,sizeN)){
+        while(i + sizeN - 1 < size) {
+            if(needle == haystack.substr(i, sizeN)) {
                 return i;
             }else{
                 i++;

@@ -12,6 +12,8 @@ struct ListNode {
 			val(x), next(NULL) {
 	}
 };*/
+
+// 递归
 class Solution {
 public:
     ListNode* ReverseList(ListNode* pHead) {
@@ -45,7 +47,7 @@ public:
     }
 };
 
-
+// 常规
 class Solution {
 public:
     ListNode* ReverseList(ListNode* pHead) {

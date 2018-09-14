@@ -26,6 +26,7 @@ public:
             else
                 count++;
         }
+        
         if(count > 0)
             sum += (count - 1) / 2;
 

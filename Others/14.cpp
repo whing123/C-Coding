@@ -3,8 +3,6 @@
 */
 
 
-
-
 int q2(string str)
 {
     vector<int> count(26, 0);
@@ -12,7 +10,7 @@ int q2(string str)
     
     for(char &ch : str)
     {
-        if(count[ch - 'a'] == 0)
+        if(count[ch - 'a'] == 0) // 首次遇到
         {
             count[ch - 'a']++;
             res.append(1, ch);

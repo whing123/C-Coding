@@ -22,6 +22,7 @@ public:
             values.push_back(tmp->val);
             tmp = tmp->next;
         }
+        
         int size = values.size();
         for(int i = 0;i < size / 2;i++){
             if(values[i] != values[size-1-i])

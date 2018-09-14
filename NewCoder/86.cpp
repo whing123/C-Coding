@@ -5,11 +5,13 @@
 class Solution {
 public:
     vector<string> Permutation(string str) {
-        vector<string> array;
         if(str.size() == 0)
             return array;
+		
+		vector<string> array;
         Permutation(array, str, 0);
         sort(array.begin(), array.end());
+
         return array;
     }
      
@@ -17,6 +19,7 @@ public:
     {
         if(begin == str.size()-1)
             array.push_back(str);
+
         for(int i = begin; i <= str.size()-1; i++){
 
             if(i != begin && str[i] == str[begin])//有重复字符时，跳过
@@ -41,12 +44,12 @@ public ArrayList Permutation(String str) {
     return res;
 }
 public void PermutationHelper(char[] cs, int i, ArrayList list) {
-    if(i == cs.length - 1) {
+    if (i == cs.length - 1) {
         String val = String.valueOf(cs);
-        if (!list.contains(val))
+        if (!list.contains(val)) // no repeat
             list.add(val);
     } else {
-        for(int j = i; j < cs.length; ++j) {
+        for (int j = i; j < cs.length; ++j) {
             swap(cs, i, j);
             PermutationHelper(cs, i + 1, list);
             swap(cs, i, j);

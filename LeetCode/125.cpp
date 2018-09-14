@@ -10,6 +10,7 @@ public:
         if(size == 0){
             return true;
         }
+        
         vector<char> str;
         int i = 0;
         while(i < size){
@@ -26,7 +27,7 @@ public:
         size = str.size();
         int tmp1 = size / 2;
         int tmp2 = size - 1;
-        for(i = 0;i < tmp1;i++){
+        for(i = 0; i < tmp1; i++){
             if(str[i] != str[tmp2 - i]){
                 return false;
             }

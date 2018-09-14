@@ -2,9 +2,7 @@
  *  541
  *  Reverse String II
  * *思路：
- *  
- * *技法：
- *  
+
  */
 
 class Solution {
@@ -12,7 +10,7 @@ public:
     string reverseStr(string s, int k) {
         int size = s.size();
         
-        for(int i = 0;i < size;i += 2*k){
+        for(int i = 0; i < size; i += 2*k){
             int left = size-i; //当前剩余元素数
             if(left < k){  //不足k
                 reverse(s,i,left);
@@ -31,7 +29,7 @@ public:
     void reverse(string &s, int start, int k){
         int end = start + k - 1;
         
-        for(int i = 0;i < k/2;i++){
+        for(int i = 0; i < k/2; i++){
             char tmp = s[start+i];
             s[start+i] = s[end-i];
             s[end-i] = tmp;

@@ -18,6 +18,7 @@ public:
     {
         ListNode* head = new ListNode(-1); // 伪头节点
         ListNode* cur = head;
+        
         while(pHead1 && pHead2){
             if(pHead1->val < pHead2->val){
                 cur->next = pHead1;
