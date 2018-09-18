@@ -429,6 +429,7 @@ C++ source codes
 |690| Employee Importance | 该员工及其所有下属的重要性之和 map使用 BFS| done |
 |695| Max Area of Island | 最大的岛屿面积 上下左右四个方向递归搜索 | *1* |
 |200| Number of Islands | 矩形中岛屿数量 | *1* |
+|827| Making A Large Island | 最大岛屿面积 改变0->1求最大岛屿面积 | *1* |
 |733| Flood Fill | 某一点开始向周围染色 | *1* |
 |417| Pacific Atlantic Water Flow | 水流入海 | done |
 |494| Target Sum | 一组数的正负和为定值 DFS | *1* |
@@ -591,19 +592,19 @@ C++ source codes
 | 序号 | 题目 | 链表 | status |
 |:---|:---:|:---:|:---:|
 |33| 删除链表中重复的结点 | 剑指offer | done | 
-|39| 从尾到头打印链表 | 剑指offer | *1* |
-|40| 反转链表 | 递归 剑指offer | *1* |
-|47| 合并两个排序的链表 | 剑指offer | *1* |
-|50| 链表中倒数第k个结点 | 剑指offer | *1* |
-|63| 两个链表的第一个公共结点 | 剑指offer | *1* |
-|73| 链表中环的入口 | 剑指offer | *1* | 
+|[39](/NewCoder/39.cpp)| 从尾到头打印链表 | 剑指offer | *1* |
+|[40](/NewCoder/40.cpp)| 反转链表 | 递归 剑指offer | *1* |
+|[47](/NewCoder/47.cpp)| 合并两个排序的链表 | 剑指offer | *1* |
+|[50](/NewCoder/50.cpp)| 链表中倒数第k个结点 | 剑指offer | *1* |
+|[63](/NewCoder/63.cpp)| 两个链表的第一个公共结点 | 剑指offer | *1* |
+|[73](/NewCoder/73.cpp)| 链表中环的入口 | 剑指offer | *1* | 
 |79| 复杂链表的复制 | 剑指offer | done |
 
 
 | 序号 | 题目| 栈 队列| status |
 |:---|:---:|:---:|:---:|
-|37| 两个栈来实现一个队列 | 剑指offer | *1* |
-|56| 包含min函数的栈 | 剑指offer | *1* |
+|[37](/NewCoder/37.cpp)| 两个栈来实现一个队列 | 剑指offer | *1* |
+|[56](/NewCoder/56.cpp)| 包含min函数的栈 | 剑指offer | *1* |
 
 
 | 序号 | 题目| 递归 | status |
@@ -615,18 +616,18 @@ C++ source codes
 
 | 序号 | 题目| DFS | status |
 |:---|:---:|:---:|:---:|
-|94| 走到第n步时投骰子的方法 | 1-6不限次数取出和为定值 要考虑投骰子的顺序 与Leetcode 39对比 美团 | *1* |
+|[94](/NewCoder/94.cpp)| 走到第n步时投骰子的方法 | 1-6不限次数取出和为定值 要考虑投骰子的顺序 与Leetcode 39对比 美团 | *1* |
 
 
 | 序号 | 题目 | DP | status |
 |:---|:---:|:---:|:---:|
-|24| 拼凑面额 | DP | *1* |
+|[24](/NewCoder/24.cpp)| 拼凑面额 | DP | *1* |
 |52| 第N个丑数 | 剑指offer DP | done |
-|66| 斐波那契数列 | 剑指offer DP | *1* |
-|64| 跳台阶 | 剑指offer DP | *1* |
-|69| 变态跳台阶 | 剑指offer | done |
+|[66](/NewCoder/66.cpp)| 斐波那契数列 | 剑指offer DP | *1* |
+|[64](/NewCoder/64.cpp)| 跳台阶 | 剑指offer DP | *1* |
+|[69](/NewCoder/69.cpp)| 变态跳台阶 | 剑指offer | done |
 |65| 矩形覆盖 | 剑指offer | done |
-|96| 最长公共连续子串 | leetcode 718 | *1* |
+|[96](/NewCoder/96.cpp)| 最长公共连续子串 | leetcode 718 | *1* |
 
 
 | 序号 | 题目 | 矩阵 | status |
@@ -635,7 +636,7 @@ C++ source codes
 |3| 数组单调和 | | done |
 |95| 最大矩形面积 | leetcode 84 | done |
 |98| 顺时针打印矩阵 | 剑指offer 递归 | done |
-|53| 二维数组中的查找 | 右上角开始查找 剑指offer | *1* |
+|[53](/NewCoder/53.cpp)| 二维数组中的查找 | 右上角开始查找 剑指offer | *1* |
 
 
 | 序号 | 题目 | 数组 Array | status |
@@ -649,23 +650,23 @@ C++ source codes
 |81| 把数组排成最小的数 | 所有数排成最小的数字 剑指offer | done |
 |82| 栈的压入、弹出序列 | 输入两个整数序列，第一个序列表示栈的压入顺序，判断第二个序列是否为该栈的弹出顺序 剑指offer | done |
 |85| 最小的K个数 | Top K问题 剑指offer | done | 
-|97| 滑动窗口最大值 | 剑指offer | *1* |
+|[97](/NewCoder/97.cpp)| 滑动窗口最大值 | 剑指offer | *1* |
 
 
 | 序号 | 题目 | 二分查找 | status |
 |:---|:---:|:---:|:---:|
-|75| 旋转数组的最小数字 | 二分查找 剑指offer | *1* |
-|78| 数字在排序数组中出现的次数 | 二分查找 剑指offer | *1* |
-|83| 和为S的两个数字 | 二分查找 剑指offer leetcode 1 two sum | *1* |
+|[75](/NewCoder/75.cpp)| 旋转数组的最小数字 | 二分查找 剑指offer | *1* |
+|[78](/NewCoder/78.cpp)| 数字在排序数组中出现的次数 | 二分查找 剑指offer | *1* |
+|[83](/NewCoder/83.cpp)| 和为S的两个数字 | 二分查找 剑指offer leetcode 1 two sum | *1* |
 
 
 | 序号 | 题目| String | status |
 |:---|:---:|:---:|:---:|
 |88| 钟表调时间 | 网易游戏 | done |
-|74| 翻转字符串单词顺序 | 反转字符串单词顺序 剑指offer | *1* |
-|16| 句子反转 | 将句子中的单词位置反转 | *1* |
-|84| 左旋转字符串 | 或右旋 剑指offer | *1* |
-|86| 字符串的排列 | 全排列 剑指offer DFS | done | 
+|[74](/NewCoder/74.cpp)| 翻转字符串单词顺序 | 反转字符串单词顺序 剑指offer | *1* |
+|[16](/NewCoder/16.cpp)| 句子反转 | 将句子中的单词位置反转 | *1* |
+|[84](/NewCoder/84.cpp)| 左旋转字符串 | 或右旋 剑指offer | *1* |
+|[86](/NewCoder/86.cpp)| 字符串的排列 | 全排列 剑指offer DFS | *1* | 
 |59| 表示数值的字符串 | 剑指offer | done |
 |87| 把字符串转换成整数 | 剑指offer | done |
 
@@ -673,18 +674,18 @@ C++ source codes
 | 序号 | 题目 | 二叉树 | status |
 |:---|:---:|:---:|:---:|
 |30| 输出单层结点 | 层序遍历 | done |
-|48| 从上往下打印二叉树 | 层序遍历 剑指offer | *1* |
+|[48](/NewCoder/48.cpp)| 从上往下打印二叉树 | 层序遍历 剑指offer | *1* |
 |43| 层序遍历 | 剑指offer | done |
 |71| 按之字形顺序打印二叉树 | 层序遍历 剑指offer | done |
 |13| 树的高度 | 根据父子关系求树高 DFS | done |
-|35| 二叉树的深度 | 递归 剑指offer | *1* |
-|41| 判断一颗二叉树是不是对称的 | 左右对称 剑指offer | *1* |
+|[35](/NewCoder/35.cpp)| 二叉树的深度 | 递归 剑指offer | *1* |
+|[41](/NewCoder/41.cpp)| 判断一颗二叉树是不是对称的 | 左右对称 剑指offer | *1* |
 |42| 二叉树的镜像 | 将其变换为原二叉树的镜像 剑指offer | *2* |
 |20| 拓扑结构相同子树 | 子树判断，注意与44子结构的区别 | done |
 |44| 二叉树子结构判断 | 子结构判断 剑指offer | done |
 |45| 判断平衡二叉树 | 剑指offer | done |
 |49| 二叉树中和为某一值的路径 | 根到叶子 剑指offer | done |
-|38| 前序中序重建二叉树 | 剑指offer | *1* |
+|[38](/NewCoder/38.cpp)| 前序中序重建二叉树 | 剑指offer | *1* |
 |46| 判断数组是不是某二叉搜索树的后序遍历 | 剑指offer | done |
 |51| 中序遍历下个节点 | 剑指offer | done |
 |17| 二叉树的序列化 | | done |

@@ -8,7 +8,7 @@ class Solution {
 public:
 	vector<string> letterCombinations(string digits) {
 		vector<string> res;
-        if (digits.length() == 0){
+        if (digits.length() == 0) {
             return res;
         }
         
