@@ -49,6 +49,7 @@ public:
                 cur = st.top();
                 st.pop();
                 res.push_back(cur->val);
+                
                 cur = cur->right;
             }
         }

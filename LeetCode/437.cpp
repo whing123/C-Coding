@@ -81,6 +81,7 @@ public:
                 cnt++;
             }
         }
+        
         path.push_back(root->val);
         if(root->val == sum){
             cnt++;

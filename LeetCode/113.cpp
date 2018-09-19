@@ -33,12 +33,12 @@ public:
         }
         
         path.push_back(root->val);
-        if(root->left == NULL && root->right == NULL){
+        if(root->left == NULL && root->right == NULL){ // leaf
             int s = 0;
             for(int i = 0; i < path.size(); ++i){
                 s += path[i];
             }
-            if(s == sum){
+            if(s == sum){ // if sum of path == target
                 res.push_back(path);
             }
         }

@@ -321,12 +321,12 @@ C++ source codes
 |319| Bulb Switcher | n个灯泡第i轮每i个进行反转 | done |
 |453| Minimum Moves to Equal Array Elements | 移动最少的步数使所有元素相同，每次给n-1元素+1 | done |
 |462| Minimum Moves to Equal Array Elements II | 每次只给一个元素+-1 | done |
-|11| Container With Most Water | 积雨水问题 一次 | done |
-|42| Trapping Rain Water | 积雨水问题 累积 | done |
+|[11](/LeetCode/11.cpp)| Container With Most Water | 积雨水问题 一次最多 双指针 | done |
+|42| Trapping Rain Water | 积雨水问题 累积 | *1* |
 |217| Contains Duplicate | 数组中是否包含重复元素 | done |
 |219| Contains Duplicate II | 给定步长内是否存在相等的两个数 | done |
 |220| Contains Duplicate III | 给定步长内是否存在diff在给定范围内的两个数 | done |
-|56| Merge Intervals | 区间合并 | done |
+|[56](/LeetCode/56.cpp)| Merge Intervals | 区间合并 | *1* |
 
 
 | 序号 | 题目 | Array Hash | status |
@@ -337,7 +337,7 @@ C++ source codes
 | 序号 | 题目 | 二分查找 | status |
 |:---|:---:|:---:|:---:|
 |1| Two Sum | 和为定值的两个数的下标 牛客83 | *1* |
-|34| Find First and Last Position of Element in Sorted Array | 同一元素的首尾下标 牛客78 | *1* |
+|[34](/LeetCode/34.cpp)| Find First and Last Position of Element in Sorted Array | 同一元素的首尾下标 牛客[78](/NewCoder/78.cpp) | *1* |
 |33| Search in Rotated Sorted Array | 旋转数组的查找 | done |
 |729| My Calendar I | 不能有重合 二分查找 find可能的区间 | done |
 |731| My Calendar II | 不能有三重合 非二分查找 | done |
@@ -372,9 +372,9 @@ C++ source codes
 | 序号  | 题目 | 栈 队列 | status |
 |:---|:---:|:---:|:---:|
 |20| Valid Parentheses | 验证括号是否匹配 | *1* |
-|155| Min Stack | 返回最小值的栈 牛客56 | *1* |
-|232| Implement Queue using Stacks | 用栈实现队列 牛客37  | *1* |
-|225| Implement Stack using Queues | 用队列实现栈 | *1* |
+|[155](/LeetCode/155.cpp)| Min Stack | 返回最小值的栈 牛客[56](/NewCoder/56.cpp) | *1* |
+|[232](/LeetCode/232.cpp)| Implement Queue using Stacks | 用栈实现队列 牛客[37](/NewCoder/37.cpp) | *1* |
+|[225](/LeetCode/225.cpp)| Implement Stack using Queues | 用队列实现栈 | *1* |
 
 
 | 序号 | 题目 | DP | status |
@@ -427,38 +427,38 @@ C++ source codes
 |337| House Robber III | 二叉树父子不能同时偷 | done |
 |114| Flatten Binary Tree to Linked List | 二叉树转右侧链表 | done |
 |690| Employee Importance | 该员工及其所有下属的重要性之和 map使用 BFS| done |
-|695| Max Area of Island | 最大的岛屿面积 上下左右四个方向递归搜索 | *1* |
-|200| Number of Islands | 矩形中岛屿数量 | *1* |
+|[695](/LeetCode/695.cpp)| Max Area of Island | 最大的岛屿面积 上下左右四个方向递归搜索 | *1* |
+|[200](/LeetCode/200.cpp)| Number of Islands | 矩形中岛屿数量 | *1* |
 |827| Making A Large Island | 最大岛屿面积 改变0->1求最大岛屿面积 | *1* |
 |733| Flood Fill | 某一点开始向周围染色 | *1* |
 |417| Pacific Atlantic Water Flow | 水流入海 | done |
 |494| Target Sum | 一组数的正负和为定值 DFS | *1* |
 |473| Matchsticks to Square | 与698类似 | *1* |
-|698| Partition to K Equal Sum Subsets | 将数组分成k个和相等的子集 | *1* |
-|78| Subsets | 数组不含重复元素，求数组所有子集 | *1* |
-|90| Subsets II | 数组包含重复元素，求数组所有子集，注意与491对比 | *1* |
-|491| Increasing Subsequences | 数组包含重复元素，求所有的递增子序列 | *1* |
-|39| Combination Sum | 不含重复集合中不限次数取数字其和为定值 不考虑拿取顺序 | *1* |
-|40| Combination Sum II | 含重复集合中取数字其和为定值 只能取一次 | *1* |
-|216| Combination Sum III | 1-9中选k个元素其和为定值 只能取一次 | *1* |
-|79| Word Search | 矩形中搜索组成字符串的路径 | *1* |
-|17| Letter Combinations of a Phone Number | 二级DFS | *1* |
-|139| Word Break | 判断字符串是否可由另一字符串集组成 dfs dp | *1* |
-|93| Restore IP Addresses | C N 取 M 组合数 | *1* |
+|[698](/LeetCode/698.cpp)| Partition to K Equal Sum Subsets | 将数组分成k个和相等的子集 | *1* |
+|[78](/LeetCode/78.cpp)| Subsets | 数组不含重复元素，求数组所有子集 | *1* |
+|[90](/LeetCode/90.cpp)| Subsets II | 数组包含重复元素，求数组所有子集，注意与[491](/LeetCode/491.cpp)对比 有去重操作 | *1* |
+|[491](/LeetCode/491.cpp)| Increasing Subsequences | 数组包含重复元素，求所有的递增子序列 有去重操作 | *1* |
+|[39](/LeetCode/39.cpp)| Combination Sum | 不含重复集合中不限次数取数字其和为定值 不考虑拿取顺序 [94](/NewCoder/94.cpp)考虑顺序 | *1* |
+|[40](/LeetCode/40.cpp)| Combination Sum II | 含重复集合中取数字其和为定值 只能取一次 有去重操作 | *1* |
+|[216](/LeetCode/216.cpp)| Combination Sum III | 1-9中选k个元素其和为定值 只能取一次 C N 取 M | *1* |
+|[79](/LeetCode/79.cpp)| Word Search | 矩形中搜索组成字符串的路径 | *1* |
+|[17](/LeetCode/17.cpp)| Letter Combinations of a Phone Number | 二级DFS | *1* |
+|[139](/LeetCode/139.cpp)| Word Break | 判断字符串是否可由另一字符串集组成 dfs dp | *1* |
+|[93](/LeetCode/93.cpp)| Restore IP Addresses | C N 取 M 组合数 | *1* |
 |756| Pyramid Transition Matrix | 由下往上构造金字塔 | *1* |
-|394| Decode String| 解码字符串 | *1* |
+|394| Decode String | 解码字符串 | *1* |
 
 
 | 序号 | 题目 | backtracking | status |
 |:---|:---:|:---:|:---:|
-|46| Permutations | 不重复序列的全排列 | *1* |
-|47| Permutations II | 含重复序列的全排列 | *1* |
+|[46](/LeetCode/46.cpp)| Permutations | 不重复序列的全排列 | *1* |
+|[47](/LeetCode/47.cpp)| Permutations II | 含重复序列的全排列 | *1* |
 
 
 | 序号 | 题目 | 图 | status |
 |:---|:---:|:---:|:---:|
-|207| Course Schedule | 拓扑排序 检测是否有环 | *1* |
-|210| Course Schedule II | 拓扑排序 返回任一组合即可 | *1* |
+|[207](/LeetCode/207.cpp)| Course Schedule | 拓扑排序 检测是否有环 | *1* |
+|[210](/LeetCode/210.cpp)| Course Schedule II | 拓扑排序 返回任一组合即可 | *1* |
 
 
 | 序号 | 题目 | 二叉树 | status |
@@ -490,9 +490,9 @@ C++ source codes
 
 | 序号 | 题目 | 二叉树路径 | status |
 |:---|:---:|:---:|:---:|
-|112| Path Sum | 是否存在根到叶子的路径其和为定值 DFS | done |
-|113| Path Sum II | 所有根到叶子和为定值路径 DFS | done |
-|437| Path Sum III | 二叉树任意长度竖直路径中其和为定值的数目 | done |
+|[112](/LeetCode/112.cpp)| Path Sum | 是否存在根到叶子的路径其和为定值 DFS | done |
+|[113](/LeetCode/113.cpp)| Path Sum II | 所有根到叶子和为定值路径 DFS | done |
+|[437](/LeetCode/437.cpp)| Path Sum III | 二叉树任意长度竖直路径中其和为定值的数目 | done |
 |124| Binary Tree Maximum Path Sum | 二叉树分支路径最大和 DFS | done |
 |687| Longest Univalue Path | 最长的单一值路径，包括分支路径 | done |
 |257| Binary Tree Paths | 遍历所有根到叶子路径 DFS | done |
@@ -511,9 +511,9 @@ C++ source codes
 |:---|:---:|:---:|:---:|
 |145| Binary Tree Postorder Traversal | 二叉树后序遍历 递归与迭代 | done |
 |99| Recover Binary Search Tree | 中序遍历查找两个异常点恢复BST | done |
-|94| Binary Tree Inorder Traversal | 中序遍历 | *1* |
+|[94](/LeetCode/94.cpp)| Binary Tree Inorder Traversal | 中序遍历 | *1* |
 |897| Increasing Order Search Tree | 中序遍历成单链表 | done |
-|144| Binary Tree Preorder Traversal | 前序遍历 | *1* |
+|[144](/LeetCode/144.cpp)| Binary Tree Preorder Traversal | 前序遍历 | *1* |
 |105| Construct Binary Tree from Preorder and Inorder Traversal | 前序中序构造二叉树 DFS | done | 
 |106| Construct Binary Tree from Inorder and Postorder Traversal | 中序后序构造二叉树 DFS | done |
 |102| Binary Tree Level Order Traversal | 层序遍历 BFS | done |
@@ -535,8 +535,8 @@ C++ source codes
 |297| Serialize and Deserialize Binary Tree | 序列化二叉树 | done |
 |199| Binary Tree Right Side View | 二叉树每层最右侧节点 DFS BFS | done |
 |513| Find Bottom Left Tree Value | 找最后一行左下角的节点值 DFS BFS | done |
-|235| Lowest Common Ancestor of a Binary Search Tree | 二叉搜索树最低公共祖先 | done |
-|236| Lowest Common Ancestor of a Binary Tree | 二叉树最低公共祖先 | done |
+|[235](/LeetCode/235.cpp)| Lowest Common Ancestor of a Binary Search Tree | 二叉搜索树最低公共祖先 | done |
+|[236](/LeetCode/236.cpp)| Lowest Common Ancestor of a Binary Tree | 二叉树最低公共祖先 | done |
 |96| Unique Binary Search Trees | BST的全排列个数 卡特兰数 DP | done |
 |95| Unique Binary Search Trees II | BST的全排列树 递归 | done |
 
