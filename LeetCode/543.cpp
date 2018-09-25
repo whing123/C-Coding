@@ -25,6 +25,7 @@ public:
         int dist = height(root->left) + height(root->right);
         int ldist = diameterOfBinaryTree(root->left);  //向左递归
         int rdist = diameterOfBinaryTree(root->right); //向右递归
+        
         //比较最长
         if(ldist > dist){
             dist = ldist;

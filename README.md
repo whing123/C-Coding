@@ -270,6 +270,7 @@ C++ source codes
 |165|Compare Version Numbers|||
 |8| String to Integer (atoi) | atoi | done |
 |3| Longest Substring Without Repeating Characters | 最长不重复子串 | done |
+|[71](/LeetCode/71.cpp)| Simplify Path | 简化Unix路径 | *1* |
 
 
 | 序号 | 题目 | 数组 Array | status |
@@ -412,7 +413,7 @@ C++ source codes
 |377| Combination Sum IV | 不含重复集合中不限次数取数字其和为定值，允许同一组合内不同次序 注意与拼凑硬币24的区别 | *1* |
 |152| Maximum Product Subarray | 连续子序列的最大乘积 | done |
 |279| Perfect Squares | 由平方数相加组成某个数的最少个数 | done |
-|583| Delete Operation for Two Strings | 最少的删除次数使两个字符串相同 一次删某个字符串的一个字符 两个字符串的最长公共部分（不一定连续） 最长公共子序列 | *1* |
+|[583](/LeetCode/583.cpp)| Delete Operation for Two Strings | 最少的删除次数使两个字符串相同 一次删某个字符串的一个字符 两个字符串的最长公共部分（不一定连续） 最长公共子序列 | *1* |
 |718| Maximum Length of Repeated Subarray | 最长连续公共子序列 | *1* |
 
 
@@ -479,6 +480,8 @@ C++ source codes
 |501| Find Mode in Binary Search Tree | 寻找最高频节点值 DFS | done |
 |508| Most Frequent Subtree Sum | 最高频子树之和 | done |
 |654| Maximum Binary Tree | 数组的最大值作为根节点，最大值左边右边都是最大二叉树 与构造平衡二叉搜索树类似 | done |
+|[116](/LeetCode/116.cpp)| Populating Next Right Pointers in Each Node | 给满二叉树的每个节点找右侧兄弟节点 | *1* |
+|[117](/LeetCode/117.cpp)| Populating Next Right Pointers in Each Node II | 给二叉树的每个节点找右侧兄弟节点 | *1* |
 
 
 | 序号 | 题目 | 二叉树对称性 | status |
@@ -495,8 +498,9 @@ C++ source codes
 |[437](/LeetCode/437.cpp)| Path Sum III | 二叉树任意长度竖直路径中其和为定值的数目 | done |
 |124| Binary Tree Maximum Path Sum | 二叉树分支路径最大和 DFS | done |
 |687| Longest Univalue Path | 最长的单一值路径，包括分支路径 | done |
-|257| Binary Tree Paths | 遍历所有根到叶子路径 DFS | done |
-|543| Diameter of Binary Tree | 最长的路径长度 | done |
+|[257](/LeetCode/257.cpp)| Binary Tree Paths | 遍历所有根到叶子路径 DFS | done |
+|[543](/LeetCode/543.cpp)| Diameter of Binary Tree | 最长的路径长度 | *1* |
+|[863](/LeetCode/863.cpp)| All Nodes Distance K in Binary Tree | 到某个节点距离为定值的节点集 DFS | *1* |
 
 
 | 序号 | 题目 | 二叉树高度 | status |
@@ -504,7 +508,7 @@ C++ source codes
 |104| Maximum Depth of Binary Tree | 求二叉树最大深度，树高 DFS | done |
 |559| Maximum Depth of N-ary Tree | 求N叉树最大深度 DFS | done |
 |111| Minimum Depth of Binary Tree | 二叉树树根到叶子最小深度 与牛客35对比 DFS BFS | done |
-|655| Print Binary Tree | 打印二叉树，包括空节点，还要对齐 二叉树求最大宽度 求高度 | done |
+|[655](/LeetCode/655.cpp)| Print Binary Tree | 打印二叉树，包括空节点，还要对齐 二叉树求最大宽度 求高度 | done |
 
 
 | 序号 | 题目 | 二叉树遍历 | status |
@@ -627,7 +631,7 @@ C++ source codes
 |[64](/NewCoder/64.cpp)| 跳台阶 | 剑指offer DP | *1* |
 |[69](/NewCoder/69.cpp)| 变态跳台阶 | 剑指offer | done |
 |65| 矩形覆盖 | 剑指offer | done |
-|[96](/NewCoder/96.cpp)| 最长公共连续子串 | leetcode 718 | *1* |
+|[96](/NewCoder/96.cpp)| 最长公共连续子串 | leetcode [718](/LeetCode/718.cpp) | *1* |
 
 
 | 序号 | 题目 | 矩阵 | status |
