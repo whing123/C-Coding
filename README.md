@@ -408,47 +408,47 @@ C++ source codes
 |523| Continuous Subarray Sum | 是否存在连续子序列的和为k的倍数 | done |
 |712| Minimum ASCII Delete Sum for Two Strings | 删到两者一样 2D | done |
 |486| Predict the Winner | 左取一个右取一个谁最多 2D | done |
-|646| Maximum Length of Pair Chain |数对所组成的链的长度 | done |
+|646| Maximum Length of Pair Chain | 数对所组成的链的长度 | done |
 |474| Ones and Zeroes | 用1s和0s拼最多数量的01串 | done |
 |542| 01 Matrix | 找和0最近的距离 | done |
 |377| Combination Sum IV | 不含重复集合中不限次数取数字其和为定值，允许同一组合内不同次序 注意与拼凑硬币24的区别 | *1* |
 |152| Maximum Product Subarray | 连续子序列的最大乘积 | done |
 |279| Perfect Squares | 由平方数相加组成某个数的最少个数 | done |
-|[583](\LeetCode\583.cpp)| Delete Operation for Two Strings | 最少的删除次数使两个字符串相同 一次删某个字符串的一个字符 两个字符串的最长公共部分（不一定连续） 最长公共子序列 | *1* |
-|718| Maximum Length of Repeated Subarray | 最长连续公共子序列 | *1* |
+| [583](\LeetCode\583.cpp) | Delete Operation for Two Strings | 最长公共子序列 两个字符串的最长公共部分（不一定连续） 最少的删除次数使两个字符串相同 一次删某个字符串的一个字符 | *1* |
+| [718](\LeetCode\718.cpp) | Maximum Length of Repeated Subarray | 最长连续公共子序列 | *1* |
 
 
 | 序号 | 题目 | DFS | status |
 |:---|:---:|:---:|:---:|
-|531|Lonely Pixel I|||
-|533|Lonely Pixel II|||
-|529| Minesweeper | BFS ||
-|22| Generate Parentheses | 生成括号 | done |
-|841| Keys and Rooms | 访问所有房间 | done |
-|547| Friend Circles | 朋友圈的数目 | done |
-|337| House Robber III | 二叉树父子不能同时偷 | done |
-|114| Flatten Binary Tree to Linked List | 二叉树转右侧链表 | done |
-|690| Employee Importance | 该员工及其所有下属的重要性之和 map使用 BFS| done |
-|[695](\LeetCode\695.cpp)| Max Area of Island | 最大的岛屿面积 上下左右四个方向递归搜索 | *1* |
-|[200](\LeetCode\200.cpp)| Number of Islands | 矩形中岛屿数量 | *1* |
-|827| Making A Large Island | 最大岛屿面积 改变0->1求最大岛屿面积 | *1* |
-|733| Flood Fill | 某一点开始向周围染色 | *1* |
-|417| Pacific Atlantic Water Flow | 水流入海 | done |
-|494| Target Sum | 一组数的正负和为定值 DFS | *1* |
-|473| Matchsticks to Square | 与698类似 | *1* |
-|[698](\LeetCode\698.cpp)| Partition to K Equal Sum Subsets | 将数组分成k个和相等的子集 | *1* |
-|[78](\LeetCode\78.cpp)| Subsets | 数组不含重复元素，求数组所有子集 | *1* |
-|[90](\LeetCode\90.cpp)| Subsets II | 数组包含重复元素，求数组所有子集，注意与[491](\LeetCode\491.cpp)对比 有去重操作 | *1* |
-|[491](\LeetCode\491.cpp)| Increasing Subsequences | 数组包含重复元素，求所有的递增子序列 有去重操作 | *1* |
-|[39](\LeetCode\39.cpp)| Combination Sum | 不含重复集合中不限次数取数字其和为定值 不考虑拿取顺序 [94](\NewCoder\94.cpp)考虑顺序 | *1* |
-|[40](\LeetCode\40.cpp)| Combination Sum II | 含重复集合中取数字其和为定值 只能取一次 有去重操作 | *1* |
-|[216](\LeetCode\216.cpp)| Combination Sum III | 1-9中选k个元素其和为定值 只能取一次 C N 取 M | *1* |
-|[79](\LeetCode\79.cpp)| Word Search | 矩形中搜索组成字符串的路径 | *1* |
-|[17](\LeetCode\17.cpp)| Letter Combinations of a Phone Number | 二级DFS | *1* |
-|[139](\LeetCode\139.cpp)| Word Break | 判断字符串是否可由另一字符串集组成 dfs dp | *1* |
-|[93](\LeetCode\93.cpp)| Restore IP Addresses | C N 取 M 组合数 | *1* |
-|756| Pyramid Transition Matrix | 由下往上构造金字塔 | *1* |
-|394| Decode String | 解码字符串 | *1* |
+| 531 | Lonely Pixel I |||
+| 533 | Lonely Pixel II |||
+| 529| Minesweeper | BFS ||
+| 22| Generate Parentheses | 生成括号 | done |
+| 841| Keys and Rooms | 访问所有房间 | done |
+| 547| Friend Circles | 朋友圈的数目 | done |
+| 337| House Robber III | 二叉树父子不能同时偷 | done |
+| 114| Flatten Binary Tree to Linked List | 二叉树转右侧链表 | done |
+| 690| Employee Importance | 该员工及其所有下属的重要性之和 map使用 BFS| done |
+| [695](\LeetCode\695.cpp) | Max Area of Island | 最大的岛屿面积 上下左右四个方向递归搜索 | *1* |
+| [200](\LeetCode\200.cpp) | Number of Islands | 矩形中岛屿数量 | *1* |
+| 827| Making A Large Island | 最大岛屿面积 改变0->1求最大岛屿面积 | *1* |
+| 733| Flood Fill | 某一点开始向周围染色 | *1* |
+| 417| Pacific Atlantic Water Flow | 水流入海 | done |
+| 494| Target Sum | 一组数的正负和为定值 DFS | *1* |
+| 473| Matchsticks to Square | 与698类似 | *1* |
+| [698](\LeetCode\698.cpp)| Partition to K Equal Sum Subsets | 将数组分成k个和相等的子集 | *1* |
+| [78](\LeetCode\78.cpp)| Subsets | 数组不含重复元素，求数组所有子集 | *1* |
+| [90](\LeetCode\90.cpp)| Subsets II | 数组包含重复元素，求数组所有子集，注意与[491](\LeetCode\491.cpp)对比 有去重操作 | *1* |
+| [491](\LeetCode\491.cpp)| Increasing Subsequences | 数组包含重复元素，求所有的递增子序列 有去重操作 | *1* |
+| [39](\LeetCode\39.cpp)| Combination Sum | 不含重复集合中不限次数取数字其和为定值 不考虑拿取顺序 [94](\NewCoder\94.cpp)考虑顺序 | *1* |
+| [40](\LeetCode\40.cpp)| Combination Sum II | 含重复集合中取数字其和为定值 只能取一次 有去重操作 | *1* |
+| [216](\LeetCode\216.cpp)| Combination Sum III | 1-9中选k个元素其和为定值 只能取一次 C N 取 M | *1* |
+| [79](\LeetCode\79.cpp)| Word Search | 矩形中搜索组成字符串的路径 | *1* |
+| [17](\LeetCode\17.cpp)| Letter Combinations of a Phone Number | 二级DFS | *1* |
+| [139](\LeetCode\139.cpp) | Word Break | 判断字符串是否可由另一字符串集组成 dfs dp | *1* |
+| [93](\LeetCode\93.cpp) | Restore IP Addresses | C N 取 M 组合数 | *1* |
+| 756 | Pyramid Transition Matrix | 由下往上构造金字塔 | *1* |
+| 394 | Decode String | 解码字符串 | *1* |
 
 
 | 序号 | 题目 | backtracking | status |
@@ -626,13 +626,13 @@ C++ source codes
 
 | 序号 | 题目 | DP | status |
 |:---|:---:|:---:|:---:|
-|[24](\NewCoder\24.cpp)| 拼凑面额 | DP | *1* |
-|52| 第N个丑数 | 剑指offer DP | done |
-|[66](\NewCoder\66.cpp)| 斐波那契数列 | 剑指offer DP | *1* |
-|[64](\NewCoder\64.cpp)| 跳台阶 | 剑指offer DP | *1* |
-|[69](\NewCoder\69.cpp)| 变态跳台阶 | 剑指offer | done |
-|65| 矩形覆盖 | 剑指offer | done |
-|[96](\NewCoder\96.cpp)| 最长公共连续子串 | leetcode [718](\LeetCode\718.cpp) | *1* |
+| [24](\NewCoder\24.cpp) | 拼凑面额 | DP 用若干硬币拼凑一个面额的组合数 | *1* |
+| [52](\NewCoder\52.cpp) | 第N个丑数 | 剑指offer DP | done |
+| [66](\NewCoder\66.cpp) | 斐波那契数列 | 剑指offer DP | *1* |
+| [64](\NewCoder\64.cpp) | 跳台阶 | 剑指offer DP | *1* |
+| [69](\NewCoder\69.cpp) | 变态跳台阶 | 剑指offer | done |
+| [65](\NewCoder\65.cpp) | 矩形覆盖 | 剑指offer | done |
+| [96](\NewCoder\96.cpp) | 最长公共连续子串 | leetcode [718](\LeetCode\718.cpp) | *1* |
 
 
 | 序号 | 题目 | 矩阵 | status |

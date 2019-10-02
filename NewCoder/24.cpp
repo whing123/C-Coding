@@ -1,6 +1,6 @@
-/* *题目：
+/*  题目：
  *  拼凑面额
- * *思路：
+ *  思路：
  *  
  */
 
@@ -9,17 +9,17 @@
  
 using namespace std;
  
-int main(){
-    int coins[6] = {1,5,10,20,50,100};
+int main() {
+    int coins[6] = {1, 5, 10, 20, 50, 100};
     int N;
-    while(cin >> N){
-        vector<long> dp(N+1, 0);
+    while (cin >> N) {
+        vector<long> dp(N + 1, 0);
         dp[0] = 1;
          
-        for(int i = 0; i < 6; ++i){
-            for(int j = 1; j <= N; ++j){
-                if(j >= coins[i]){
-                    dp[j] += dp[j-coins[i]];
+        for (int i = 0; i < 6; ++i) {
+            for (int j = 1; j <= N; ++j) {
+                if (j >= coins[i]) {
+                    dp[j] += dp[j - coins[i]];
                 }
             }
         }
